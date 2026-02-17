@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #SBATCH --account="r250142"
-#SBATCH --time=0-00:05:00
+#SBATCH --time=0-00:50:00
 #SBATCH --mem=1G
 #SBATCH --constraint=x64cpu
 #SBATCH --nodes=1
