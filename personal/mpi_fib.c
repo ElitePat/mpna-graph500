@@ -26,7 +26,7 @@ int main(int argc, char ** argv) {
     MPI_Comm_size(MPI_COMM_WORLD,&world_size);
 
     for(int i=0; i<MAX_ITER; ++i){
-        tab_all[&rang%4][i] = fib(i);
+        tab_all[rang%4][i] = fib(i);
     }
 
     MPI_Finalize();
