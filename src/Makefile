@@ -7,7 +7,7 @@ all: graph500_reference_bfs_sssp.out graph500_reference_bfs
 
 GENERATOR_SOURCES = ../generator/graph_generator.c ../generator/make_graph.c ../generator/splittable_mrg.c ../generator/utils.c
 SOURCES = main.c utils.c validate.c ../aml/aml.c
-HEADERS = common.h csr_reference.h bitmap_reference.h
+HEADERS = common.h csr_reference.h bitmap_reference.h ../aml/aml.h
 
 graph500_reference_bfs_sssp.out: bfs_reference.c $(SOURCES) $(HEADERS) $(GENERATOR_SOURCES) csr_reference.c sssp_reference.c
 	$(MPICC) $(CFLAGS) -DSSSP $(LDFLAGS) -o graph500_reference_bfs_sssp.out bfs_reference.c sssp_reference.c csr_reference.c $(SOURCES) $(GENERATOR_SOURCES) -lm
