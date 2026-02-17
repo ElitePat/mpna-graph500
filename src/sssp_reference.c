@@ -30,7 +30,7 @@ extern unsigned long * visited;
 //global variables as those accesed by active message handler
 float *glob_dist;
 float glob_maxdelta, glob_mindelta; //range for current bucket
-float *weights;
+extern float *weights;
 volatile int lightphase;
 
 //Relaxation data type 
