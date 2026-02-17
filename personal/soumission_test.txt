@@ -14,10 +14,10 @@
 romeo_load_x64cpu_env
 spack load openmpi@5.0.5 maqao@2025.1.4
 
-mkdir /test0/
-cp $SLURM_SUBMIT_DIR/mpi_fib.cpp /test0/
+mkdir $HOME/test0/
+cp $SLURM_SUBMIT_DIR/mpi_fib.cpp $HOME/test0/
 #cp $SLURM_SUBMIT_DIR/input.data /scratch_p/$USER/$SLURM_JOBID/
-cd /test0/
+cd $HOME/test0/
 
 mpicc mpi_fib.cpp -o mpi_fib.out
 
