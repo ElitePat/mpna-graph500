@@ -22,4 +22,6 @@ cd $HOME/test0/
 
 mpicc mpi_fib.c -o mpi_fib.out
 
-srun maqao oneview -R1 xp=OV_t0 -- ./mpi_fib.out
+srun mpi_fib.out > res0.txt
+
+#srun maqao oneview -R1 xp=OV_t0 -- ./mpi_fib.out
