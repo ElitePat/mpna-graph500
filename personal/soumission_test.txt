@@ -24,4 +24,4 @@ mpicc mpi_fib.c -o mpi_fib.out
 
 #srun mpi_fib.out
 
-srun maqao oneview -R1 xp=OV_test1 -- ./mpi_fib.out
+srun maqao oneview -R1 -dbg=1 xp=OV_test1 -- mpi_fib.out
