@@ -6,8 +6,8 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
-#SBATCH --job-name "SSSP Measurement"
-#SBATCH --comment "Lancement du benchmark Graph500"
+#SBATCH --job-name "SSSP Measurement 1"
+#SBATCH --comment "Benchmark Graph500 pour N processus"
 #SBATCH --error=job.%J.err
 #SBATCH --output=job.%J.out
 
@@ -17,4 +17,7 @@ spack load openmpi@5.0.5 %gcc@11.4.1
 cd ../src/
 make
 
-srun graph500_reference_bfs_sssp.out 20
+#maitenant on ce concentre sur le SSSP
+SKIP_BFS=1
+
+srun graph500_reference_bfs_sssp.out 20 
