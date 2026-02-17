@@ -1,0 +1,10 @@
+==> Error: Spec 'openmpi@5.0.5 ^maqao@2025.1.4' matches no installed packages.
+mkdir: cannot create directory ‘/test0/’: Permission denied
+cp: cannot create regular file '/test0/': Not a directory
+/var/spool/slurmd/job335768/slurm_script: line 20: cd: /test0/: No such file or directory
+/var/spool/slurmd/job335768/slurm_script: line 22: mpicc: command not found
+slurmstepd: error: execve(): maqao: No such file or directory
+slurmstepd: error: execve(): maqao: No such file or directory
+slurmstepd: error: execve(): maqao: No such file or directory
+slurmstepd: error: execve(): maqao: No such file or directory
+srun: error: romeo-c040: tasks 0-3: Exited with exit code 2

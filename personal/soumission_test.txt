@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+#SBATCH --account="r250142"
+#SBATCH --time=0-00:05:00
+#SBATCH --mem=1G
+#SBATCH --constraint=x64cpu
+#SBATCH --nodes=1
+#SBATCH --ntasks=4
+#SBATCH --cpus-per-task=1
+#SBATCH --job-name "Test 0 de Patrick"
+#SBATCH --comment "Un calcul simple pour voir si tout marche"
+#SBATCH --error=job.%J.err
+#SBATCH --output=job.%J.out
+
+romeo_load_x64cpu_env
+spack load openmpi@5.0.5 ^maqao@2025.1.4
+
+mkdir /test0/
+cp $SLURM_SUBMIT_DIR/mpi_fib.cpp /test0/
+#cp $SLURM_SUBMIT_DIR/input.data /scratch_p/$USER/$SLURM_JOBID/
+cd /test0/
+
+mpicc mpi_fib.cpp -o mpi_fib.out
+
+srun maqao oneview -R1 xp=OV_t0 -- ./mpi_fib.out
