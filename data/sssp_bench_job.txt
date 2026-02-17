@@ -17,4 +17,4 @@ spack load openmpi@5.0.5 %gcc@11.4.1
 cd ../src/
 make
 
-srun graph500_reference_bfs_sssp 
+srun graph500_reference_bfs_sssp 10
