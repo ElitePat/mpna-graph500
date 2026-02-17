@@ -4,11 +4,11 @@
 #include <unistd.h>
 
 #define SERVER_NODE 0
-#define MAX_ITER 50
+#define MAX_ITER 10
 
 // not very optimized :X
 int fib(int i){
-    if(i<1){
+    if((i==1) || (i==0)){
         return i;
     }else{
         return fib(i-2) + fib(i-1);
