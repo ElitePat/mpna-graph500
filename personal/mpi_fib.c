@@ -31,7 +31,7 @@ int main(int argc, char ** argv) {
         tab_all[rang%4][i] = fib(i);
     }
     */
-    printf("OK1\n");
+    printf("Je suis %d\n",rang);
 
     MPI_Finalize();
 
