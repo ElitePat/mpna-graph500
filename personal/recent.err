@@ -1,0 +1,13 @@
+==> Error: openmpi@5.0.5 matches multiple packages.
+  Matching packages:
+    lni3xp2 openmpi@5.0.5 arch=linux-rhel9-zen4 %gcc@11.4.1
+    rvuhwou openmpi@5.0.5 arch=linux-rhel9-zen4 %aocc@5.0.0
+  Use a more specific spec (e.g., prepend '/' to the hash).
+mkdir: cannot create directory ‘/home/nmpatrick/test0/’: File exists
+cp: cannot stat '/gpfs/home/nmpatrick/mpna/mpna-graph500/personal/mpi_fib.cpp': No such file or directory
+/var/spool/slurmd/job336922/slurm_script: line 22: mpicc: command not found
+slurmstepd: error: execve(): maqao: No such file or directory
+slurmstepd: error: execve(): maqao: No such file or directory
+slurmstepd: error: execve(): maqao: No such file or directory
+slurmstepd: error: execve(): maqao: No such file or directory
+srun: error: romeo-c040: tasks 0-3: Exited with exit code 2

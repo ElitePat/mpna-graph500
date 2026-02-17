@@ -12,7 +12,8 @@
 #SBATCH --output=job.%J.out
 
 romeo_load_x64cpu_env
-spack load openmpi@5.0.5 maqao@2025.1.4 %gcc@11.4.1
+spack load openmpi@5.0.5 %gcc@11.4.1
+spack load maqao@2025.1.4
 
 mkdir $HOME/test0/
 cp $SLURM_SUBMIT_DIR/mpi_fib.cpp $HOME/test0/
