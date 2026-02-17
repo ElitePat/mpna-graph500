@@ -20,4 +20,6 @@ make
 #maitenant on ce concentre sur le SSSP
 SKIP_BFS=1
 
+echo "Verification SKIP_BFS = $SKIP_BFS"
+
 srun graph500_reference_bfs_sssp.out 20 
