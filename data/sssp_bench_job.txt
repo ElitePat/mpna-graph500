@@ -5,11 +5,11 @@
 #SBATCH --constraint=x64cpu
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=2
-#SBATCH --job-name "Test ref and custom"
+#SBATCH --cpus-per-task=4
+#SBATCH --job-name "Test ref (and custom)"
 #SBATCH --comment "Benchmark Graph500, custom implementations"
-#SBATCH --error=custom_try.err
-#SBATCH --output=custom_try.out
+#SBATCH --error=ref_bench3.err
+#SBATCH --output=ref_bench3.out
 
 romeo_load_x64cpu_env
 spack load openmpi@5.0.5 %gcc@11.4.1
