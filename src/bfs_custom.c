@@ -1,4 +1,5 @@
 // bfs_custom.c - Version Hybride Corrigée (Top-Down / Bottom-Up)
+// Beamer et al. direction-optimizing BFS pour Graph500
 #include "common.h"
 #include "csr_reference.h"
 #include "bitmap_reference.h"
@@ -13,234 +14,241 @@
 #define ulong_mask 63
 #define ulong_shift 6
 
-#define SET_BIT(bm, v) do { bm[(v) >> 6] |= (1ULL << ((v) & 63)); } while (0)
-#define TEST_BIT(bm, v) ((bm[(v) >> 6] & (1ULL << ((v) & 63))) != 0)
+#define SET_BIT(bm, v)  do { (bm)[(v) >> 6] |= (1ULL << ((v) & 63)); } while (0)
+#define TEST_BIT(bm, v) (((bm)[(v) >> 6] & (1ULL << ((v) & 63))) != 0)
 
-// Macro pour tester un bit dans un bitmap GLOBAL (indexé par vertex global)
-#define TEST_BIT_GLOBAL(bm, global_v) ({ \
-    int64_t owner = VERTEX_OWNER(global_v); \
-    int64_t local_v = VERTEX_LOCAL(global_v); \
-    int64_t offset = owner * max_local_verts + local_v; \
-    ((bm[(offset) >> 6] & (1ULL << ((offset) & 63))) != 0); \
-})
+/*
+ * Bitmap global : le vertex global gv est mappé à l'offset
+ *   offset = VERTEX_OWNER(gv) * max_local_verts + VERTEX_LOCAL(gv)
+ */
+#define GLOBAL_OFFSET(gv) \
+    (VERTEX_OWNER(gv) * max_local_verts + VERTEX_LOCAL(gv))
 
-#define SET_BIT_GLOBAL(bm, global_v) do { \
-    int64_t owner = VERTEX_OWNER(global_v); \
-    int64_t local_v = VERTEX_LOCAL(global_v); \
-    int64_t offset = owner * max_local_verts + local_v; \
-    bm[(offset) >> 6] |= (1ULL << ((offset) & 63)); \
+#define TEST_BIT_GLOBAL(bm, gv) \
+    (((bm)[GLOBAL_OFFSET(gv) >> 6] & (1ULL << (GLOBAL_OFFSET(gv) & 63))) != 0)
+
+#define SET_BIT_GLOBAL(bm, gv) do { \
+    int64_t _off = GLOBAL_OFFSET(gv); \
+    (bm)[_off >> 6] |= (1ULL << (_off & 63)); \
 } while(0)
 
-// Paramètres de switching
+/* Paramètres de switching Beamer et al. */
 #define ALPHA 15.0
-#define BETA 24.0
+#define BETA  24.0
 
-// Structures globales
-unsigned long *visited;
-unsigned long *frontier_bitmap;
-unsigned long *next_frontier_bitmap;
-int64_t visited_size;
+/* ------------------------------------------------------------------ */
+/* Variables globales (non-static : attendues par csr_reference.c,    */
+/* validate.c via extern)                                              */
+/* ------------------------------------------------------------------ */
+unsigned long  *visited;
+unsigned long  *frontier_bitmap;
+unsigned long  *next_frontier_bitmap;
+int64_t         visited_size;
 
-extern int64_t *pred_glob, *column;
-int *rowstarts;
-oned_csr_graph g;
+int64_t        *pred_glob;
+oned_csr_graph  g;         /* attendu par csr_reference.c */
+int            *rowstarts; /* attendu par validate.c      */
+void           *column;    /* attendu par COLUMN() macro  */
 
-int mpi_rank, mpi_size;
-int64_t max_local_verts = 0;  // Maximum de vertices par PE
+int     mpi_rank, mpi_size;
+int64_t max_local_verts = 0;
+
+/* bitmap global alloué une seule fois */
+static unsigned long *global_frontier    = NULL;
+static int64_t        global_bitmap_size = 0;
+
+/* ------------------------------------------------------------------ */
+/* Initialisation                                                       */
+/* ------------------------------------------------------------------ */
 
 void make_graph_data_structure(const tuple_graph* const tg) {
     MPI_Comm_rank(MPI_COMM_WORLD, &mpi_rank);
     MPI_Comm_size(MPI_COMM_WORLD, &mpi_size);
-    
+
     convert_graph_to_oned_csr(tg, &g);
-    
-    column = g.column;
+
+    /* Exposer pour validate.c et la macro COLUMN() */
+    column    = g.column;
     rowstarts = g.rowstarts;
+
     visited_size = (g.nlocalverts + ulong_bits - 1) / ulong_bits;
-    
-    visited = xmalloc(visited_size * sizeof(unsigned long));
-    frontier_bitmap = xmalloc(visited_size * sizeof(unsigned long));
+
+    visited              = xmalloc(visited_size * sizeof(unsigned long));
+    frontier_bitmap      = xmalloc(visited_size * sizeof(unsigned long));
     next_frontier_bitmap = xmalloc(visited_size * sizeof(unsigned long));
-    
-    // Calculer le max de vertices locaux sur tous les PEs
+
+    /* Calculer max_local_verts sur tous les PEs */
     max_local_verts = g.nlocalverts;
-    MPI_Allreduce(MPI_IN_PLACE, &max_local_verts, 1, MPI_INT64_T, MPI_MAX, MPI_COMM_WORLD);
+    MPI_Allreduce(MPI_IN_PLACE, &max_local_verts, 1,
+                  MPI_INT64_T, MPI_MAX, MPI_COMM_WORLD);
+
+    /* Allouer le bitmap global une seule fois */
+    global_bitmap_size = ((max_local_verts * (int64_t)mpi_size) + ulong_bits - 1) / ulong_bits;
+    global_frontier    = xmalloc(global_bitmap_size * sizeof(unsigned long));
 }
+
+/* ------------------------------------------------------------------ */
+/* Utilitaires                                                          */
+/* ------------------------------------------------------------------ */
 
 static inline int64_t count_set_bits(unsigned long *bitmap, int64_t size) {
     int64_t count = 0;
-    for (int64_t i = 0; i < size; i++) {
+    for (int64_t i = 0; i < size; i++)
         count += __builtin_popcountll(bitmap[i]);
-    }
     return count;
 }
 
-/**
- * TOP-DOWN : Explorer depuis la frontière vers les voisins
- * On synchronise la frontière globale, puis chaque PE explore ses vertices locaux
+/*
+ * Construit et synchronise la frontière globale via Allreduce(MPI_BOR).
  */
-static void bfs_step_top_down(void) {
-    // Taille du bitmap global = nombre total de vertices possibles
-    int64_t global_bitmap_size = ((max_local_verts * mpi_size) + ulong_bits - 1) / ulong_bits;
-    unsigned long *global_frontier = calloc(global_bitmap_size, sizeof(unsigned long));
-    
-    // Chaque PE copie sa frontière locale dans le bitmap global
+static void build_global_frontier(void) {
+    memset(global_frontier, 0, global_bitmap_size * sizeof(unsigned long));
     for (int64_t v = 0; v < g.nlocalverts; v++) {
-        if (TEST_BIT(frontier_bitmap, v)) {
-            int64_t global_v = VERTEX_TO_GLOBAL(mpi_rank, v);
-            SET_BIT_GLOBAL(global_frontier, global_v);
-        }
+        if (TEST_BIT(frontier_bitmap, v))
+            SET_BIT_GLOBAL(global_frontier, VERTEX_TO_GLOBAL(mpi_rank, v));
     }
-    
-    // Synchroniser pour avoir la frontière complète
-    MPI_Allreduce(MPI_IN_PLACE, global_frontier, global_bitmap_size, 
+    MPI_Allreduce(MPI_IN_PLACE, global_frontier, global_bitmap_size,
                   MPI_UNSIGNED_LONG, MPI_BOR, MPI_COMM_WORLD);
-    
-    // Chaque vertex local explore ses voisins
-    for (int64_t v = 0; v < g.nlocalverts; v++) {
-        if (TEST_BIT(visited, v)) continue;
-        
-        int64_t row_start = g.rowstarts[v];
-        int64_t row_end = g.rowstarts[v + 1];
-        
-        for (int64_t j = row_start; j < row_end; j++) {
-            int64_t neighbor_global = COLUMN(j);
-            
-            // Vérifier si ce voisin est dans la frontière globale
-            if (TEST_BIT_GLOBAL(global_frontier, neighbor_global)) {
-                SET_BIT(visited, v);
-                SET_BIT(next_frontier_bitmap, v);
-                pred_glob[v] = neighbor_global;
-                break;
-            }
-        }
-    }
-    
-    free(global_frontier);
 }
 
-/**
- * BOTTOM-UP : Chaque vertex non-visité cherche un parent dans la frontière
- * Plus efficace quand la frontière est grande (beaucoup de vertices actifs)
- */
-static void bfs_step_bottom_up(void) {
-    // Synchroniser la frontière globale
-    int64_t global_bitmap_size = ((max_local_verts * mpi_size) + ulong_bits - 1) / ulong_bits;
-    unsigned long *global_frontier = calloc(global_bitmap_size, sizeof(unsigned long));
-    
-    for (int64_t v = 0; v < g.nlocalverts; v++) {
-        if (TEST_BIT(frontier_bitmap, v)) {
-            int64_t global_v = VERTEX_TO_GLOBAL(mpi_rank, v);
-            SET_BIT_GLOBAL(global_frontier, global_v);
-        }
-    }
-    
-    MPI_Allreduce(MPI_IN_PLACE, global_frontier, global_bitmap_size, 
-                  MPI_UNSIGNED_LONG, MPI_BOR, MPI_COMM_WORLD);
-    
-    // Pour chaque vertex local non-visité
+
+
+
+/* ------------------------------------------------------------------ */
+/* TOP-DOWN                                                             */
+/* ------------------------------------------------------------------ */
+
+static void bfs_step_top_down(void) {
+    // 1. Synchronisation unique de la frontière
+    build_global_frontier();
+
+    // 2. Une seule passe sur les sommets locaux non-visités
+    // On cherche si l'un de leurs voisins appartient à la frontière globale
     for (int64_t v = 0; v < g.nlocalverts; v++) {
         if (TEST_BIT(visited, v)) continue;
-        
+
         int64_t row_start = g.rowstarts[v];
-        int64_t row_end = g.rowstarts[v + 1];
-        
-        // Chercher UN parent dans la frontière
+        int64_t row_end   = g.rowstarts[v + 1];
+
         for (int64_t j = row_start; j < row_end; j++) {
-            int64_t neighbor_global = COLUMN(j);
-            
-            if (TEST_BIT_GLOBAL(global_frontier, neighbor_global)) {
+            int64_t nb_global = COLUMN(j);
+
+            // Si le voisin est dans la frontière (qu'il soit local ou distant)
+            if (TEST_BIT_GLOBAL(global_frontier, nb_global)) {
                 SET_BIT(visited, v);
                 SET_BIT(next_frontier_bitmap, v);
-                pred_glob[v] = neighbor_global;
-                break;  // Parent trouvé !
+                pred_glob[v] = nb_global; // Parent trouvé
+                break; // On passe au sommet local suivant
             }
         }
     }
-    
-    free(global_frontier);
 }
+/* ------------------------------------------------------------------ */
+/* BOTTOM-UP                                                            */
+/* ------------------------------------------------------------------ */
+/*
+ * Chaque vertex local non-visité cherche UN parent dans la frontière
+ * globale. Le break dès le premier parent trouvé est l'optimisation
+ * clé de Beamer et al.
+ */
+static void bfs_step_bottom_up(void) {
+    build_global_frontier();
+
+    for (int64_t v = 0; v < g.nlocalverts; v++) {
+        if (TEST_BIT(visited, v)) continue;
+
+        for (int64_t j = g.rowstarts[v]; j < g.rowstarts[v + 1]; j++) {
+            int64_t nb_global = COLUMN(j);
+
+            if (TEST_BIT_GLOBAL(global_frontier, nb_global)) {
+                SET_BIT(visited, v);
+                SET_BIT(next_frontier_bitmap, v);
+                pred_glob[v] = nb_global;
+                break;  /* Un seul parent suffit */
+            }
+        }
+    }
+}
+
+/* ------------------------------------------------------------------ */
+/* BFS principal                                                        */
+/* ------------------------------------------------------------------ */
 
 void run_bfs(int64_t root, int64_t* pred) {
     pred_glob = pred;
-    
-    // Initialisation
-    memset(visited, 0, visited_size * sizeof(unsigned long));
-    memset(frontier_bitmap, 0, visited_size * sizeof(unsigned long));
+    clean_pred(pred); // Utilisation de votre fonction existante
+
+    memset(visited,              0, visited_size * sizeof(unsigned long));
+    memset(frontier_bitmap,      0, visited_size * sizeof(unsigned long));
     memset(next_frontier_bitmap, 0, visited_size * sizeof(unsigned long));
-    
-    // Setup root
-    int root_pe = VERTEX_OWNER(root);
+
+    int     root_pe    = VERTEX_OWNER(root);
     int64_t root_local = VERTEX_LOCAL(root);
-    
+
     if (root_pe == mpi_rank) {
         pred[root_local] = root;
-        SET_BIT(visited, root_local);
+        SET_BIT(visited,         root_local);
         SET_BIT(frontier_bitmap, root_local);
     }
-    
-    MPI_Barrier(MPI_COMM_WORLD);
-    
-    // Calculer le nombre total de vertices
-    int64_t total_vertices = g.nlocalverts;
-    MPI_Allreduce(MPI_IN_PLACE, &total_vertices, 1, MPI_INT64_T, MPI_SUM, MPI_COMM_WORLD);
-    
-    // Calculer les edges totaux pour le critère de switching
+
+    /* Calculer les totaux une seule fois au début */
+    int64_t total_vertices = 0;
+    int64_t local_verts = g.nlocalverts;
+    MPI_Allreduce(&local_verts, &total_vertices, 1, MPI_INT64_T, MPI_SUM, MPI_COMM_WORLD);
+
     int64_t total_edges = 0;
-    for (int64_t i = 0; i < g.nlocalverts; i++) {
+    for (int64_t i = 0; i < g.nlocalverts; i++)
         total_edges += g.rowstarts[i + 1] - g.rowstarts[i];
-    }
-    MPI_Allreduce(MPI_IN_PLACE, &total_edges, 1, MPI_INT64_T, MPI_SUM, MPI_COMM_WORLD);
-    
+    MPI_Allreduce(&total_edges, &total_edges, 1, MPI_INT64_T, MPI_SUM, MPI_COMM_WORLD);
+
+    int64_t mu = total_edges;
     int use_bottom_up = 0;
-    int iteration = 0;
-    const int MAX_ITER = 1000;
-    
-    while (iteration < MAX_ITER) {
-        iteration++;
-        
-        // Compter la frontière
-        int64_t local_frontier = count_set_bits(frontier_bitmap, visited_size);
-        int64_t frontier_count = local_frontier;
-        MPI_Allreduce(MPI_IN_PLACE, &frontier_count, 1, MPI_INT64_T, MPI_SUM, MPI_COMM_WORLD);
-        
-        if (frontier_count == 0) break;
-        
-        // DÉCISION DE SWITCHING basée sur heuristiques de Beamer et al.
-        if (!use_bottom_up) {
-            // Estimer edges à explorer
-            int64_t scout_count = frontier_count * 16;  // Approximation (edgefactor=16)
-            int64_t edges_remaining = total_edges - (iteration * frontier_count * 16);
-            
-            if (scout_count > edges_remaining / ALPHA) {
-                use_bottom_up = 1;
-            }
-        } else {
-            // Revenir à top-down si frontière devient petite
-            if (frontier_count < total_vertices / BETA) {
-                use_bottom_up = 0;
+
+    for (int iteration = 0; iteration < 10000; iteration++) {
+        // --- OPTIMISATION : UN SEUL ALLREDUCE POUR MF ET FRONTIER_COUNT ---
+        int64_t local_data[2] = {0, 0}; // [0] = count, [1] = mf
+        for (int64_t v = 0; v < g.nlocalverts; v++) {
+            if (TEST_BIT(frontier_bitmap, v)) {
+                local_data[0]++;
+                local_data[1] += (g.rowstarts[v + 1] - g.rowstarts[v]);
             }
         }
         
-        // Exécuter l'approche choisie
+        int64_t global_data[2];
+        MPI_Allreduce(local_data, global_data, 2, MPI_INT64_T, MPI_SUM, MPI_COMM_WORLD);
+        
+        int64_t frontier_count = global_data[0];
+        int64_t mf             = global_data[1];
+
+        if (frontier_count == 0) break;
+
+        // --- DÉCISION DE SWITCHING (BEAMER ET AL.) ---
+        if (!use_bottom_up && (double)mf > (double)mu / ALPHA) {
+            use_bottom_up = 1;
+        } else if (use_bottom_up && (double)frontier_count < (double)total_vertices / BETA) {
+            use_bottom_up = 0;
+        }
+
+        // --- EXÉCUTION ---
         if (use_bottom_up) {
             bfs_step_bottom_up();
         } else {
             bfs_step_top_down();
         }
-        
-        // Synchronisation
-        MPI_Barrier(MPI_COMM_WORLD);
-        
-        // Swap frontiers
-        unsigned long *temp = frontier_bitmap;
+
+        mu -= mf;
+        if (mu < 0) mu = 0;
+
+        // Swap efficace
+        unsigned long *tmp = frontier_bitmap;
         frontier_bitmap = next_frontier_bitmap;
-        next_frontier_bitmap = temp;
+        next_frontier_bitmap = tmp;
         memset(next_frontier_bitmap, 0, visited_size * sizeof(unsigned long));
     }
-    
-    MPI_Barrier(MPI_COMM_WORLD);
 }
+/* ------------------------------------------------------------------ */
+/* Fonctions requises par Graph500                                      */
+/* ------------------------------------------------------------------ */
 
 void get_edge_count_for_teps(int64_t* edge_visit_count) {
     int64_t edge_count = 0;
@@ -252,12 +260,14 @@ void get_edge_count_for_teps(int64_t* edge_visit_count) {
             }
         }
     }
-    MPI_Allreduce(MPI_IN_PLACE, &edge_count, 1, MPI_INT64_T, MPI_SUM, MPI_COMM_WORLD);
+    MPI_Allreduce(MPI_IN_PLACE, &edge_count, 1,
+                  MPI_INT64_T, MPI_SUM, MPI_COMM_WORLD);
     *edge_visit_count = edge_count;
 }
 
 void clean_pred(int64_t* pred) {
-    memset(pred, -1, g.nlocalverts * sizeof(int64_t));
+    for (int64_t i = 0; i < g.nlocalverts; i++)
+        pred[i] = -1;
 }
 
 void free_graph_data_structure(void) {
@@ -265,6 +275,7 @@ void free_graph_data_structure(void) {
     free(visited);
     free(frontier_bitmap);
     free(next_frontier_bitmap);
+    free(global_frontier);
 }
 
 size_t get_nlocalverts_for_pred(void) {
