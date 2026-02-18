@@ -1,25 +1,24 @@
 #!/usr/bin/env bash
 #SBATCH --account="r250142"
-#SBATCH --time=0-01:00:00
+#SBATCH --time=0-00:05:00
 #SBATCH --mem=2G
 #SBATCH --constraint=x64cpu
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=2
-#SBATCH --job-name "Test compilation"
-#SBATCH --comment "Benchmark Graph500"
-#SBATCH --error=compil.err
-#SBATCH --output=compil.out
+#SBATCH --cpus-per-task=1
+#SBATCH --job-name "Test custom function"
+#SBATCH --comment "Benchmark Graph500, custom implementations"
+#SBATCH --error=custom_try.err
+#SBATCH --output=custom_try.out
 
 romeo_load_x64cpu_env
 spack load openmpi@5.0.5 %gcc@11.4.1
 
 cd ../src/
-make clean
 make
 
 #maitenant on ce concentre sur le SSSP
 SKIP_BFS=1
 echo "Verification SKIP_BFS = $SKIP_BFS"
 
-#srun graph500_reference_bfs_sssp.out 22 
+srun graph500_custom_bfs_sssp.out 10
