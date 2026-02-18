@@ -62,16 +62,16 @@ void run_sssp(int64_t root,int64_t* pred,float *dist) {
 		// on découvre la nouvelle frontière
 		for(int i=0; i<current_next; i++){
 			// on comapre la distance depuis le noeud actuel à celle qu'il a deja
-			new_dist= dist[root] + g.weight[root];
+			new_dist= dist[frontier_next[i]] + g.weight[frontier_next[i]];
 			// si il n'a jamais été visité.
 			if(visited[frontier_next[i]] == 0){
 				dist[frontier_next[i]] = new_dist;
-				pred[frontier_next[i]] = root;
+				pred[frontier_next[i]] = frontier_next[i];
 				// on marque le noeud comme visité
 				visited[frontier_next[i]] = 1;
 			}else if(new_dist < dist[frontier_next[i]]){ // si il a deja été visité
 				dist[frontier_next[i]] = new_dist;
-				pred[frontier_next[i]] = root;
+				pred[frontier_next[i]] = frontier_next[i];
 			} // et sinon on fait rien
 		}
 
@@ -86,7 +86,23 @@ void run_sssp(int64_t root,int64_t* pred,float *dist) {
 			frontier_next[i] = 0;
 		}
 		current_next = 0;
-	}	
+	}
+
+	// now time for relaxation
+	// on visite tous les noeuds même ceux pas encore visités
+	for(int i=0; i<g.max_nlocalverts; i++){
+		for(int j=0; j<g.max_nlocalverts; j++){
+			if(g.column[j] == i){// pour chacun de ses voisins
+				new_dist = dist[j] + g.weight[j];
+				if(new_dist < dist[i]){ // on cherche si il y pas un plus court chemin !
+					// si c'est le cas on actualise
+					dist[i] = new_dist;
+					pred[i] = j; // le voisin en question devien son predecesseur
+				} // sinon on fait rien
+			}
+		}
+	}
+
 }
 
 //user provided function to prefill dist array with whatever value
