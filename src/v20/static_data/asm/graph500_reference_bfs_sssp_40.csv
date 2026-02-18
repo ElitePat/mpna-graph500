@@ -1,0 +1,27 @@
+address;source_location;insn;indent
+0x406c10;/home/hananefdh/MPNA/graph500/src/validate.c:287;MOV	%RAX,%RBX;
+0x406c13;/home/hananefdh/MPNA/graph500/src/validate.c:290;MOV	0x73646(%RIP),%RAX;
+0x406c1a;/home/hananefdh/MPNA/graph500/src/validate.c:290;MOV	(%RAX,%RBX,4),%EAX;
+0x406c1d;/home/hananefdh/MPNA/graph500/src/validate.c:290;TEST	%EAX,%EAX;
+0x406c1f;/home/hananefdh/MPNA/graph500/src/validate.c:290;JNE	406c72 <validate_result+0x382>;
+0x406c21;/home/hananefdh/MPNA/graph500/src/validate.c:290;MOV	(%R12,%RBX,8),%R13;
+0x406c25;/home/hananefdh/MPNA/graph500/src/validate.c:290;CMP	$-0x1,%R13;
+0x406c29;/home/hananefdh/MPNA/graph500/src/validate.c:290;JE	406c72 <validate_result+0x382>;
+0x406c2b;/home/hananefdh/MPNA/graph500/src/validate.c:291;MOV	-0x80(%RBP),%RAX;
+0x406c2f;/home/hananefdh/MPNA/graph500/src/validate.c:291;VXORPD	%XMM3,%XMM3,%XMM3;
+0x406c33;/home/hananefdh/MPNA/graph500/src/validate.c:291;MOV	0xb401e(%RIP),%R14D;
+0x406c3a;/home/hananefdh/MPNA/graph500/src/validate.c:291;VCVTSS2SD	(%RAX,%RBX,4),%XMM3,%XMM0;
+0x406c3f;/home/hananefdh/MPNA/graph500/src/validate.c:291;SHLX	%R14,%RBX,%R14;
+0x406c44;/home/hananefdh/MPNA/graph500/src/validate.c:291;VMOVSD	%XMM0,-0x58(%RBP);
+0x406c49;/home/hananefdh/MPNA/graph500/src/validate.c:291;CALL	408cd0 <aml_my_pe>;
+0x406c4e;/home/hananefdh/MPNA/graph500/src/validate.c:291;VMOVSD	-0x58(%RBP),%XMM0;
+0x406c53;/home/hananefdh/MPNA/graph500/src/validate.c:291;MOV	%R13,%RDX;
+0x406c56;/home/hananefdh/MPNA/graph500/src/validate.c:291;MOVSXD	%EAX,%RSI;
+0x406c59;/home/hananefdh/MPNA/graph500/src/validate.c:291;MOV	$0x40afa8,%EDI;
+0x406c5e;/home/hananefdh/MPNA/graph500/src/validate.c:291;MOV	$0x1,%EAX;
+0x406c63;/home/hananefdh/MPNA/graph500/src/validate.c:291;ADD	%R14,%RSI;
+0x406c66;/home/hananefdh/MPNA/graph500/src/validate.c:291;CALL	402080 <printf@plt>;
+0x406c6b;/home/hananefdh/MPNA/graph500/src/validate.c:291;INCQ	0x735fe(%RIP);
+0x406c72;/home/hananefdh/MPNA/graph500/src/validate.c:289;LEA	0x1(%RBX),%RAX;
+0x406c76;/home/hananefdh/MPNA/graph500/src/validate.c:289;CMP	%R15,%RBX;
+0x406c79;/home/hananefdh/MPNA/graph500/src/validate.c:289;JNE	406c10 <validate_result+0x320>;

@@ -1,0 +1,11 @@
+address;source_location;insn;indent
+0x404550;/home/hananefdh/MPNA/graph500/src/bfs_reference.c:146;CMPQ	$0,0xb6688(%RIP);
+0x404558;/home/hananefdh/MPNA/graph500/src/bfs_reference.c:146;JE	404574 <clean_pred+0x24>;
+0x40455a;/home/hananefdh/MPNA/graph500/src/bfs_reference.c:146;XOR	%EAX,%EAX;
+0x40455c;/home/hananefdh/MPNA/graph500/src/bfs_reference.c:146;NOPL	(%RAX);
+0x404560;/home/hananefdh/MPNA/graph500/src/bfs_reference.c:146;MOVQ	$-0x1,(%RDI,%RAX,8);(14) 
+0x404568;/home/hananefdh/MPNA/graph500/src/bfs_reference.c:146;INC	%RAX;(14) 
+0x40456b;/home/hananefdh/MPNA/graph500/src/bfs_reference.c:146;CMP	%RAX,0xb666e(%RIP);(14) 
+0x404572;/home/hananefdh/MPNA/graph500/src/bfs_reference.c:146;JA	404560 <clean_pred+0x10>;(14) 
+0x404574;/home/hananefdh/MPNA/graph500/src/bfs_reference.c:147;RET;
+0x404575;:0;NOPW	%CS:(%RAX,%RAX,1);

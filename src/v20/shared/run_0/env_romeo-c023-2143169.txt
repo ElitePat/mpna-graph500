@@ -1,0 +1,174 @@
+SHELL=/usr/bin/bash
+HISTCONTROL=ignoredups
+PKG_CONFIG_PATH=/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/mpich-4.3.0-udyhaai3chj56talqfjwgu4dxqxbzue5/lib/pkgconfig:/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/hwloc-2.12.2-6lwxzn2zb5ylfaxw3iqywocvcio53kdl/lib/pkgconfig:/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/libfabric-2.4.0-trxdixu53og7c6wdy3jbnkmw6p7ja6ab/lib/pkgconfig:/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/yaksa-0.4-75thwa2kvt34v6fm6pjucw26vxuig45j/lib/pkgconfig:/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/libpciaccess-0.17-3zk2ad5hn2elzieoxrqgohela6jvxwly/lib/pkgconfig:/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/libxml2-2.15.1-k7lnoh63rwr5dgd3adxulufp5tji2dzh/lib/pkgconfig:/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/ncurses-6.5-20250705-qgidbrkxucauq7uom6ye3vt6fil2txy5/lib/pkgconfig:/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/xz-5.6.3-u6bkzy6fhhurnksxyq6bifirjrp6y6ck/lib/pkgconfig:/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/zlib-ng-2.3.2-usrc3nfxbswmxqourc4zxm7lemnlhovg/lib/pkgconfig:/usr/share/pkgconfig:/usr/lib64/pkgconfig
+HISTSIZE=1000
+HOSTNAME=romeo-c023
+MPICC=/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/mpich-4.3.0-udyhaai3chj56talqfjwgu4dxqxbzue5/bin/mpicc
+MPICXX=/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/mpich-4.3.0-udyhaai3chj56talqfjwgu4dxqxbzue5/bin/mpicxx
+PWD=/home/hananefdh/MPNA/graph500/src
+LOGNAME=hananefdh
+MODULESHOME=/usr/share/Modules
+MANPATH=/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/mpich-4.3.0-udyhaai3chj56talqfjwgu4dxqxbzue5/share/man:/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/hwloc-2.12.2-6lwxzn2zb5ylfaxw3iqywocvcio53kdl/share/man:/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/libfabric-2.4.0-trxdixu53og7c6wdy3jbnkmw6p7ja6ab/share/man:/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/libiconv-1.18-2uad6sbxqgufiis3gkexewy5s7f4zxjc/share/man:/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/xz-5.6.3-u6bkzy6fhhurnksxyq6bifirjrp6y6ck/share/man:/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/zlib-ng-2.3.2-usrc3nfxbswmxqourc4zxm7lemnlhovg/share/man:/usr/share/man:/usr/share/man:
+_=/usr/bin/env
+SPACK_PYTHON=/usr/bin/python3
+MOTD_SHOWN=pam
+__MODULES_SHARE_MANPATH=:1
+HOME=/home/hananefdh
+LANG=C.UTF-8
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.m4a=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.oga=01;36:*.opus=01;36:*.spx=01;36:*.xspf=01;36:
+MPIF90=/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/mpich-4.3.0-udyhaai3chj56talqfjwgu4dxqxbzue5/bin/mpif90
+CMAKE_PREFIX_PATH=/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/mpich-4.3.0-udyhaai3chj56talqfjwgu4dxqxbzue5:/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/hwloc-2.12.2-6lwxzn2zb5ylfaxw3iqywocvcio53kdl:/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/libfabric-2.4.0-trxdixu53og7c6wdy3jbnkmw6p7ja6ab:/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/yaksa-0.4-75thwa2kvt34v6fm6pjucw26vxuig45j:/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/libpciaccess-0.17-3zk2ad5hn2elzieoxrqgohela6jvxwly:/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/libxml2-2.15.1-k7lnoh63rwr5dgd3adxulufp5tji2dzh:/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/ncurses-6.5-20250705-qgidbrkxucauq7uom6ye3vt6fil2txy5:/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/libiconv-1.18-2uad6sbxqgufiis3gkexewy5s7f4zxjc:/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/xz-5.6.3-u6bkzy6fhhurnksxyq6bifirjrp6y6ck:/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/zlib-ng-2.3.2-usrc3nfxbswmxqourc4zxm7lemnlhovg:/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/gcc-runtime-11.4.1-q6wrzecqsjkeqj75djmxleag65fdmftm
+MPIF77=/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/mpich-4.3.0-udyhaai3chj56talqfjwgu4dxqxbzue5/bin/mpif77
+SSH_CONNECTION=172.1.1.5 42418 172.1.1.63 22
+SPACK_ROOT=/home/hananefdh/spack
+SPACK_LOADED_HASHES=udyhaai3chj56talqfjwgu4dxqxbzue5
+TERM=xterm-256color
+ACLOCAL_PATH=/usr/share/aclocal
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+USER=hananefdh
+MODULES_RUN_QUARANTINE=LD_LIBRARY_PATH LD_PRELOAD
+LOADEDMODULES=
+SHLVL=2
+BASH_ENV=/etc/spack_bash_functions.rc
+LD_LIBRARY_PATH=/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/libfabric-2.4.0-trxdixu53og7c6wdy3jbnkmw6p7ja6ab/lib64:/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/libfabric-2.4.0-trxdixu53og7c6wdy3jbnkmw6p7ja6ab/lib:/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/libfabric-2.4.0-trxdixu53og7c6wdy3jbnkmw6p7ja6ab/lib64:/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/libfabric-2.4.0-trxdixu53og7c6wdy3jbnkmw6p7ja6ab/lib
+SLURM_JOB_ID=333171
+SSH_CLIENT=172.1.1.5 42418 22
+which_declare=declare -f
+XDG_DATA_DIRS=/home/hananefdh/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+PATH=/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/mpich-4.3.0-udyhaai3chj56talqfjwgu4dxqxbzue5/bin:/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/mpich-4.3.0-udyhaai3chj56talqfjwgu4dxqxbzue5/bin:/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/hwloc-2.12.2-6lwxzn2zb5ylfaxw3iqywocvcio53kdl/bin:/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/libfabric-2.4.0-trxdixu53og7c6wdy3jbnkmw6p7ja6ab/bin:/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/libxml2-2.15.1-k7lnoh63rwr5dgd3adxulufp5tji2dzh/bin:/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/ncurses-6.5-20250705-qgidbrkxucauq7uom6ye3vt6fil2txy5/bin:/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/libiconv-1.18-2uad6sbxqgufiis3gkexewy5s7f4zxjc/bin:/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/xz-5.6.3-u6bkzy6fhhurnksxyq6bifirjrp6y6ck/bin:/home/hananefdh/spack/bin:/home/hananefdh/.local/bin:/home/hananefdh/bin:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/lpp/mmfs/bin
+MODULEPATH=/opt/softwares/modulefiles
+MAIL=/var/spool/mail/hananefdh
+SSH_TTY=/dev/pts/0
+OLDPWD=/home/hananefdh/MPNA/graph500/src
+MODULES_CMD=/usr/share/Modules/libexec/modulecmd.tcl
+BASH_FUNC_ml%%=() {  module ml "$@"
+}
+BASH_FUNC_which%%=() {  ( alias;
+ eval ${which_declare} ) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot $@
+}
+BASH_FUNC_module%%=() {  local _mlredir=1;
+ if [ -n "${MODULES_REDIRECT_OUTPUT+x}" ]; then
+ if [ "$MODULES_REDIRECT_OUTPUT" = '0' ]; then
+ _mlredir=0;
+ else
+ if [ "$MODULES_REDIRECT_OUTPUT" = '1' ]; then
+ _mlredir=1;
+ fi;
+ fi;
+ fi;
+ case " $@ " in 
+ *' --no-redirect '*)
+ _mlredir=0
+ ;;
+ *' --redirect '*)
+ _mlredir=1
+ ;;
+ esac;
+ if [ $_mlredir -eq 0 ]; then
+ _module_raw "$@";
+ else
+ _module_raw "$@" 2>&1;
+ fi
+}
+BASH_FUNC__spack_shell_wrapper%%=() {  for var in DYLD_LIBRARY_PATH DYLD_FALLBACK_LIBRARY_PATH;
+ do
+ eval "if [ -n \"\${${var}-}\" ]; then export SPACK_$var=\${${var}}; fi";
+ done;
+ if [ -n "${ZSH_VERSION:-}" ]; then
+ emulate -L sh;
+ fi;
+ _sp_flags="";
+ while [ ! -z ${1+x} ] && [ "${1#-}" != "${1}" ]; do
+ _sp_flags="$_sp_flags $1";
+ shift;
+ done;
+ if [ -n "$_sp_flags" ] && [ "${_sp_flags#*h}" != "${_sp_flags}" ] || [ "${_sp_flags#*V}" != "${_sp_flags}" ]; then
+ command spack $_sp_flags "$@";
+ return;
+ fi;
+ _sp_subcommand="";
+ if [ ! -z ${1+x} ]; then
+ _sp_subcommand="$1";
+ shift;
+ fi;
+ case $_sp_subcommand in 
+ "cd")
+ _sp_arg="";
+ if [ -n "$1" ]; then
+ _sp_arg="$1";
+ shift;
+ fi;
+ if [ "$_sp_arg" = "-h" ] || [ "$_sp_arg" = "--help" ]; then
+ command spack cd -h;
+ else
+ LOC="$(SPACK_COLOR="${SPACK_COLOR:-always}" spack location $_sp_arg "$@")";
+ if [ -d "$LOC" ]; then
+ cd "$LOC";
+ else
+ return 1;
+ fi;
+ fi;
+ return
+ ;;
+ "env")
+ _sp_arg="";
+ if [ -n "$1" ]; then
+ _sp_arg="$1";
+ shift;
+ fi;
+ if [ "$_sp_arg" = "-h" ] || [ "$_sp_arg" = "--help" ]; then
+ command spack env -h;
+ else
+ case $_sp_arg in 
+ activate)
+ _a=" $@";
+ if [ "${_a#* --sh}" != "$_a" ] || [ "${_a#* --csh}" != "$_a" ] || [ "${_a#* -h}" != "$_a" ] || [ "${_a#* --help}" != "$_a" ]; then
+ command spack env activate "$@";
+ else
+ stdout="$(SPACK_COLOR="${SPACK_COLOR:-always}" command spack $_sp_flags env activate --sh "$@")" || return;
+ eval "$stdout";
+ fi
+ ;;
+ deactivate)
+ _a=" $@";
+ if [ "${_a#* --sh}" != "$_a" ] || [ "${_a#* --csh}" != "$_a" ]; then
+ command spack env deactivate "$@";
+ else
+ if [ -n "$*" ]; then
+ command spack env deactivate -h;
+ else
+ stdout="$(SPACK_COLOR="${SPACK_COLOR:-always}" command spack $_sp_flags env deactivate --sh)" || return;
+ eval "$stdout";
+ fi;
+ fi
+ ;;
+ *)
+ command spack env $_sp_arg "$@"
+ ;;
+ esac;
+ fi;
+ return
+ ;;
+ "load" | "unload")
+ _a=" $@";
+ if [ "${_a#* --sh}" != "$_a" ] || [ "${_a#* --csh}" != "$_a" ] || [ "${_a#* -h}" != "$_a" ] || [ "${_a#* --list}" != "$_a" ] || [ "${_a#* --help}" != "$_a" ]; then
+ command spack $_sp_flags $_sp_subcommand "$@";
+ else
+ stdout="$(SPACK_COLOR="${SPACK_COLOR:-always}" command spack $_sp_flags $_sp_subcommand --sh "$@")" || return;
+ eval "$stdout";
+ fi
+ ;;
+ *)
+ command spack $_sp_flags $_sp_subcommand "$@"
+ ;;
+ esac
+}
+BASH_FUNC__module_raw%%=() {  eval "$(/usr/bin/tclsh '/usr/share/Modules/libexec/modulecmd.tcl' bash "$@")";
+ _mlstatus=$?;
+ return $_mlstatus
+}
+BASH_FUNC_spack%%=() {  : this is a shell function from: /home/hananefdh/spack/share/spack/setup-env.sh;
+ : the real spack script is here: /home/hananefdh/spack/bin/spack;
+ _spack_shell_wrapper "$@";
+ return $?
+}

@@ -1,0 +1,249 @@
+{
+  "_cqa_uarch_const":
+    {
+      "RS_ALU2 size": 24,
+      "store latency": 3,
+      "load latency": 4,
+      "RS_ALU3 size": 24,
+      "ports":
+        [
+          {
+            "name": "ALU0/BRU0",
+            "units":
+              {
+                "ALU":
+                  [
+
+                  ],
+                "BRU":
+                  [
+
+                  ]
+              }
+          },
+          {
+            "name": "ALU1",
+            "units":
+              {
+                "ALU":
+                  [
+
+                  ]
+              }
+          },
+          {
+            "name": "ALU2",
+            "units":
+              {
+                "ALU":
+                  [
+
+                  ]
+              }
+          },
+          {
+            "name": "ALU3",
+            "units":
+              {
+                "ALU":
+                  [
+
+                  ]
+              }
+          },
+          {
+            "name": "BRU1",
+            "units":
+              {
+                "BRU":
+                  [
+
+                  ]
+              }
+          },
+          {
+            "width": 256,
+            "name": "AGU0",
+            "units":
+              {
+                "store address":
+                  [
+
+                  ],
+                "load":
+                  {
+                    "mc": true
+                  }
+              }
+          },
+          {
+            "width": 256,
+            "name": "AGU1",
+            "units":
+              {
+                "store address":
+                  [
+
+                  ],
+                "load":
+                  {
+                    "mc": true
+                  }
+              }
+          },
+          {
+            "width": 256,
+            "name": "AGU2",
+            "units":
+              {
+                "store address":
+                  [
+
+                  ],
+                "load":
+                  {
+                    "mc": true
+                  }
+              }
+          },
+          {
+            "width": 256,
+            "name": "FP0",
+            "units":
+              {
+                "VPU":
+                  {
+                    "FMA": true,
+                    "FMUL": true,
+                    "mc": true
+                  },
+                "DIV/SQRT":
+                  {
+                    "mc": true
+                  }
+              }
+          },
+          {
+            "width": 256,
+            "name": "FP1",
+            "units":
+              {
+                "VPU":
+                  {
+                    "FMA": true,
+                    "FMUL": true,
+                    "mc": true
+                  },
+                "DIV/SQRT":
+                  {
+                    "mc": true
+                  }
+              }
+          },
+          {
+            "width": 256,
+            "name": "FP2",
+            "units":
+              {
+                "VPU":
+                  {
+                    "FADD": true,
+                    "mc": true
+                  }
+              }
+          },
+          {
+            "width": 256,
+            "name": "FP3",
+            "units":
+              {
+                "VPU":
+                  {
+                    "FADD": true,
+                    "mc": true
+                  }
+              }
+          },
+          {
+            "width": 256,
+            "name": "FP4",
+            "units":
+              {
+                "FP store data":
+                  [
+
+                  ]
+              }
+          },
+          {
+            "width": 256,
+            "name": "FP5",
+            "units":
+              {
+                "FP store data":
+                  [
+
+                  ]
+              }
+          }
+        ],
+      "UQ throughput": 6,
+      "vector-unaligned optimal pattern": "1x256",
+      "RS_ALU1 size": 24,
+      "RS_VPU0 size": 32,
+      "UFS resources":
+        [
+        "ROB",
+        "RS_ALU0",
+        "RS_ALU1",
+        "RS_ALU2",
+        "RS_ALU3",
+        "RS_VPU0",
+        "RS_VPU1",
+        "LB",
+        "LFB",
+        "SB",
+        "PRF_INT",
+        "PRF_FLOAT"
+        ],
+      "NOP 0f 1f decode": "fast",
+      "FP load latency": 7,
+      "vector size in bytes": 64,
+      "PRF_FLOAT size": 192,
+      "LFB size": 24,
+      "uop cache capacity": 4500,
+      "PRF_INT size": 224,
+      "nb execution ports": 14,
+      "LB size": 88,
+      "RS_ALU0 size": 24,
+      "RS_VPU1 size": 32,
+      "predicted taken branch ports":
+        [
+        0
+        ],
+      "SB size": 64,
+      "L1D_ports":
+        [
+
+        ],
+      "IQ throughput": 4,
+      "ROB size": 320,
+      "INT vector size in bytes": 64,
+      "bytes fetched per cycle": 32,
+      "retire throughput": 8,
+      "aliases":
+        {
+          "RS_ALU0": "ALQ0",
+          "RS_VPU0": "VPQ0",
+          "RS_ALU2": "ALQ2",
+          "LFB": "MAB",
+          "RS_ALU1": "ALQ1",
+          "SB": "STQ",
+          "RS_ALU3": "ALQ3",
+          "ROB": "RQ",
+          "LB": "LDQ",
+          "RS_VPU1": "VPQ1"
+        },
+      "Is supported by UFS": false
+    }
+}

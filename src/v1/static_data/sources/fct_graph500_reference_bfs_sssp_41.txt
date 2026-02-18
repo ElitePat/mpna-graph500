@@ -1,0 +1,77 @@
+/home/hananefdh/MPNA/graph500/src/validate.c: 114 - 298
+--------------------------------------------------------------------------------
+
+114: 	edgedist m = {vloc,VERTEX_LOCAL(COLUMN(vedge)),globpred[vloc],globdist[vloc]
+115: #ifdef SSSP
+116: 		,vweights[vedge]
+117: #endif
+118: 	};
+119: 	aml_send(&m,1,sizeof(edgedist),VERTEX_OWNER(COLUMN(vedge)));
+[...]
+179: int validate_result(int isbfs,const tuple_graph* const tg, const size_t nlocalverts, const int64_t root, int64_t* const pred, float* dist,int64_t *nedges_in) {
+180: 	validatingbfs=isbfs;
+181: 
+182: 	//if(failedtovalidate) return 0; //failed to allocate lots of memory for validation: skipping all validation now
+183: 
+184: 	size_t i,j,k;
+185: 	if(firstvalidationrun) {
+186: 		firstvalidationrun=0;
+187: 		confirmed = xmalloc(nlocalverts*sizeof(int));
+188: #ifdef REUSE_CSR_FOR_VALIDATION
+189: vrowstarts=rowstarts;
+190: #ifdef SSSP
+191: vweights=weights;
+[...]
+246: 	for (i = 0; i < nlocalverts; ++i)
+247: 		if(VERTEX_TO_GLOBAL(my_pe(),i)>maxvertex) maxvertex = VERTEX_TO_GLOBAL(my_pe(),i);
+248: 	aml_long_allmax(&maxvertex);
+249: 
+250: 	} //only run at first validation
+251: 
+252: 	//Actual validation here:
+253: 	globpred=pred;
+254: 	globdist=dist;
+255: 	for (i = 0; i < nlocalverts; ++i)
+256: 		confirmed[i]=0;
+257: 
+258: 	for (i = 0; i < nlocalverts; ++i)
+259: 		if((pred[i]!=-1 && pred[i]<0) || pred[i]>maxvertex) 
+260: 		printf("Validation Error: predecessor %llu of vertex %llu is out of range\n",pred[i],VERTEX_TO_GLOBAL(my_pe(),i)),val_errors++;
+261: 	aml_long_allsum(&val_errors);
+262: 	if(val_errors>0) return 0;
+263: 
+264: 	if(validatingbfs) 
+265: 	makedepthmapforbfs(nlocalverts,root,pred,dist);
+266: 
+267: 	for (i = 0; i < nlocalverts; ++i) {
+268: 		if(dist[i]!=-1.0 && dist[i]<0.0) 
+269: 		printf("Validation Error: distance/depth %3.2f of vertex %llu is out of range\n",dist[i],VERTEX_TO_GLOBAL(my_pe(),i)),val_errors++;
+270: 		if((pred[i]==-1 && dist[i]!=-1.0) || (pred[i]!=-1 && dist[i]==-1.0)) 
+271: 		printf("Validation Error: vertex %llu has inconsistent predecessor %llu and distance %f\n",VERTEX_TO_GLOBAL(my_pe(),i),pred[i],dist[i]),val_errors++;
+272: 	}
+273: 
+274: 	if(my_pe()==VERTEX_OWNER(root)) {
+275: 		int vloc = VERTEX_LOCAL(root);
+276: 		if(pred[vloc]!=root || dist[vloc]!=0.0) 
+277: 		printf("Validation Error: root vertex %llu has predecessor %llu and distance %f\n",root,pred[vloc],dist[vloc]),val_errors++;
+278: 		else confirmed[vloc]=1;
+279: 	}
+280: 
+281: 	aml_register_handler(edgepreddisthndl,1);
+282: 	nedges_traversed=0;
+283: 
+284: 	for (i = 0; i < nlocalverts; ++i)
+285: 		for(j = vrowstarts[i];j<vrowstarts[i+1];j++)
+286: 			sendedgepreddist(i,j);
+287: 	aml_barrier();
+288: 
+289: 	for (i = 0; i < nlocalverts; ++i)
+290: 		if(confirmed[i]==0 && pred[i]!=-1) 
+291: 		printf("Validation Error: path to vertex %llu not confirmed from predecessor %llu with distance %f\n",VERTEX_TO_GLOBAL(my_pe(),i),pred[i],dist[i]),val_errors++;
+292: 
+293: 	aml_long_allsum(&val_errors);
+294: 	aml_long_allsum(&nedges_traversed);
+295: 	if(nedges_in!=NULL && *nedges_in!=nedges_traversed) 
+296: 	printf("Validation Error: wrong nedge_traversed %llu (correct number is %llu)\n",*nedges_in,nedges_traversed),val_errors++;
+297: 	if(val_errors>0) return 0; else return 1;
+298: }

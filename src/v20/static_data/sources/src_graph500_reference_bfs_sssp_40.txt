@@ -1,0 +1,8 @@
+/home/hananefdh/MPNA/graph500/src/validate.c: 287 - 291
+--------------------------------------------------------------------------------
+
+287: 	aml_barrier();
+288: 
+289: 	for (i = 0; i < nlocalverts; ++i)
+290: 		if(confirmed[i]==0 && pred[i]!=-1) 
+291: 		printf("Validation Error: path to vertex %llu not confirmed from predecessor %llu with distance %f\n",VERTEX_TO_GLOBAL(my_pe(),i),pred[i],dist[i]),val_errors++;

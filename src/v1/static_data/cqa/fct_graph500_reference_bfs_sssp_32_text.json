@@ -1,0 +1,675 @@
+{
+  "_cqa_text_report":
+    {
+      "_objects":
+        {
+          "list_path_2_complex_1":
+            {
+              "dynamic": true,
+              "initial": "closed",
+              "type": "list",
+              "lines":
+                [
+                "/home/hananefdh/MPNA/graph500/src/validate.c:62"
+                ],
+              "header": ""
+            },
+          "image_col_maj":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/col_maj.svg",
+              "size":
+                {
+                  "x": 500
+                }
+            },
+          "image_4x32_256":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/4x32_256.svg",
+              "size":
+                {
+                  "x": 500
+                }
+            },
+          "image_1x64_128":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/1x64_128.svg",
+              "size":
+                {
+                  "x": 500
+                }
+            },
+          "image_4x32_512":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/4x32_512.svg",
+              "size":
+                {
+                  "x": 500
+                }
+            },
+          "image_8x32_512":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/8x32_512.svg",
+              "size":
+                {
+                  "x": 500
+                }
+            },
+          "image_1x32_256":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/1x32_256.svg",
+              "size":
+                {
+                  "x": 500
+                }
+            },
+          "image_2x64_512":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/2x64_512.svg",
+              "size":
+                {
+                  "x": 500
+                }
+            },
+          "tt_insn_vec":
+            {
+              "type": "tooltip",
+              "help": "Portion of vector registers that is actually used. Available only for instructions belonging to a SIMD/vector instructions set (like x86 AVX)",
+              "text": "Vectorization"
+            },
+          "image_1x64_256":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/1x64_256.svg",
+              "size":
+                {
+                  "x": 500
+                }
+            },
+          "tt_Recip_throughput":
+            {
+              "type": "tooltip",
+              "help": "Average number of cycles to retire that instruction if repeated (assuming independent instructions, with no read-after-write dependency)",
+              "text": "Recip. throughput"
+            },
+          "list_path_4_complex_1":
+            {
+              "dynamic": true,
+              "initial": "closed",
+              "type": "list",
+              "lines":
+                [
+                "/home/hananefdh/MPNA/graph500/src/validate.c:62"
+                ],
+              "header": ""
+            },
+          "tt_Nb_FU":
+            {
+              "type": "tooltip",
+              "help": "Number of Fused (Front-end) uops",
+              "text": "Nb FU"
+            },
+          "image_vec_align":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/vec_align.svg",
+              "size":
+                {
+                  "x": 500
+                }
+            },
+          "image_1x64_512":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/1x64_512.svg",
+              "size":
+                {
+                  "x": 500
+                }
+            },
+          "image_1x32_128":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/1x32_128.svg",
+              "size":
+                {
+                  "x": 500
+                }
+            },
+          "list_path_3_complex_1":
+            {
+              "dynamic": true,
+              "initial": "closed",
+              "type": "list",
+              "lines":
+                [
+                "/home/hananefdh/MPNA/graph500/src/validate.c:62"
+                ],
+              "header": ""
+            },
+          "image_2x64_256":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/2x64_256.svg",
+              "size":
+                {
+                  "x": 500
+                }
+            },
+          "image_row_maj":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/row_maj.svg",
+              "size":
+                {
+                  "x": 500
+                }
+            },
+          "image_4x64_512":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/4x64_512.svg",
+              "size":
+                {
+                  "x": 500
+                }
+            },
+          "image_1x32_512":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/1x32_512.svg",
+              "size":
+                {
+                  "x": 500
+                }
+            },
+          "list_path_3_complex_2":
+            {
+              "dynamic": true,
+              "initial": "closed",
+              "type": "list",
+              "lines":
+                [
+                "/home/hananefdh/MPNA/graph500/src/validate.c:62"
+                ],
+              "header": ""
+            }
+        },
+      "AVG":
+        {
+          "hint":
+            [
+              {
+                "title": "Type of elements and instruction set",
+                "txt": "1 SSE or AVX instructions are processing arithmetic or math operations on single precision FP elements in scalar mode (one at a time).\n"
+              },
+              {
+                "title": "Matching between your function (in the source code) and the binary function",
+                "txt": "The binary function is composed of 0.25 FP arithmetical operations:\n - 0.25: addition or subtraction\nThe binary function is loading 44 bytes (11 single precision FP elements).\nThe binary function is storing 3 bytes (0 single precision FP elements)."
+              },
+              {
+                "title": "Arithmetic intensity",
+                "txt": "Arithmetic intensity is 0.01 FP operations per loaded or stored byte."
+              }
+            ],
+          "expert":
+            [
+              {
+                "title": "General properties",
+                "txt": "nb instructions    : 15.25\nnb uops            : 16.25\nloop length        : 64.50\nused x86 registers : 5\nused mmx registers : 0\nused xmm registers : 0.75\nused ymm registers : 0\nused zmm registers : 0\nnb stack references: 0\n"
+              },
+              {
+                "help": "Front-end corresponds to instructions fetching and decoding into macro/micro operations",
+                "title": "Front-end",
+                "txt": "MACRO FUSION NOT POSSIBLE\nmicro-operation queue: 2.71 cycles\nfront end            : 2.71 cycles\n"
+              },
+              {
+                "help": "Back-end corresponds to macro/micro operations execution (includes allocating registers, fetching operands etc.)",
+                "title": "Back-end",
+                "txt": "       | ALU0/BRU0 | ALU1 | ALU2 | ALU3 | BRU1 | AGU0 | AGU1 | AGU2 | FP0  | FP1  | FP2  | FP3  | FP4  | FP5\n-------------------------------------------------------------------------------------------------------------\nuops   | 2.19      | 2.19 | 2.13 | 2.13 | 1.63 | 2.75 | 2.75 | 2.75 | 0.00 | 0.00 | 0.50 | 0.50 | 0.50 | 0.50\ncycles | 2.19      | 2.19 | 2.13 | 2.13 | 1.63 | 2.75 | 2.75 | 2.75 | 0.00 | 0.00 | 0.50 | 0.50 | 0.50 | 0.50\n\nExecution ports to units layout:\n - ALU0/BRU0: ALU, BRU\n - ALU1: ALU\n - ALU2: ALU\n - ALU3: ALU\n - BRU1: BRU\n - AGU0 (256 bits): store address, load\n - AGU1 (256 bits): store address, load\n - AGU2 (256 bits): store address, load\n - FP0 (256 bits): VPU, DIV/SQRT\n - FP1 (256 bits): VPU, DIV/SQRT\n - FP2 (256 bits): VPU\n - FP3 (256 bits): VPU\n - FP4 (256 bits): FP store data\n - FP5 (256 bits): FP store data\n\nCycles executing div or sqrt instructions: NA\n"
+              },
+              {
+                "title": "Cycles summary",
+                "txt": "Front-end : 2.71\nDispatch  : 2.77\nOverall L1: 2.81\n"
+              },
+              {
+                "help": "Proportion of vectorizable instructions that are actually vectorized. Higher is better.",
+                "title": "Vectorization ratios",
+                "txt": "INT\nall    : 0%\nload   : 0%\nstore  : NA (no store vectorizable/vectorized instructions)\nmul    : NA (no mul vectorizable/vectorized instructions)\nadd-sub: NA (no add-sub vectorizable/vectorized instructions)\nfma    : NA (no fma vectorizable/vectorized instructions)\nother  : 0%\nFP\nall     : 0%\nload    : 0%\nstore   : 0%\nmul     : NA (no mul vectorizable/vectorized instructions)\nadd-sub : 0%\nfma     : NA (no fma vectorizable/vectorized instructions)\ndiv/sqrt: NA (no div/sqrt vectorizable/vectorized instructions)\nother   : 0%\nINT+FP\nall     : 0%\nload    : 0%\nstore   : 0%\nmul     : NA (no mul vectorizable/vectorized instructions)\nadd-sub : 0%\nfma     : NA (no fma vectorizable/vectorized instructions)\ndiv/sqrt: NA (no div/sqrt vectorizable/vectorized instructions)\nother   : 0%\n"
+              },
+              {
+                "help": "Effective/average relative length/width used in vector/SIMD registers. Higher is better.",
+                "title": "Vector efficiency ratios",
+                "txt": "INT\nall    : 7%\nload   : 12%\nstore  : NA (no store vectorizable/vectorized instructions)\nmul    : NA (no mul vectorizable/vectorized instructions)\nadd-sub: NA (no add-sub vectorizable/vectorized instructions)\nfma    : NA (no fma vectorizable/vectorized instructions)\nother  : 7%\nFP\nall     : 6%\nload    : 6%\nstore   : 6%\nmul     : NA (no mul vectorizable/vectorized instructions)\nadd-sub : 6%\nfma     : NA (no fma vectorizable/vectorized instructions)\ndiv/sqrt: NA (no div/sqrt vectorizable/vectorized instructions)\nother   : 6%\nINT+FP\nall     : 6%\nload    : 6%\nstore   : 6%\nmul     : NA (no mul vectorizable/vectorized instructions)\nadd-sub : 6%\nfma     : NA (no fma vectorizable/vectorized instructions)\ndiv/sqrt: NA (no div/sqrt vectorizable/vectorized instructions)\nother   : 6%\n"
+              },
+              {
+                "help": "Compare the CQA-computed load/store/compute metrics with the capacity of the core. For instance if CQA computes 24 bytes in the loop in 2 cycles (that is 12 cycles per cycle) and if the core can process up to 16 bytes per cycle, that metric is 75%.",
+                "title": "Cycles and memory resources usage",
+                "txt": "Assuming all data fit into the L1 cache, each call to the function takes 2.81 cycles. At this rate:\n - 16% of peak load performance is reached (15.76 out of 96.00 bytes loaded per cycle (GB/s @ 1GHz))\n - 1% of peak store performance is reached (0.75 out of 64.00 bytes stored per cycle (GB/s @ 1GHz))\n"
+              }
+            ],
+          "header":
+            [
+            "0% of peak computational performance is used (0.06 out of 48.00 FLOP per cycle (GFLOPS @ 1GHz))"
+            ],
+          "brief":
+            [
+
+            ],
+          "gain":
+            [
+              {
+                "workaround": " - Try another compiler or update/tune your current one\n - Make array accesses unit-stride:\n  * If your function streams arrays of structures (AoS), try to use structures of arrays instead (SoA):\nfor(i) a[i].x = b[i].x; (slow, non stride 1) => for(i) a.x[i] = b.x[i]; (fast, stride 1)\n",
+                "details": "All SSE/AVX instructions are used in scalar version (process only one data element in vector registers).\nSince your execution units are vector units, only a vectorized function can use their full power.\n",
+                "title": "Vectorization",
+                "txt": "Your function is not vectorized.\nOnly 6% of vector register length is used (average across all SSE/AVX instructions).\nBy vectorizing your function, you can lower the cost of an iteration from 2.81 to 0.45 cycles (6.28x speedup)."
+              }
+            ],
+          "potential":
+            [
+
+            ]
+        },
+      "paths":
+        [
+          {
+            "hint":
+              [
+                {
+                  "title": "Type of elements and instruction set",
+                  "txt": "No instructions are processing arithmetic or math operations on FP elements. This function is probably writing/copying data or processing integer elements."
+                },
+                {
+                  "title": "Matching between your function (in the source code) and the binary function",
+                  "txt": "The binary function does not contain any FP arithmetical operations.\nThe binary function is loading 28 bytes."
+                }
+              ],
+            "expert":
+              [
+                {
+                  "title": "General properties",
+                  "txt": "nb instructions    : 10\nnb uops            : 10\nloop length        : 38\nused x86 registers : 5\nused mmx registers : 0\nused xmm registers : 0\nused ymm registers : 0\nused zmm registers : 0\nnb stack references: 0\n"
+                },
+                {
+                  "help": "Front-end corresponds to instructions fetching and decoding into macro/micro operations",
+                  "title": "Front-end",
+                  "txt": "MACRO FUSION NOT POSSIBLE\nFIT IN UOP CACHE\nmicro-operation queue: 1.67 cycles\nfront end            : 1.67 cycles\n"
+                },
+                {
+                  "help": "Back-end corresponds to macro/micro operations execution (includes allocating registers, fetching operands etc.)",
+                  "title": "Back-end",
+                  "txt": "       | ALU0/BRU0 | ALU1 | ALU2 | ALU3 | BRU1 | AGU0 | AGU1 | AGU2 | FP0  | FP1  | FP2  | FP3  | FP4  | FP5\n-------------------------------------------------------------------------------------------------------------\nuops   | 1.75      | 1.75 | 1.75 | 1.75 | 1.00 | 1.67 | 1.67 | 1.67 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00\ncycles | 1.75      | 1.75 | 1.75 | 1.75 | 1.00 | 1.67 | 1.67 | 1.67 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00\n\nExecution ports to units layout:\n - ALU0/BRU0: ALU, BRU\n - ALU1: ALU\n - ALU2: ALU\n - ALU3: ALU\n - BRU1: BRU\n - AGU0 (256 bits): store address, load\n - AGU1 (256 bits): store address, load\n - AGU2 (256 bits): store address, load\n - FP0 (256 bits): VPU, DIV/SQRT\n - FP1 (256 bits): VPU, DIV/SQRT\n - FP2 (256 bits): VPU\n - FP3 (256 bits): VPU\n - FP4 (256 bits): FP store data\n - FP5 (256 bits): FP store data\n\nCycles executing div or sqrt instructions: NA\n"
+                },
+                {
+                  "title": "Cycles summary",
+                  "txt": "Front-end : 1.67\nDispatch  : 1.75\nOverall L1: 1.75\n"
+                },
+                {
+                  "help": "Proportion of vectorizable instructions that are actually vectorized. Higher is better.",
+                  "title": "Vectorization ratios",
+                  "txt": "all     : 0%\nload    : NA (no load vectorizable/vectorized instructions)\nstore   : NA (no store vectorizable/vectorized instructions)\nmul     : NA (no mul vectorizable/vectorized instructions)\nadd-sub : NA (no add-sub vectorizable/vectorized instructions)\nfma     : NA (no fma vectorizable/vectorized instructions)\ndiv/sqrt: NA (no div/sqrt vectorizable/vectorized instructions)\nother   : 0%\n"
+                },
+                {
+                  "help": "Effective/average relative length/width used in vector/SIMD registers. Higher is better.",
+                  "title": "Vector efficiency ratios",
+                  "txt": "all     : 6%\nload    : NA (no load vectorizable/vectorized instructions)\nstore   : NA (no store vectorizable/vectorized instructions)\nmul     : NA (no mul vectorizable/vectorized instructions)\nadd-sub : NA (no add-sub vectorizable/vectorized instructions)\nfma     : NA (no fma vectorizable/vectorized instructions)\ndiv/sqrt: NA (no div/sqrt vectorizable/vectorized instructions)\nother   : 6%\n"
+                },
+                {
+                  "help": "Compare the CQA-computed load/store/compute metrics with the capacity of the core. For instance if CQA computes 24 bytes in the loop in 2 cycles (that is 12 cycles per cycle) and if the core can process up to 16 bytes per cycle, that metric is 75%.",
+                  "title": "Cycles and memory resources usage",
+                  "txt": "Assuming all data fit into the L1 cache, each call to the function takes 1.75 cycles. At this rate:\n - 16% of peak load performance is reached (16.00 out of 96.00 bytes loaded per cycle (GB/s @ 1GHz))\n"
+                },
+                {
+                  "help": "List of bottlenecks detected by CQA. A bottleneck is an issue which reduces front-end throughput below the core capacity.",
+                  "title": "Front-end bottlenecks",
+                  "txt": "Found no such bottlenecks."
+                },
+                {
+                  "title": "ASM code",
+                  "txt": "In the binary file, the address of the function is: 405f60\n\nInstruction                   | Nb FU | ALU0/BRU0 | ALU1 | ALU2 | ALU3 | BRU1 | AGU0 | AGU1 | AGU2 | FP0 | FP1 | FP2 | FP3 | FP4 | FP5 | Latency | Recip. throughput | Vectorization\n------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\nMOV 0xb4cf2(%RIP),%ECX        | 1     | 0         | 0    | 0    | 0    | 0    | 0.33 | 0.33 | 0.33 | 0   | 0   | 0   | 0   | 0   | 0   | 3       | 0.33              | N/A\nMOVSXD (%RSI),%RAX            | 1     | 0.25      | 0.25 | 0.25 | 0.25 | 0    | 0.33 | 0.33 | 0.33 | 0   | 0   | 0   | 0   | 0   | 0   | 1       | 0.33              | N/A\nMOVSXD %EDI,%RDI              | 1     | 0.25      | 0.25 | 0.25 | 0.25 | 0    | 0    | 0    | 0    | 0   | 0   | 0   | 0   | 0   | 0   | 1       | 0.25              | scal (6.3%)\nMOVSXD 0x4(%RSI),%RDX         | 1     | 0.25      | 0.25 | 0.25 | 0.25 | 0    | 0.33 | 0.33 | 0.33 | 0   | 0   | 0   | 0   | 0   | 0   | 1       | 0.33              | N/A\nSHLX %RCX,%RAX,%RAX           | 1     | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 0   | 0   | 0   | 0   | 1       | 0.50              | N/A\nMOV 0xb4cf4(%RIP),%RCX        | 1     | 0         | 0    | 0    | 0    | 0    | 0.33 | 0.33 | 0.33 | 0   | 0   | 0   | 0   | 0   | 0   | 3       | 0.33              | N/A\nADD %RDI,%RAX                 | 1     | 0.25      | 0.25 | 0.25 | 0.25 | 0    | 0    | 0    | 0    | 0   | 0   | 0   | 0   | 0   | 0   | 1       | 0.25              | N/A\nCMP %RAX,(%RCX,%RDX,8)        | 1     | 0.25      | 0.25 | 0.25 | 0.25 | 0    | 0.33 | 0.33 | 0.33 | 0   | 0   | 0   | 0   | 0   | 0   | 1       | 0.33              | N/A\nJE 405f90 <frompredhndl+0x30> | 1     | 0.50      | 0    | 0    | 0    | 0.50 | 0    | 0    | 0    | 0   | 0   | 0   | 0   | 0   | 0   | 1       | 0.50-1            | N/A\nRET                           | 1     | 0.50      | 0    | 0    | 0    | 0.50 | 0    | 0    | 0    | 0   | 0   | 0   | 0   | 0   | 0   | 1       | 0.50              | N/A\n"
+                }
+              ],
+            "header":
+              [
+              "0% of peak computational performance is used (0.00 out of 48.00 FLOP per cycle (GFLOPS @ 1GHz))"
+              ],
+            "brief":
+              [
+
+              ],
+            "gain":
+              [
+                {
+                  "workaround": " - Try another compiler or update/tune your current one\n - Make array accesses unit-stride:\n  * If your function streams arrays of structures (AoS), try to use structures of arrays instead (SoA):\nfor(i) a[i].x = b[i].x; (slow, non stride 1) => for(i) a.x[i] = b.x[i]; (fast, stride 1)\n",
+                  "details": "All SSE/AVX instructions are used in scalar version (process only one data element in vector registers).\nSince your execution units are vector units, only a vectorized function can use their full power.\n",
+                  "title": "Vectorization",
+                  "txt": "Your function is not vectorized.\n16 data elements could be processed at once in vector registers.\nBy vectorizing your function, you can lower the cost of an iteration from 1.75 to 0.29 cycles (6.00x speedup)."
+                },
+                {
+                  "title": "Execution units bottlenecks",
+                  "txt": "Found no such bottlenecks but see expert reports for more complex bottlenecks."
+                }
+              ],
+            "potential":
+              [
+
+              ]
+          },
+          {
+            "hint":
+              [
+                {
+                  "details": "These instructions generate more than one micro-operation and only one of them can be decoded during a cycle and the extra micro-operations increase pressure on execution units.\n - VUCOMISS: 1 occurrences<<list_path_2_complex_1>>\n",
+                  "title": "Complex instructions",
+                  "txt": "Detected COMPLEX INSTRUCTIONS.\n"
+                },
+                {
+                  "title": "Type of elements and instruction set",
+                  "txt": "1 SSE or AVX instructions are processing arithmetic or math operations on single precision FP elements in scalar mode (one at a time).\n"
+                },
+                {
+                  "title": "Matching between your function (in the source code) and the binary function",
+                  "txt": "The binary function does not contain any FP arithmetical operations.\nThe binary function is loading 44 bytes (11 single precision FP elements)."
+                }
+              ],
+            "expert":
+              [
+                {
+                  "title": "General properties",
+                  "txt": "nb instructions    : 15\nnb uops            : 16\nloop length        : 63\nused x86 registers : 5\nused mmx registers : 0\nused xmm registers : 1\nused ymm registers : 0\nused zmm registers : 0\nnb stack references: 0\n"
+                },
+                {
+                  "help": "Front-end corresponds to instructions fetching and decoding into macro/micro operations",
+                  "title": "Front-end",
+                  "txt": "MACRO FUSION NOT POSSIBLE\nFIT IN UOP CACHE\nmicro-operation queue: 2.67 cycles\nfront end            : 2.67 cycles\n"
+                },
+                {
+                  "help": "Back-end corresponds to macro/micro operations execution (includes allocating registers, fetching operands etc.)",
+                  "title": "Back-end",
+                  "txt": "       | ALU0/BRU0 | ALU1 | ALU2 | ALU3 | BRU1 | AGU0 | AGU1 | AGU2 | FP0  | FP1  | FP2  | FP3  | FP4  | FP5\n-------------------------------------------------------------------------------------------------------------\nuops   | 2.25      | 2.25 | 2.00 | 2.00 | 1.50 | 2.67 | 2.67 | 2.67 | 0.00 | 0.00 | 0.50 | 0.50 | 0.50 | 0.50\ncycles | 2.25      | 2.25 | 2.00 | 2.00 | 1.50 | 2.67 | 2.67 | 2.67 | 0.00 | 0.00 | 0.50 | 0.50 | 0.50 | 0.50\n\nExecution ports to units layout:\n - ALU0/BRU0: ALU, BRU\n - ALU1: ALU\n - ALU2: ALU\n - ALU3: ALU\n - BRU1: BRU\n - AGU0 (256 bits): store address, load\n - AGU1 (256 bits): store address, load\n - AGU2 (256 bits): store address, load\n - FP0 (256 bits): VPU, DIV/SQRT\n - FP1 (256 bits): VPU, DIV/SQRT\n - FP2 (256 bits): VPU\n - FP3 (256 bits): VPU\n - FP4 (256 bits): FP store data\n - FP5 (256 bits): FP store data\n\nCycles executing div or sqrt instructions: NA\n"
+                },
+                {
+                  "title": "Cycles summary",
+                  "txt": "Front-end : 2.67\nDispatch  : 2.67\nOverall L1: 2.67\n"
+                },
+                {
+                  "help": "Proportion of vectorizable instructions that are actually vectorized. Higher is better.",
+                  "title": "Vectorization ratios",
+                  "txt": "INT\nall    : 0%\nload   : NA (no load vectorizable/vectorized instructions)\nstore  : NA (no store vectorizable/vectorized instructions)\nmul    : NA (no mul vectorizable/vectorized instructions)\nadd-sub: NA (no add-sub vectorizable/vectorized instructions)\nfma    : NA (no fma vectorizable/vectorized instructions)\nother  : 0%\nFP\nall     : 0%\nload    : 0%\nstore   : NA (no store vectorizable/vectorized instructions)\nmul     : NA (no mul vectorizable/vectorized instructions)\nadd-sub : NA (no add-sub vectorizable/vectorized instructions)\nfma     : NA (no fma vectorizable/vectorized instructions)\ndiv/sqrt: NA (no div/sqrt vectorizable/vectorized instructions)\nother   : 0%\nINT+FP\nall     : 0%\nload    : 0%\nstore   : NA (no store vectorizable/vectorized instructions)\nmul     : NA (no mul vectorizable/vectorized instructions)\nadd-sub : NA (no add-sub vectorizable/vectorized instructions)\nfma     : NA (no fma vectorizable/vectorized instructions)\ndiv/sqrt: NA (no div/sqrt vectorizable/vectorized instructions)\nother   : 0%\n"
+                },
+                {
+                  "help": "Effective/average relative length/width used in vector/SIMD registers. Higher is better.",
+                  "title": "Vector efficiency ratios",
+                  "txt": "INT\nall    : 6%\nload   : NA (no load vectorizable/vectorized instructions)\nstore  : NA (no store vectorizable/vectorized instructions)\nmul    : NA (no mul vectorizable/vectorized instructions)\nadd-sub: NA (no add-sub vectorizable/vectorized instructions)\nfma    : NA (no fma vectorizable/vectorized instructions)\nother  : 6%\nFP\nall     : 6%\nload    : 6%\nstore   : NA (no store vectorizable/vectorized instructions)\nmul     : NA (no mul vectorizable/vectorized instructions)\nadd-sub : NA (no add-sub vectorizable/vectorized instructions)\nfma     : NA (no fma vectorizable/vectorized instructions)\ndiv/sqrt: NA (no div/sqrt vectorizable/vectorized instructions)\nother   : 6%\nINT+FP\nall     : 6%\nload    : 6%\nstore   : NA (no store vectorizable/vectorized instructions)\nmul     : NA (no mul vectorizable/vectorized instructions)\nadd-sub : NA (no add-sub vectorizable/vectorized instructions)\nfma     : NA (no fma vectorizable/vectorized instructions)\ndiv/sqrt: NA (no div/sqrt vectorizable/vectorized instructions)\nother   : 6%\n"
+                },
+                {
+                  "help": "Compare the CQA-computed load/store/compute metrics with the capacity of the core. For instance if CQA computes 24 bytes in the loop in 2 cycles (that is 12 cycles per cycle) and if the core can process up to 16 bytes per cycle, that metric is 75%.",
+                  "title": "Cycles and memory resources usage",
+                  "txt": "Assuming all data fit into the L1 cache, each call to the function takes 2.67 cycles. At this rate:\n - 17% of peak load performance is reached (16.50 out of 96.00 bytes loaded per cycle (GB/s @ 1GHz))\n"
+                },
+                {
+                  "title": "Front-end bottlenecks",
+                  "txt": "Performance is limited by instruction throughput (loading/decoding program instructions to execution core) (front-end is a bottleneck).\n\nBy removing all these bottlenecks, you can lower the cost of an iteration from 2.67 to 2.25 cycles (1.19x speedup).\n"
+                },
+                {
+                  "title": "ASM code",
+                  "txt": "In the binary file, the address of the function is: 405f60\n\nInstruction                   | Nb FU | ALU0/BRU0 | ALU1 | ALU2 | ALU3 | BRU1 | AGU0 | AGU1 | AGU2 | FP0 | FP1 | FP2  | FP3  | FP4  | FP5  | Latency | Recip. throughput | Vectorization\n----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\nMOV 0xb4cf2(%RIP),%ECX        | 1     | 0         | 0    | 0    | 0    | 0    | 0.33 | 0.33 | 0.33 | 0   | 0   | 0    | 0    | 0    | 0    | 3       | 0.33              | N/A\nMOVSXD (%RSI),%RAX            | 1     | 0.25      | 0.25 | 0.25 | 0.25 | 0    | 0.33 | 0.33 | 0.33 | 0   | 0   | 0    | 0    | 0    | 0    | 1       | 0.33              | N/A\nMOVSXD %EDI,%RDI              | 1     | 0.25      | 0.25 | 0.25 | 0.25 | 0    | 0    | 0    | 0    | 0   | 0   | 0    | 0    | 0    | 0    | 1       | 0.25              | scal (6.3%)\nMOVSXD 0x4(%RSI),%RDX         | 1     | 0.25      | 0.25 | 0.25 | 0.25 | 0    | 0.33 | 0.33 | 0.33 | 0   | 0   | 0    | 0    | 0    | 0    | 1       | 0.33              | N/A\nSHLX %RCX,%RAX,%RAX           | 1     | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 0    | 0    | 0    | 0    | 1       | 0.50              | N/A\nMOV 0xb4cf4(%RIP),%RCX        | 1     | 0         | 0    | 0    | 0    | 0    | 0.33 | 0.33 | 0.33 | 0   | 0   | 0    | 0    | 0    | 0    | 3       | 0.33              | N/A\nADD %RDI,%RAX                 | 1     | 0.25      | 0.25 | 0.25 | 0.25 | 0    | 0    | 0    | 0    | 0   | 0   | 0    | 0    | 0    | 0    | 1       | 0.25              | N/A\nCMP %RAX,(%RCX,%RDX,8)        | 1     | 0.25      | 0.25 | 0.25 | 0.25 | 0    | 0.33 | 0.33 | 0.33 | 0   | 0   | 0    | 0    | 0    | 0    | 1       | 0.33              | N/A\nJE 405f90 <frompredhndl+0x30> | 1     | 0.50      | 0    | 0    | 0    | 0.50 | 0    | 0    | 0    | 0   | 0   | 0    | 0    | 0    | 0    | 1       | 0.50-1            | N/A\nRET                           | 1     | 0.50      | 0    | 0    | 0    | 0.50 | 0    | 0    | 0    | 0   | 0   | 0    | 0    | 0    | 0    | 1       | 0.50              | N/A\nMOV 0xb4ce9(%RIP),%RAX        | 1     | 0         | 0    | 0    | 0    | 0    | 0.33 | 0.33 | 0.33 | 0   | 0   | 0    | 0    | 0    | 0    | 3       | 0.33              | N/A\nLEA (%RAX,%RDX,4),%RAX        | 1     | 0.25      | 0.25 | 0.25 | 0.25 | 0    | 0    | 0    | 0    | 0   | 0   | 0    | 0    | 0    | 0    | 1       | 0.25              | N/A\nVMOVSS (%RAX),%XMM0           | 1     | 0         | 0    | 0    | 0    | 0    | 0.33 | 0.33 | 0.33 | 0   | 0   | 0    | 0    | 0    | 0    | 1       | 0.50              | scal (6.3%)\nVUCOMISS 0x50d9(%RIP),%XMM0   | 2     | 0         | 0    | 0    | 0    | 0    | 0.33 | 0.33 | 0.33 | 0   | 0   | 0.50 | 0.50 | 0.50 | 0.50 | 6       | 1                 | scal (6.3%)\nJP 405f85 <frompredhndl+0x25> | 1     | 0.50      | 0    | 0    | 0    | 0.50 | 0    | 0    | 0    | 0   | 0   | 0    | 0    | 0    | 0    | 1       | 0.50-1            | N/A\n"
+                }
+              ],
+            "header":
+              [
+              "0% of peak computational performance is used (0.00 out of 48.00 FLOP per cycle (GFLOPS @ 1GHz))"
+              ],
+            "brief":
+              [
+
+              ],
+            "gain":
+              [
+                {
+                  "workaround": " - Try to reorganize arrays of structures to structures of arrays\n - Consider to permute loops (see vectorization gain report)\n",
+                  "title": "Code clean check",
+                  "txt": "Detected a slowdown caused by scalar integer instructions (typically used for address computation).\nBy removing them, you can lower the cost of an iteration from 2.67 to 2.17 cycles (1.23x speedup)."
+                },
+                {
+                  "workaround": " - Try another compiler or update/tune your current one\n - Make array accesses unit-stride:\n  * If your function streams arrays of structures (AoS), try to use structures of arrays instead (SoA):\nfor(i) a[i].x = b[i].x; (slow, non stride 1) => for(i) a.x[i] = b.x[i]; (fast, stride 1)\n",
+                  "details": "All SSE/AVX instructions are used in scalar version (process only one data element in vector registers).\nSince your execution units are vector units, only a vectorized function can use their full power.\n",
+                  "title": "Vectorization",
+                  "txt": "Your function is not vectorized.\n16 data elements could be processed at once in vector registers.\n<<image_1x32_512>>By vectorizing your function, you can lower the cost of an iteration from 2.67 to 0.46 cycles (5.82x speedup)."
+                },
+                {
+                  "workaround": " - Read less array elements\n - Provide more information to your compiler:\n  * use the 'restrict' C99 keyword\n",
+                  "title": "Execution units bottlenecks",
+                  "txt": "Performance is limited by reading data from caches/RAM (load units are a bottleneck).\n\nBy removing all these bottlenecks, you can lower the cost of an iteration from 2.67 to 2.25 cycles (1.19x speedup).\n"
+                }
+              ],
+            "potential":
+              [
+
+              ]
+          },
+          {
+            "hint":
+              [
+                {
+                  "details": "These instructions generate more than one micro-operation and only one of them can be decoded during a cycle and the extra micro-operations increase pressure on execution units.\n - INC: 1 occurrences<<list_path_3_complex_1>>\n - VUCOMISS: 1 occurrences<<list_path_3_complex_2>>\n",
+                  "title": "Complex instructions",
+                  "txt": "Detected COMPLEX INSTRUCTIONS.\n"
+                },
+                {
+                  "title": "Type of elements and instruction set",
+                  "txt": "2 SSE or AVX instructions are processing arithmetic or math operations on single precision FP elements in scalar mode (one at a time).\n"
+                },
+                {
+                  "title": "Matching between your function (in the source code) and the binary function",
+                  "txt": "The binary function is composed of 1 FP arithmetical operations:\n - 1: addition or subtraction\nThe binary function is loading 60 bytes (15 single precision FP elements).\nThe binary function is storing 12 bytes (3 single precision FP elements)."
+                },
+                {
+                  "title": "Arithmetic intensity",
+                  "txt": "Arithmetic intensity is 0.01 FP operations per loaded or stored byte."
+                }
+              ],
+            "expert":
+              [
+                {
+                  "title": "General properties",
+                  "txt": "nb instructions    : 20\nnb uops            : 22\nloop length        : 92\nused x86 registers : 5\nused mmx registers : 0\nused xmm registers : 1\nused ymm registers : 0\nused zmm registers : 0\nnb stack references: 0\n"
+                },
+                {
+                  "help": "Front-end corresponds to instructions fetching and decoding into macro/micro operations",
+                  "title": "Front-end",
+                  "txt": "MACRO FUSION NOT POSSIBLE\nFIT IN UOP CACHE\nmicro-operation queue: 3.67 cycles\nfront end            : 3.67 cycles\n"
+                },
+                {
+                  "help": "Back-end corresponds to macro/micro operations execution (includes allocating registers, fetching operands etc.)",
+                  "title": "Back-end",
+                  "txt": "       | ALU0/BRU0 | ALU1 | ALU2 | ALU3 | BRU1 | AGU0 | AGU1 | AGU2 | FP0  | FP1  | FP2  | FP3  | FP4  | FP5\n-------------------------------------------------------------------------------------------------------------\nuops   | 2.50      | 2.50 | 2.50 | 2.50 | 2.00 | 4.00 | 4.00 | 4.00 | 0.00 | 0.00 | 1.00 | 1.00 | 1.00 | 1.00\ncycles | 2.50      | 2.50 | 2.50 | 2.50 | 2.00 | 4.00 | 4.00 | 4.00 | 0.00 | 0.00 | 1.00 | 1.00 | 1.00 | 1.00\n\nExecution ports to units layout:\n - ALU0/BRU0: ALU, BRU\n - ALU1: ALU\n - ALU2: ALU\n - ALU3: ALU\n - BRU1: BRU\n - AGU0 (256 bits): store address, load\n - AGU1 (256 bits): store address, load\n - AGU2 (256 bits): store address, load\n - FP0 (256 bits): VPU, DIV/SQRT\n - FP1 (256 bits): VPU, DIV/SQRT\n - FP2 (256 bits): VPU\n - FP3 (256 bits): VPU\n - FP4 (256 bits): FP store data\n - FP5 (256 bits): FP store data\n\nCycles executing div or sqrt instructions: NA\n"
+                },
+                {
+                  "title": "Cycles summary",
+                  "txt": "Front-end : 3.67\nDispatch  : 4.00\nOverall L1: 4.00\n"
+                },
+                {
+                  "help": "Proportion of vectorizable instructions that are actually vectorized. Higher is better.",
+                  "title": "Vectorization ratios",
+                  "txt": "INT\nall    : 0%\nload   : 0%\nstore  : NA (no store vectorizable/vectorized instructions)\nmul    : NA (no mul vectorizable/vectorized instructions)\nadd-sub: NA (no add-sub vectorizable/vectorized instructions)\nfma    : NA (no fma vectorizable/vectorized instructions)\nother  : 0%\nFP\nall     : 0%\nload    : 0%\nstore   : 0%\nmul     : NA (no mul vectorizable/vectorized instructions)\nadd-sub : 0%\nfma     : NA (no fma vectorizable/vectorized instructions)\ndiv/sqrt: NA (no div/sqrt vectorizable/vectorized instructions)\nother   : 0%\nINT+FP\nall     : 0%\nload    : 0%\nstore   : 0%\nmul     : NA (no mul vectorizable/vectorized instructions)\nadd-sub : 0%\nfma     : NA (no fma vectorizable/vectorized instructions)\ndiv/sqrt: NA (no div/sqrt vectorizable/vectorized instructions)\nother   : 0%\n"
+                },
+                {
+                  "help": "Effective/average relative length/width used in vector/SIMD registers. Higher is better.",
+                  "title": "Vector efficiency ratios",
+                  "txt": "INT\nall    : 9%\nload   : 12%\nstore  : NA (no store vectorizable/vectorized instructions)\nmul    : NA (no mul vectorizable/vectorized instructions)\nadd-sub: NA (no add-sub vectorizable/vectorized instructions)\nfma    : NA (no fma vectorizable/vectorized instructions)\nother  : 9%\nFP\nall     : 6%\nload    : 6%\nstore   : 6%\nmul     : NA (no mul vectorizable/vectorized instructions)\nadd-sub : 6%\nfma     : NA (no fma vectorizable/vectorized instructions)\ndiv/sqrt: NA (no div/sqrt vectorizable/vectorized instructions)\nother   : 6%\nINT+FP\nall     : 7%\nload    : 7%\nstore   : 6%\nmul     : NA (no mul vectorizable/vectorized instructions)\nadd-sub : 6%\nfma     : NA (no fma vectorizable/vectorized instructions)\ndiv/sqrt: NA (no div/sqrt vectorizable/vectorized instructions)\nother   : 8%\n"
+                },
+                {
+                  "help": "Compare the CQA-computed load/store/compute metrics with the capacity of the core. For instance if CQA computes 24 bytes in the loop in 2 cycles (that is 12 cycles per cycle) and if the core can process up to 16 bytes per cycle, that metric is 75%.",
+                  "title": "Cycles and memory resources usage",
+                  "txt": "Assuming all data fit into the L1 cache, each call to the function takes 4.00 cycles. At this rate:\n - 15% of peak load performance is reached (15.00 out of 96.00 bytes loaded per cycle (GB/s @ 1GHz))\n - 4% of peak store performance is reached (3.00 out of 64.00 bytes stored per cycle (GB/s @ 1GHz))\n"
+                },
+                {
+                  "help": "List of bottlenecks detected by CQA. A bottleneck is an issue which reduces front-end throughput below the core capacity.",
+                  "title": "Front-end bottlenecks",
+                  "txt": "Found no such bottlenecks."
+                },
+                {
+                  "title": "ASM code",
+                  "txt": "In the binary file, the address of the function is: 405f60\n\nInstruction                      | Nb FU | ALU0/BRU0 | ALU1 | ALU2 | ALU3 | BRU1 | AGU0 | AGU1 | AGU2 | FP0 | FP1 | FP2  | FP3  | FP4  | FP5  | Latency | Recip. throughput | Vectorization\n-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\nMOV 0xb4cf2(%RIP),%ECX           | 1     | 0         | 0    | 0    | 0    | 0    | 0.33 | 0.33 | 0.33 | 0   | 0   | 0    | 0    | 0    | 0    | 3       | 0.33              | N/A\nMOVSXD (%RSI),%RAX               | 1     | 0.25      | 0.25 | 0.25 | 0.25 | 0    | 0.33 | 0.33 | 0.33 | 0   | 0   | 0    | 0    | 0    | 0    | 1       | 0.33              | N/A\nMOVSXD %EDI,%RDI                 | 1     | 0.25      | 0.25 | 0.25 | 0.25 | 0    | 0    | 0    | 0    | 0   | 0   | 0    | 0    | 0    | 0    | 1       | 0.25              | scal (6.3%)\nMOVSXD 0x4(%RSI),%RDX            | 1     | 0.25      | 0.25 | 0.25 | 0.25 | 0    | 0.33 | 0.33 | 0.33 | 0   | 0   | 0    | 0    | 0    | 0    | 1       | 0.33              | N/A\nSHLX %RCX,%RAX,%RAX              | 1     | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 0    | 0    | 0    | 0    | 1       | 0.50              | N/A\nMOV 0xb4cf4(%RIP),%RCX           | 1     | 0         | 0    | 0    | 0    | 0    | 0.33 | 0.33 | 0.33 | 0   | 0   | 0    | 0    | 0    | 0    | 3       | 0.33              | N/A\nADD %RDI,%RAX                    | 1     | 0.25      | 0.25 | 0.25 | 0.25 | 0    | 0    | 0    | 0    | 0   | 0   | 0    | 0    | 0    | 0    | 1       | 0.25              | N/A\nCMP %RAX,(%RCX,%RDX,8)           | 1     | 0.25      | 0.25 | 0.25 | 0.25 | 0    | 0.33 | 0.33 | 0.33 | 0   | 0   | 0    | 0    | 0    | 0    | 1       | 0.33              | scal (12.5%)\nJE 405f90 <frompredhndl+0x30>    | 1     | 0.50      | 0    | 0    | 0    | 0.50 | 0    | 0    | 0    | 0   | 0   | 0    | 0    | 0    | 0    | 1       | 0.50-1            | N/A\nMOV 0xb4ce9(%RIP),%RAX           | 1     | 0         | 0    | 0    | 0    | 0    | 0.33 | 0.33 | 0.33 | 0   | 0   | 0    | 0    | 0    | 0    | 3       | 0.33              | N/A\nLEA (%RAX,%RDX,4),%RAX           | 1     | 0.25      | 0.25 | 0.25 | 0.25 | 0    | 0    | 0    | 0    | 0   | 0   | 0    | 0    | 0    | 0    | 1       | 0.25              | N/A\nVMOVSS (%RAX),%XMM0              | 1     | 0         | 0    | 0    | 0    | 0    | 0.33 | 0.33 | 0.33 | 0   | 0   | 0    | 0    | 0    | 0    | 1       | 0.50              | scal (6.3%)\nVUCOMISS 0x50d9(%RIP),%XMM0      | 2     | 0         | 0    | 0    | 0    | 0    | 0.33 | 0.33 | 0.33 | 0   | 0   | 0.50 | 0.50 | 0.50 | 0.50 | 6       | 1                 | scal (6.3%)\nJP 405f85 <frompredhndl+0x25>    | 1     | 0.50      | 0    | 0    | 0    | 0.50 | 0    | 0    | 0    | 0   | 0   | 0    | 0    | 0    | 0    | 1       | 0.50-1            | N/A\nJNE 405f85 <frompredhndl+0x25>   | 1     | 0.50      | 0    | 0    | 0    | 0.50 | 0    | 0    | 0    | 0   | 0   | 0    | 0    | 0    | 0    | 1       | 0.50-1            | N/A\nVMOVSS 0x50ed(%RIP),%XMM0        | 1     | 0         | 0    | 0    | 0    | 0    | 0.33 | 0.33 | 0.33 | 0   | 0   | 0    | 0    | 0    | 0    | 1       | 0.50              | scal (6.3%)\nVADDSS 0xb4ce5(%RIP),%XMM0,%XMM0 | 1     | 0         | 0    | 0    | 0    | 0    | 0.33 | 0.33 | 0.33 | 0   | 0   | 0.50 | 0.50 | 0    | 0    | 3       | 0.50              | scal (6.3%)\nVMOVSS %XMM0,(%RAX)              | 1     | 0         | 0    | 0    | 0    | 0    | 0.33 | 0.33 | 0.33 | 0   | 0   | 0    | 0    | 0.50 | 0.50 | 1       | 1                 | scal (6.3%)\nINCQ 0xb4ca2(%RIP)               | 2     | 0.25      | 0.25 | 0.25 | 0.25 | 0    | 0.33 | 0.33 | 0.33 | 0   | 0   | 0    | 0    | 0    | 0    | 1       | 0.50              | N/A\nRET                              | 1     | 0.50      | 0    | 0    | 0    | 0.50 | 0    | 0    | 0    | 0   | 0   | 0    | 0    | 0    | 0    | 1       | 0.50              | N/A\n"
+                }
+              ],
+            "header":
+              [
+              "0% of peak computational performance is used (0.25 out of 48.00 FLOP per cycle (GFLOPS @ 1GHz))"
+              ],
+            "brief":
+              [
+
+              ],
+            "gain":
+              [
+                {
+                  "workaround": " - Try to reorganize arrays of structures to structures of arrays\n - Consider to permute loops (see vectorization gain report)\n",
+                  "title": "Code clean check",
+                  "txt": "Detected a slowdown caused by scalar integer instructions (typically used for address computation).\nBy removing them, you can lower the cost of an iteration from 4.00 to 2.67 cycles (1.50x speedup)."
+                },
+                {
+                  "workaround": " - Try another compiler or update/tune your current one\n - Make array accesses unit-stride:\n  * If your function streams arrays of structures (AoS), try to use structures of arrays instead (SoA):\nfor(i) a[i].x = b[i].x; (slow, non stride 1) => for(i) a.x[i] = b.x[i]; (fast, stride 1)\n",
+                  "details": "All SSE/AVX instructions are used in scalar version (process only one data element in vector registers).\nSince your execution units are vector units, only a vectorized function can use their full power.\n",
+                  "title": "Vectorization",
+                  "txt": "Your function is not vectorized.\nOnly 7% of vector register length is used (average across all SSE/AVX instructions).\nBy vectorizing your function, you can lower the cost of an iteration from 4.00 to 0.58 cycles (6.86x speedup)."
+                },
+                {
+                  "workaround": " - Read less array elements\n - Write less array elements\n - Provide more information to your compiler:\n  * use the 'restrict' C99 keyword\n",
+                  "title": "Execution units bottlenecks",
+                  "txt": "Performance is limited by:\n - reading data from caches/RAM (load units are a bottleneck)\n - writing data to caches/RAM (the store unit is a bottleneck)\n\nBy removing all these bottlenecks, you can lower the cost of an iteration from 4.00 to 3.67 cycles (1.09x speedup).\n"
+                }
+              ],
+            "potential":
+              [
+
+              ]
+          },
+          {
+            "hint":
+              [
+                {
+                  "details": "These instructions generate more than one micro-operation and only one of them can be decoded during a cycle and the extra micro-operations increase pressure on execution units.\n - VUCOMISS: 1 occurrences<<list_path_4_complex_1>>\n",
+                  "title": "Complex instructions",
+                  "txt": "Detected COMPLEX INSTRUCTIONS.\n"
+                },
+                {
+                  "title": "Type of elements and instruction set",
+                  "txt": "1 SSE or AVX instructions are processing arithmetic or math operations on single precision FP elements in scalar mode (one at a time).\n"
+                },
+                {
+                  "title": "Matching between your function (in the source code) and the binary function",
+                  "txt": "The binary function does not contain any FP arithmetical operations.\nThe binary function is loading 44 bytes (11 single precision FP elements)."
+                }
+              ],
+            "expert":
+              [
+                {
+                  "title": "General properties",
+                  "txt": "nb instructions    : 16\nnb uops            : 17\nloop length        : 65\nused x86 registers : 5\nused mmx registers : 0\nused xmm registers : 1\nused ymm registers : 0\nused zmm registers : 0\nnb stack references: 0\n"
+                },
+                {
+                  "help": "Front-end corresponds to instructions fetching and decoding into macro/micro operations",
+                  "title": "Front-end",
+                  "txt": "MACRO FUSION NOT POSSIBLE\nFIT IN UOP CACHE\nmicro-operation queue: 2.83 cycles\nfront end            : 2.83 cycles\n"
+                },
+                {
+                  "help": "Back-end corresponds to macro/micro operations execution (includes allocating registers, fetching operands etc.)",
+                  "title": "Back-end",
+                  "txt": "       | ALU0/BRU0 | ALU1 | ALU2 | ALU3 | BRU1 | AGU0 | AGU1 | AGU2 | FP0  | FP1  | FP2  | FP3  | FP4  | FP5\n-------------------------------------------------------------------------------------------------------------\nuops   | 2.25      | 2.25 | 2.25 | 2.25 | 2.00 | 2.67 | 2.67 | 2.67 | 0.00 | 0.00 | 0.50 | 0.50 | 0.50 | 0.50\ncycles | 2.25      | 2.25 | 2.25 | 2.25 | 2.00 | 2.67 | 2.67 | 2.67 | 0.00 | 0.00 | 0.50 | 0.50 | 0.50 | 0.50\n\nExecution ports to units layout:\n - ALU0/BRU0: ALU, BRU\n - ALU1: ALU\n - ALU2: ALU\n - ALU3: ALU\n - BRU1: BRU\n - AGU0 (256 bits): store address, load\n - AGU1 (256 bits): store address, load\n - AGU2 (256 bits): store address, load\n - FP0 (256 bits): VPU, DIV/SQRT\n - FP1 (256 bits): VPU, DIV/SQRT\n - FP2 (256 bits): VPU\n - FP3 (256 bits): VPU\n - FP4 (256 bits): FP store data\n - FP5 (256 bits): FP store data\n\nCycles executing div or sqrt instructions: NA\n"
+                },
+                {
+                  "title": "Cycles summary",
+                  "txt": "Front-end : 2.83\nDispatch  : 2.67\nOverall L1: 2.83\n"
+                },
+                {
+                  "help": "Proportion of vectorizable instructions that are actually vectorized. Higher is better.",
+                  "title": "Vectorization ratios",
+                  "txt": "INT\nall    : 0%\nload   : NA (no load vectorizable/vectorized instructions)\nstore  : NA (no store vectorizable/vectorized instructions)\nmul    : NA (no mul vectorizable/vectorized instructions)\nadd-sub: NA (no add-sub vectorizable/vectorized instructions)\nfma    : NA (no fma vectorizable/vectorized instructions)\nother  : 0%\nFP\nall     : 0%\nload    : 0%\nstore   : NA (no store vectorizable/vectorized instructions)\nmul     : NA (no mul vectorizable/vectorized instructions)\nadd-sub : NA (no add-sub vectorizable/vectorized instructions)\nfma     : NA (no fma vectorizable/vectorized instructions)\ndiv/sqrt: NA (no div/sqrt vectorizable/vectorized instructions)\nother   : 0%\nINT+FP\nall     : 0%\nload    : 0%\nstore   : NA (no store vectorizable/vectorized instructions)\nmul     : NA (no mul vectorizable/vectorized instructions)\nadd-sub : NA (no add-sub vectorizable/vectorized instructions)\nfma     : NA (no fma vectorizable/vectorized instructions)\ndiv/sqrt: NA (no div/sqrt vectorizable/vectorized instructions)\nother   : 0%\n"
+                },
+                {
+                  "help": "Effective/average relative length/width used in vector/SIMD registers. Higher is better.",
+                  "title": "Vector efficiency ratios",
+                  "txt": "INT\nall    : 6%\nload   : NA (no load vectorizable/vectorized instructions)\nstore  : NA (no store vectorizable/vectorized instructions)\nmul    : NA (no mul vectorizable/vectorized instructions)\nadd-sub: NA (no add-sub vectorizable/vectorized instructions)\nfma    : NA (no fma vectorizable/vectorized instructions)\nother  : 6%\nFP\nall     : 6%\nload    : 6%\nstore   : NA (no store vectorizable/vectorized instructions)\nmul     : NA (no mul vectorizable/vectorized instructions)\nadd-sub : NA (no add-sub vectorizable/vectorized instructions)\nfma     : NA (no fma vectorizable/vectorized instructions)\ndiv/sqrt: NA (no div/sqrt vectorizable/vectorized instructions)\nother   : 6%\nINT+FP\nall     : 6%\nload    : 6%\nstore   : NA (no store vectorizable/vectorized instructions)\nmul     : NA (no mul vectorizable/vectorized instructions)\nadd-sub : NA (no add-sub vectorizable/vectorized instructions)\nfma     : NA (no fma vectorizable/vectorized instructions)\ndiv/sqrt: NA (no div/sqrt vectorizable/vectorized instructions)\nother   : 6%\n"
+                },
+                {
+                  "help": "Compare the CQA-computed load/store/compute metrics with the capacity of the core. For instance if CQA computes 24 bytes in the loop in 2 cycles (that is 12 cycles per cycle) and if the core can process up to 16 bytes per cycle, that metric is 75%.",
+                  "title": "Cycles and memory resources usage",
+                  "txt": "Assuming all data fit into the L1 cache, each call to the function takes 2.83 cycles. At this rate:\n - 16% of peak load performance is reached (15.53 out of 96.00 bytes loaded per cycle (GB/s @ 1GHz))\n"
+                },
+                {
+                  "title": "Front-end bottlenecks",
+                  "txt": "Performance is limited by instruction throughput (loading/decoding program instructions to execution core) (front-end is a bottleneck).\n\nBy removing all these bottlenecks, you can lower the cost of an iteration from 2.83 to 2.67 cycles (1.06x speedup).\n"
+                },
+                {
+                  "title": "ASM code",
+                  "txt": "In the binary file, the address of the function is: 405f60\n\nInstruction                    | Nb FU | ALU0/BRU0 | ALU1 | ALU2 | ALU3 | BRU1 | AGU0 | AGU1 | AGU2 | FP0 | FP1 | FP2  | FP3  | FP4  | FP5  | Latency | Recip. throughput | Vectorization\n-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\nMOV 0xb4cf2(%RIP),%ECX         | 1     | 0         | 0    | 0    | 0    | 0    | 0.33 | 0.33 | 0.33 | 0   | 0   | 0    | 0    | 0    | 0    | 3       | 0.33              | N/A\nMOVSXD (%RSI),%RAX             | 1     | 0.25      | 0.25 | 0.25 | 0.25 | 0    | 0.33 | 0.33 | 0.33 | 0   | 0   | 0    | 0    | 0    | 0    | 1       | 0.33              | N/A\nMOVSXD %EDI,%RDI               | 1     | 0.25      | 0.25 | 0.25 | 0.25 | 0    | 0    | 0    | 0    | 0   | 0   | 0    | 0    | 0    | 0    | 1       | 0.25              | scal (6.3%)\nMOVSXD 0x4(%RSI),%RDX          | 1     | 0.25      | 0.25 | 0.25 | 0.25 | 0    | 0.33 | 0.33 | 0.33 | 0   | 0   | 0    | 0    | 0    | 0    | 1       | 0.33              | N/A\nSHLX %RCX,%RAX,%RAX            | 1     | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 0    | 0    | 0    | 0    | 1       | 0.50              | N/A\nMOV 0xb4cf4(%RIP),%RCX         | 1     | 0         | 0    | 0    | 0    | 0    | 0.33 | 0.33 | 0.33 | 0   | 0   | 0    | 0    | 0    | 0    | 3       | 0.33              | N/A\nADD %RDI,%RAX                  | 1     | 0.25      | 0.25 | 0.25 | 0.25 | 0    | 0    | 0    | 0    | 0   | 0   | 0    | 0    | 0    | 0    | 1       | 0.25              | N/A\nCMP %RAX,(%RCX,%RDX,8)         | 1     | 0.25      | 0.25 | 0.25 | 0.25 | 0    | 0.33 | 0.33 | 0.33 | 0   | 0   | 0    | 0    | 0    | 0    | 1       | 0.33              | N/A\nJE 405f90 <frompredhndl+0x30>  | 1     | 0.50      | 0    | 0    | 0    | 0.50 | 0    | 0    | 0    | 0   | 0   | 0    | 0    | 0    | 0    | 1       | 0.50-1            | N/A\nRET                            | 1     | 0.50      | 0    | 0    | 0    | 0.50 | 0    | 0    | 0    | 0   | 0   | 0    | 0    | 0    | 0    | 1       | 0.50              | N/A\nMOV 0xb4ce9(%RIP),%RAX         | 1     | 0         | 0    | 0    | 0    | 0    | 0.33 | 0.33 | 0.33 | 0   | 0   | 0    | 0    | 0    | 0    | 3       | 0.33              | N/A\nLEA (%RAX,%RDX,4),%RAX         | 1     | 0.25      | 0.25 | 0.25 | 0.25 | 0    | 0    | 0    | 0    | 0   | 0   | 0    | 0    | 0    | 0    | 1       | 0.25              | N/A\nVMOVSS (%RAX),%XMM0            | 1     | 0         | 0    | 0    | 0    | 0    | 0.33 | 0.33 | 0.33 | 0   | 0   | 0    | 0    | 0    | 0    | 1       | 0.50              | scal (6.3%)\nVUCOMISS 0x50d9(%RIP),%XMM0    | 2     | 0         | 0    | 0    | 0    | 0    | 0.33 | 0.33 | 0.33 | 0   | 0   | 0.50 | 0.50 | 0.50 | 0.50 | 6       | 1                 | scal (6.3%)\nJP 405f85 <frompredhndl+0x25>  | 1     | 0.50      | 0    | 0    | 0    | 0.50 | 0    | 0    | 0    | 0   | 0   | 0    | 0    | 0    | 0    | 1       | 0.50-1            | N/A\nJNE 405f85 <frompredhndl+0x25> | 1     | 0.50      | 0    | 0    | 0    | 0.50 | 0    | 0    | 0    | 0   | 0   | 0    | 0    | 0    | 0    | 1       | 0.50-1            | N/A\n"
+                }
+              ],
+            "header":
+              [
+              "0% of peak computational performance is used (0.00 out of 48.00 FLOP per cycle (GFLOPS @ 1GHz))"
+              ],
+            "brief":
+              [
+
+              ],
+            "gain":
+              [
+                {
+                  "workaround": " - Try to reorganize arrays of structures to structures of arrays\n - Consider to permute loops (see vectorization gain report)\n",
+                  "title": "Code clean check",
+                  "txt": "Detected a slowdown caused by scalar integer instructions (typically used for address computation).\nBy removing them, you can lower the cost of an iteration from 2.83 to 2.33 cycles (1.21x speedup)."
+                },
+                {
+                  "workaround": " - Try another compiler or update/tune your current one\n - Make array accesses unit-stride:\n  * If your function streams arrays of structures (AoS), try to use structures of arrays instead (SoA):\nfor(i) a[i].x = b[i].x; (slow, non stride 1) => for(i) a.x[i] = b.x[i]; (fast, stride 1)\n",
+                  "details": "All SSE/AVX instructions are used in scalar version (process only one data element in vector registers).\nSince your execution units are vector units, only a vectorized function can use their full power.\n",
+                  "title": "Vectorization",
+                  "txt": "Your function is not vectorized.\n16 data elements could be processed at once in vector registers.\n<<image_1x32_512>>By vectorizing your function, you can lower the cost of an iteration from 2.83 to 0.46 cycles (6.18x speedup)."
+                },
+                {
+                  "title": "Execution units bottlenecks",
+                  "txt": "Found no such bottlenecks but see expert reports for more complex bottlenecks."
+                }
+              ],
+            "potential":
+              [
+
+              ]
+          }
+        ],
+      "common":
+        {
+          "header":
+            [
+            "The function is defined in /home/hananefdh/MPNA/graph500/src/validate.c:59-63.\n",
+            "This function has 4 execution paths.\n",
+            "The presence of multiple execution paths is typically the main/first bottleneck.\nTry to simplify control inside function: ideally, try to remove all conditional expressions, for example by (if applicable):\n - hoisting them (moving them outside the function)\n - turning them into conditional moves, MIN or MAX\n\n",
+            "Ex: if (x<0) x=0 => x = (x<0 ? 0 : x) (or MAX(0,x) after defining the corresponding macro)\n"
+            ],
+          "nb_paths": 4
+        }
+    }
+}

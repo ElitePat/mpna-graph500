@@ -1,0 +1,8 @@
+/home/hananefdh/MPNA/graph500/src/bfs_reference.c: 132 - 136
+--------------------------------------------------------------------------------
+
+132: 	for(i=0;i<g.nlocalverts;i++)
+133: 		if(pred_glob[i]!=-1) {
+134: 			for(j=rowstarts[i];j<rowstarts[i+1];j++)
+135: 				if(COLUMN(j)<=VERTEX_TO_GLOBAL(my_pe(),i))
+136: 					edge_count++;

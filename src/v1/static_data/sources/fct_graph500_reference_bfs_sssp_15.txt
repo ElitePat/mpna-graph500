@@ -1,0 +1,20 @@
+/home/hananefdh/MPNA/graph500/src/sssp_reference.c: 46 - 62
+--------------------------------------------------------------------------------
+
+46: 	int vloc = m->dest_vloc;
+47: 	float w = m->w;
+48: 	float *dest_dist = &glob_dist[vloc];
+49: 	//check if relaxation is needed: either new path is shorter or vertex not reached earlier
+50: 	if (*dest_dist < 0 || *dest_dist > w) {
+51: 		*dest_dist = w; //update distance
+52: 		pred_glob[vloc]=VERTEX_TO_GLOBAL(from,m->src_vloc); //update path
+53: 
+54: 		if(lightphase && !TEST_VISITEDLOC(vloc)) //Bitmap used to track if was already relaxed with light edge
+55: 		{
+56: 			if(w < glob_maxdelta) { //if falls into current bucket needs further reprocessing
+57: 				q2[q2c++] = vloc;
+58: 				SET_VISITEDLOC(vloc);
+59: 			}
+60: 		}
+61: 	}
+62: }

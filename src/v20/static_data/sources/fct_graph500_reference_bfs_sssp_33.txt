@@ -1,0 +1,26 @@
+/home/hananefdh/MPNA/graph500/src/validate.c: 125 - 147
+--------------------------------------------------------------------------------
+
+125: void edgepreddisthndl(int frompe,void* data,int sz) {
+126: 	edgedist *m = (edgedist*) data;
+127: 
+128: 	unsigned int v1loc = m->vloc;
+129: 
+130: 	int64_t v1 = VERTEX_TO_GLOBAL(my_pe(),v1loc);
+131: 	int64_t v0 = VERTEX_TO_GLOBAL(frompe,m->vfrom);
+132: 	int64_t predv1 = globpred[v1loc];
+133: 	int64_t predv0 = m->predfrom;
+134: #ifdef SSSP
+135: 	float w = (validatingbfs?1.0:m->w);
+136: #else
+137: 	float w = 1.0;
+138: #endif
+139: 	float distv0 = m->distfrom;
+140: 	float distv1 = globdist[v1loc];
+141: 	if(predv0==-1 && predv1==-1) return; else if(v0<v1) nedges_traversed++;
+142: 
+143: 	if((predv0==-1 && predv1!=-1) || (predv1==-1 && predv0!=-1)) DUMPERROR("edge connecting visited and unvisited vertices");
+144: 	if(predv1==v0 && distv1 == distv0+w) confirmed[v1loc]=1; //confirm pred/dist as existing edge
+145: 
+146: 	if(distv0+w < distv1 || distv1+w<distv0) DUMPERROR("triangle rule violated");
+147: }

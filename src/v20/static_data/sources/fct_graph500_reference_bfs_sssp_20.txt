@@ -1,0 +1,10 @@
+/home/hananefdh/MPNA/graph500/src/csr_reference.c: 42 - 48
+--------------------------------------------------------------------------------
+
+42: 	int64_t gtgt = *((int64_t*)(data+4));
+43: 	SETCOLUMN(degrees[vloc]++,gtgt);
+44: #ifdef SSSP
+45: 	float w = ((float*)data)[3];
+46: 	weights[degrees[vloc]-1]=w;
+47: #endif
+48: }

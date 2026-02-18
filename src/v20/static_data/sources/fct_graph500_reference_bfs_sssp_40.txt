@@ -1,0 +1,36 @@
+/home/hananefdh/MPNA/graph500/src/validate.c: 66 - 177
+--------------------------------------------------------------------------------
+
+66: 	int pe=VERTEX_OWNER(src);
+67: 	int vloc[2]={vfrom, VERTEX_LOCAL(src)};
+68: 	aml_send(&vloc,1,8,pe);
+[...]
+149: void makedepthmapforbfs(const size_t nlocalverts,const int64_t root,int64_t * const pred,float* dist) {
+150: 
+151: 	int i,j;
+152: 	for(i=0;i<nlocalverts;i++) {
+153: 		dist[i]=FLT_MAX; //at the end there should be no FLT_MAX left
+154: 		if(pred[i]==-1) dist[i]=-1.0;
+155: 		if(pred[i]==root) dist[i]=1.0;
+156: 	}
+157: 
+158: 	//fix root distance
+159: 	if(my_pe()==VERTEX_OWNER(root)) dist[VERTEX_LOCAL(root)]=0.0;
+160: 
+161: 	newvisits=1;
+162: 	prevlevel=0.0;
+163: 	aml_register_handler(frompredhndl,1);
+164: 
+165: 	while(newvisits!=0) {
+166: 		newvisits=0;
+167: 		prevlevel+=1.0;
+168: 
+169: 		for(i=0;i<nlocalverts;i++)
+170: 			if(dist[i]==prevlevel)
+171: 				for(j=vrowstarts[i];j<vrowstarts[i+1];j++)
+172: 					send_frompred(i,COLUMN(j));
+173: 		aml_barrier();
+174: 
+175: 		aml_long_allsum(&newvisits);
+176: 	}
+177: }

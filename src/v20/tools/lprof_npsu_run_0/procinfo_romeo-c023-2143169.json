@@ -1,0 +1,21 @@
+{
+  "content": {
+    "proc_name"          : "AMD_fam19h_mod11h",
+    "hostname"           : "romeo-c023",
+    "architecture_code"  : "2",
+    "uarchitecture_code" : "39",
+    "architecture"       : "x86_64",
+    "uarchitecture"      : "ZEN_V4",
+    "cpui_model_name"    : "AMD EPYC 9654 96-Core Processor",
+    "cpui_cache_size"    : "1024 KB",
+    "cpui_cpu_cores"     : "96",
+    "max_frequency"          : "3707812",
+    "cur_frequency"      : "2400000",
+    "driver_frequency"   : "acpi-cpufreq",
+    "scaling_governor"   : "performance",
+    "huge_pages"         : "always",
+    "os_version"         : "Linux 5.14.0-427.42.1.el9_4.x86_64 #1 SMP PREEMPT_DYNAMIC Fri Oct 18 14:35:40 EDT 2024",
+    "perf_event_paranoid"      : "2",
+    "is_lstopo"          : true,
+  }
+}

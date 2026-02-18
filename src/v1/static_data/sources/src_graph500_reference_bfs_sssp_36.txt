@@ -1,0 +1,9 @@
+/home/hananefdh/MPNA/graph500/src/validate.c: 66 - 172
+--------------------------------------------------------------------------------
+
+66: 	int pe=VERTEX_OWNER(src);
+67: 	int vloc[2]={vfrom, VERTEX_LOCAL(src)};
+68: 	aml_send(&vloc,1,8,pe);
+[...]
+171: 				for(j=vrowstarts[i];j<vrowstarts[i+1];j++)
+172: 					send_frompred(i,COLUMN(j));

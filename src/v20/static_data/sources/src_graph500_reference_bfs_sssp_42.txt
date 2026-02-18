@@ -1,0 +1,8 @@
+/home/hananefdh/MPNA/graph500/src/validate.c: 267 - 271
+--------------------------------------------------------------------------------
+
+267: 	for (i = 0; i < nlocalverts; ++i) {
+268: 		if(dist[i]!=-1.0 && dist[i]<0.0) 
+269: 		printf("Validation Error: distance/depth %3.2f of vertex %llu is out of range\n",dist[i],VERTEX_TO_GLOBAL(my_pe(),i)),val_errors++;
+270: 		if((pred[i]==-1 && dist[i]!=-1.0) || (pred[i]!=-1 && dist[i]==-1.0)) 
+271: 		printf("Validation Error: vertex %llu has inconsistent predecessor %llu and distance %f\n",VERTEX_TO_GLOBAL(my_pe(),i),pred[i],dist[i]),val_errors++;

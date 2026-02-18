@@ -1,0 +1,16 @@
+********************************************************************************
+MAQAO 2025.1.0 - b107544c0173fc3785aa7d997ff783dc12b975d2::20250527-133805 || 2025/05/27
+/home/hananefdh/maqao.x86_64.2025.1.0/bin/maqao oneview -R1 xp=v20 -- ./graph500_reference_bfs_sssp 20 16 
+CPY:  [true] ./graph500_reference_bfs_sssp --> /home/hananefdh/MPNA/graph500/src/v20/binaries/graph500_reference_bfs_sssp
+CMD:   /home/hananefdh/maqao.x86_64.2025.1.0/bin/maqao lprof _caller=oneview  --xp="/home/hananefdh/MPNA/graph500/src/v20/tools/lprof_npsu_run_0" --mpi-command="" --collect-CPU-time-intervals --collect-topology   -- /home/hananefdh/MPNA/graph500/src/v20/binaries/graph500_reference_bfs_sssp  20 16
+In run run_0, 2 loops were discarded from static analysis because their coverage
+are lower than object_coverage_threshold value (0.01%).
+That represents 0.012741278856993% of the execution time. To include them, change the value
+in the experiment directory configuration file, then rerun the command with the additionnal parameter
+--force-static-analysis
+9 functions were discarded from static analysis because their coverage
+are lower than object_coverage_threshold value (0.01%).
+That represents 0.028667877428234% of the execution time. To include them, change the value
+in the experiment directory configuration file, then rerun the command with the additionnal parameter
+--force-static-analysis
+CMD:  /home/hananefdh/maqao.x86_64.2025.1.0/bin/maqao otter  -input=/home/hananefdh/MPNA/graph500/src/v20/OTTER/input_manifest.csv -output=/home/hananefdh/MPNA/graph500/src/v20/OTTER/output_manifest.csv --reduce-threads-files=on

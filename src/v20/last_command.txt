@@ -1,0 +1,1 @@
+/home/hananefdh/maqao.x86_64.2025.1.0/bin/maqao oneview -R1 xp=v20 -- ./graph500_reference_bfs_sssp 20 16 

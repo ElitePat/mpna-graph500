@@ -1,0 +1,7 @@
+/home/hananefdh/MPNA/graph500/src/validate.c: 152 - 155
+--------------------------------------------------------------------------------
+
+152: 	for(i=0;i<nlocalverts;i++) {
+153: 		dist[i]=FLT_MAX; //at the end there should be no FLT_MAX left
+154: 		if(pred[i]==-1) dist[i]=-1.0;
+155: 		if(pred[i]==root) dist[i]=1.0;

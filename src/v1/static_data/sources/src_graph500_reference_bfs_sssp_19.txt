@@ -1,0 +1,10 @@
+/home/hananefdh/MPNA/graph500/src/sssp_reference.c: 66 - 109
+--------------------------------------------------------------------------------
+
+66: 	relaxmsg m = {weight,VERTEX_LOCAL(glob),fromloc};
+67: 	aml_send(&m,1,sizeof(relaxmsg),VERTEX_OWNER(glob));
+[...]
+106: 			for(i=0;i<qc;i++)
+107: 				for(j=rowstarts[q1[i]];j<rowstarts[q1[i]+1];j++)
+108: 					if(weights[j]<delta)
+109: 						send_relax(COLUMN(j),dist[q1[i]]+weights[j],q1[i]);

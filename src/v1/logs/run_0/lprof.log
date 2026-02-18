@@ -1,0 +1,78 @@
+SCALE:                          14
+edgefactor:                     16
+NBFS:                           64
+graph_generation:               0.0729278
+num_mpi_processes:              1
+construction_time:              0.00631022
+bfs  min_time:                  0.00211585
+bfs  firstquartile_time:        0.00212829
+bfs  median_time:               0.00213545
+bfs  thirdquartile_time:        0.00214428
+bfs  max_time:                  0.0022173
+bfs  mean_time:                 0.00214063
+bfs  stddev_time:               2.05964e-05
+sssp min_time:                  0.00584591
+sssp firstquartile_time:        0.00673287
+sssp median_time:               0.00719415
+sssp thirdquartile_time:        0.00752739
+sssp max_time:                  0.00833639
+sssp mean_time:                 0.00713495
+sssp stddev_time:               0.00058866
+min_nedge:                      261818
+firstquartile_nedge:            261818
+median_nedge:                   261818
+thirdquartile_nedge:            261818
+max_nedge:                      261818
+mean_nedge:                     261818
+stddev_nedge:                   0
+bfs  min_TEPS:                  1.1808e+08
+bfs  firstquartile_TEPS:        1.22101e+08
+bfs  median_TEPS:               1.22605e+08
+bfs  thirdquartile_TEPS:        1.23018e+08
+bfs  max_TEPS:                  1.23741e+08
+bfs  harmonic_mean_TEPS:     !  1.22309e+08
+bfs  harmonic_stddev_TEPS:      148264
+sssp min_TEPS:                  3.14066e+07
+sssp firstquartile_TEPS:        3.47821e+07
+sssp median_TEPS:               3.63932e+07
+sssp thirdquartile_TEPS:        3.88865e+07
+sssp max_TEPS:                  4.47866e+07
+sssp harmonic_mean_TEPS:     !  3.66951e+07
+sssp harmonic_stddev_TEPS:      381427
+bfs  min_validate:              0.00734086
+bfs  firstquartile_validate:    0.00737392
+bfs  median_validate:           0.00738516
+bfs  thirdquartile_validate:    0.00740978
+bfs  max_validate:              0.00746021
+bfs  mean_validate:             0.00739109
+bfs  stddev_validate:           2.65432e-05
+sssp min_validate:              0.00517573
+sssp firstquartile_validate:    0.00520158
+sssp median_validate:           0.00521042
+sssp thirdquartile_validate:    0.00522122
+sssp max_validate:              0.00524554
+sssp mean_validate:             0.00521098
+sssp stddev_validate:           1.39137e-05
+
+* [MAQAO] Info: Dumping samples (host romeo-c023, process 2140952)
+* [MAQAO] Info: Dumping source info for callchain nodes (host romeo-c023, process 2140952)
+* [MAQAO] Info: Building/writing metadata (host romeo-c023)
+* [MAQAO] Info: Finished collect step (host romeo-c023, process 2140952)
+
+
+Your experiment path is /home/hananefdh/MPNA/graph500/src/v1/tools/lprof_npsu_run_0
+
+To display your profiling results:
+#######################################################################################################################
+#    LEVEL    |     REPORT     |                                       COMMAND                                        #
+#######################################################################################################################
+#  Functions  |  Cluster-wide  |  maqao lprof -df xp=/home/hananefdh/MPNA/graph500/src/v1/tools/lprof_npsu_run_0      #
+#  Functions  |  Per-node      |  maqao lprof -df -dn xp=/home/hananefdh/MPNA/graph500/src/v1/tools/lprof_npsu_run_0  #
+#  Functions  |  Per-process   |  maqao lprof -df -dp xp=/home/hananefdh/MPNA/graph500/src/v1/tools/lprof_npsu_run_0  #
+#  Functions  |  Per-thread    |  maqao lprof -df -dt xp=/home/hananefdh/MPNA/graph500/src/v1/tools/lprof_npsu_run_0  #
+#  Loops      |  Cluster-wide  |  maqao lprof -dl xp=/home/hananefdh/MPNA/graph500/src/v1/tools/lprof_npsu_run_0      #
+#  Loops      |  Per-node      |  maqao lprof -dl -dn xp=/home/hananefdh/MPNA/graph500/src/v1/tools/lprof_npsu_run_0  #
+#  Loops      |  Per-process   |  maqao lprof -dl -dp xp=/home/hananefdh/MPNA/graph500/src/v1/tools/lprof_npsu_run_0  #
+#  Loops      |  Per-thread    |  maqao lprof -dl -dt xp=/home/hananefdh/MPNA/graph500/src/v1/tools/lprof_npsu_run_0  #
+#######################################################################################################################
+

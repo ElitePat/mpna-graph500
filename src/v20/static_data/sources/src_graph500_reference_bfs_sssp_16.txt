@@ -1,0 +1,8 @@
+/home/hananefdh/MPNA/graph500/src/sssp_reference.c: 134 - 138
+--------------------------------------------------------------------------------
+
+134: 		for(i=0;i<g.nlocalverts;i++)
+135: 			if(dist[i]>=glob_mindelta) {
+136: 				sum++; //how many are still to be processed
+137: 				if (dist[i] < glob_maxdelta)
+138: 					q1[qc++]=i; //this is lowest bucket

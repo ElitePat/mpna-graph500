@@ -1,0 +1,8 @@
+/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c: 165 - 195
+--------------------------------------------------------------------------------
+
+165:   mrg_apply_transition(mat, state, state);
+[...]
+193:   for (byte_index = 8; exponent_middle; ++byte_index, exponent_middle >>= 8) {
+194:     uint_least8_t val = (uint_least8_t)(exponent_middle & 0xFF);
+195:     if (val != 0) mrg_step(&mrg_skip_matrices[byte_index][val], state);

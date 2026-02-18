@@ -1,0 +1,9 @@
+/home/hananefdh/MPNA/graph500/src/bfs_reference.c: 54 - 59
+--------------------------------------------------------------------------------
+
+54: 	if (!TEST_VISITEDLOC(m->vloc)) {
+55: 		SET_VISITEDLOC(m->vloc);
+56: 		q2[q2c++] = m->vloc;
+57: 		pred_glob[m->vloc] = VERTEX_TO_GLOBAL(from,m->vfrom);
+58: 	}
+59: }

@@ -1,0 +1,27 @@
+/home/hananefdh/MPNA/graph500/src/../generator/graph_generator.c: 50 - 162
+--------------------------------------------------------------------------------
+
+50:   uint32_t val = mrg_get_uint_orig(st);
+51:   if (/* Unlikely */ val < limit) {
+[...]
+62:   val %= INITIATOR_DENOMINATOR;
+63:   if (val < adjusted_bc_numerator) return 1;
+64:   val = (uint32_t)(val - adjusted_bc_numerator);
+65:   if (val < adjusted_bc_numerator) return 2;
+66:   val = (uint32_t)(val - adjusted_bc_numerator);
+67: #if SPK_NOISE_LEVEL == 0
+68:   if (val < INITIATOR_A_NUMERATOR) return 0;
+[...]
+146:   while (nverts > 1) {
+147:     int square = generate_4way_bernoulli(st, level, lgN);
+148:     int src_offset = square / 2;
+149:     int tgt_offset = square % 2;
+150:     assert (base_src <= base_tgt);
+151:     if (base_src == base_tgt) {
+152:       /* Clip-and-flip for undirected graph */
+153:       if (src_offset > tgt_offset) {
+[...]
+159:     nverts /= 2;
+160:     ++level;
+161:     base_src += nverts * src_offset;
+162:     base_tgt += nverts * tgt_offset;

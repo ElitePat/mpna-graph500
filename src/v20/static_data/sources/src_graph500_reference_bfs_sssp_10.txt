@@ -1,0 +1,9 @@
+/home/hananefdh/MPNA/graph500/src/bfs_reference.c: 62 - 108
+--------------------------------------------------------------------------------
+
+62: 	visitmsg m = {VERTEX_LOCAL(glob),from};
+63: 	aml_send(&m,1,sizeof(visitmsg),VERTEX_OWNER(glob));
+[...]
+106: 		for(i=0;i<qc;i++)
+107: 			for(j=rowstarts[q1[i]];j<rowstarts[q1[i]+1];j++)
+108: 				send_visit(COLUMN(j),q1[i]);

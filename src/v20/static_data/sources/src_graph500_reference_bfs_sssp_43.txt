@@ -1,0 +1,6 @@
+/home/hananefdh/MPNA/graph500/src/validate.c: 258 - 260
+--------------------------------------------------------------------------------
+
+258: 	for (i = 0; i < nlocalverts; ++i)
+259: 		if((pred[i]!=-1 && pred[i]<0) || pred[i]>maxvertex) 
+260: 		printf("Validation Error: predecessor %llu of vertex %llu is out of range\n",pred[i],VERTEX_TO_GLOBAL(my_pe(),i)),val_errors++;

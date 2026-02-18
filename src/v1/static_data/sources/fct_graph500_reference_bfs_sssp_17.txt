@@ -1,0 +1,76 @@
+/home/hananefdh/MPNA/graph500/src/sssp_reference.c: 66 - 150
+--------------------------------------------------------------------------------
+
+66: 	relaxmsg m = {weight,VERTEX_LOCAL(glob),fromloc};
+67: 	aml_send(&m,1,sizeof(relaxmsg),VERTEX_OWNER(glob));
+68: }
+69: 
+70: void run_sssp(int64_t root,int64_t* pred,float *dist) {
+71: 
+72: 	unsigned int i,j;
+73: 	long sum=0;
+74: 
+75: 	float delta = 0.1;
+76: 	glob_mindelta=0.0;
+77: 	glob_maxdelta=delta;
+78: 	glob_dist=dist;
+79: 	weights=g.weights;
+80: 	pred_glob=pred;
+81: 	qc=0;q2c=0;
+82: 
+83: 	aml_register_handler(relaxhndl,1);
+84: 
+85: 	if (VERTEX_OWNER(root) == my_pe()) {
+86: 		q1[0]=VERTEX_LOCAL(root);
+87: 		qc=1;
+88: 		dist[VERTEX_LOCAL(root)]=0.0;
+89: 		pred[VERTEX_LOCAL(root)]=root;
+90: 	}
+91: 
+92: 	aml_barrier();
+93: 	sum=1;
+94: 
+95: 	int64_t lastvisited=1;
+96: 	while(sum!=0) {
+[...]
+102: 		while(sum!=0) {
+103: 			CLEAN_VISITED();
+104: 			lightphase=1;
+105: 			aml_barrier();
+106: 			for(i=0;i<qc;i++)
+107: 				for(j=rowstarts[q1[i]];j<rowstarts[q1[i]+1];j++)
+108: 					if(weights[j]<delta)
+109: 						send_relax(COLUMN(j),dist[q1[i]]+weights[j],q1[i]);
+110: 			aml_barrier();
+111: 
+112: 			qc=q2c;q2c=0;int *tmp=q1;q1=q2;q2=tmp;
+113: 			sum=qc;
+114: 			aml_long_allsum(&sum);
+115: 		}
+116: 		lightphase=0;
+117: 		aml_barrier();
+118: 
+119: 		//2. iterate over S and heavy edges
+120: 		for(i=0;i<g.nlocalverts;i++)
+121: 			if(dist[i]>=glob_mindelta && dist[i] < glob_maxdelta) {
+122: 				for(j=rowstarts[i];j<rowstarts[i+1];j++)
+123: 					if(weights[j]>=delta)
+124: 						send_relax(COLUMN(j),dist[i]+weights[j],i);
+125: 			}
+126: 		aml_barrier();
+127: 
+128: 		glob_mindelta=glob_maxdelta;
+129: 		glob_maxdelta+=delta;
+130: 		qc=0;sum=0;
+131: 
+132: 		//3. Bucket processing and checking termination condition
+133: 		int64_t lvlvisited=0;
+134: 		for(i=0;i<g.nlocalverts;i++)
+135: 			if(dist[i]>=glob_mindelta) {
+136: 				sum++; //how many are still to be processed
+137: 				if (dist[i] < glob_maxdelta)
+138: 					q1[qc++]=i; //this is lowest bucket
+139: 			} else if(dist[i]!=-1.0) lvlvisited++;
+140: 		aml_long_allsum(&sum);
+[...]
+150: }

@@ -1,0 +1,25 @@
+address;source_location;insn;indent
+0x404c90;/home/hananefdh/MPNA/graph500/src/csr_reference.c:43;MOVSXD	(%RSI),%RDX;
+0x404c93;/home/hananefdh/MPNA/graph500/src/csr_reference.c:43;MOV	0xb5fb6(%RIP),%R8;
+0x404c9a;/home/hananefdh/MPNA/graph500/src/csr_reference.c:42;MOV	0x4(%RSI),%RDI;
+0x404c9e;/home/hananefdh/MPNA/graph500/src/csr_reference.c:43;MOV	0xb5ee3(%RIP),%RCX;
+0x404ca5;/home/hananefdh/MPNA/graph500/src/csr_reference.c:43;SAL	$0x2,%RDX;
+0x404ca9;/home/hananefdh/MPNA/graph500/src/csr_reference.c:43;ADD	%RDX,%R8;
+0x404cac;/home/hananefdh/MPNA/graph500/src/csr_reference.c:42;MOV	%RDI,%R9;
+0x404caf;/home/hananefdh/MPNA/graph500/src/csr_reference.c:43;MOV	(%R8),%EAX;
+0x404cb2;/home/hananefdh/MPNA/graph500/src/csr_reference.c:42;SHR	$0x20,%R9;
+0x404cb6;/home/hananefdh/MPNA/graph500/src/csr_reference.c:43;LEA	0x1(%RAX),%R10D;
+0x404cba;/home/hananefdh/MPNA/graph500/src/csr_reference.c:43;LEA	(%RAX,%RAX,2),%EAX;
+0x404cbd;/home/hananefdh/MPNA/graph500/src/csr_reference.c:43;ADD	%EAX,%EAX;
+0x404cbf;/home/hananefdh/MPNA/graph500/src/csr_reference.c:43;MOV	%R10D,(%R8);
+0x404cc2;/home/hananefdh/MPNA/graph500/src/csr_reference.c:43;CLTQ;
+0x404cc4;/home/hananefdh/MPNA/graph500/src/csr_reference.c:43;ADD	%RCX,%RAX;
+0x404cc7;/home/hananefdh/MPNA/graph500/src/csr_reference.c:43;MOV	%EDI,(%RAX);
+0x404cc9;/home/hananefdh/MPNA/graph500/src/csr_reference.c:43;MOV	%R9W,0x4(%RAX);
+0x404cce;/home/hananefdh/MPNA/graph500/src/csr_reference.c:46;MOV	0xb5f7b(%RIP),%RAX;
+0x404cd5;/home/hananefdh/MPNA/graph500/src/csr_reference.c:45;VMOVSS	0xc(%RSI),%XMM0;
+0x404cda;/home/hananefdh/MPNA/graph500/src/csr_reference.c:46;MOVSXD	(%RAX,%RDX,1),%RDX;
+0x404cde;/home/hananefdh/MPNA/graph500/src/csr_reference.c:46;MOV	0xb5f4b(%RIP),%RAX;
+0x404ce5;/home/hananefdh/MPNA/graph500/src/csr_reference.c:46;VMOVSS	%XMM0,-0x4(%RAX,%RDX,4);
+0x404ceb;/home/hananefdh/MPNA/graph500/src/csr_reference.c:48;RET;
+0x404cec;:0;NOPL	(%RAX);

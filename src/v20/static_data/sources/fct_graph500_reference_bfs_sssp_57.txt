@@ -1,0 +1,44 @@
+/home/hananefdh/MPNA/graph500/src/../generator/mod_arith_64bit.h: 27 - 69
+--------------------------------------------------------------------------------
+
+27:   assert (a <= 0x7FFFFFFE);
+28:   assert (b <= 0x7FFFFFFE);
+29:   return (uint_fast32_t)((uint_fast64_t)a * b % 0x7FFFFFFF);
+[...]
+36:   return (uint_fast32_t)(((uint_fast64_t)a * b + sum) % 0x7FFFFFFF);
+[...]
+43:   assert (c <= 0x7FFFFFFE);
+44:   assert (d <= 0x7FFFFFFE);
+45:   return (uint_fast32_t)(((uint_fast64_t)a * b + (uint_fast64_t)c * d + sum) % 0x7FFFFFFF);
+[...]
+52:   assert (c <= 0x7FFFFFFE);
+53:   assert (d <= 0x7FFFFFFE);
+54:   assert (e <= 0x7FFFFFFE);
+55:   assert (f <= 0x7FFFFFFE);
+56:   return (uint_fast32_t)(((uint_fast64_t)a * b + (uint_fast64_t)c * d + (uint_fast64_t)e * f + sum) % 0x7FFFFFFF);
+57: }
+58: 
+59: static inline uint_fast32_t mod_mac4(uint_fast32_t sum, uint_fast32_t a, uint_fast32_t b, uint_fast32_t c, uint_fast32_t d, uint_fast32_t e, uint_fast32_t f, uint_fast32_t g, uint_fast32_t h) {
+60:   assert (sum <= 0x7FFFFFFE);
+61:   assert (a <= 0x7FFFFFFE);
+62:   assert (b <= 0x7FFFFFFE);
+63:   assert (c <= 0x7FFFFFFE);
+64:   assert (d <= 0x7FFFFFFE);
+65:   assert (e <= 0x7FFFFFFE);
+66:   assert (f <= 0x7FFFFFFE);
+67:   assert (g <= 0x7FFFFFFE);
+68:   assert (h <= 0x7FFFFFFE);
+69:   return (uint_fast32_t)(((uint_fast64_t)a * b + (uint_fast64_t)c * d + (uint_fast64_t)e * f + (uint_fast64_t)g * h + sum) % 0x7FFFFFFF);
+/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c: 116 - 159
+--------------------------------------------------------------------------------
+
+116: static void mrg_apply_transition(const mrg_transition_matrix* restrict mat, const mrg_state* restrict st, mrg_state* r) {
+[...]
+148:   uint_fast32_t o1 = mod_mac_y(mod_mul(mat->d, st->z1), mod_mac4(0, mat->s, st->z2, mat->a, st->z3, mat->b, st->z4, mat->c, st->z5));
+149:   uint_fast32_t o2 = mod_mac_y(mod_mac2(0, mat->c, st->z1, mat->w, st->z2), mod_mac3(0, mat->s, st->z3, mat->a, st->z4, mat->b, st->z5));
+150:   uint_fast32_t o3 = mod_mac_y(mod_mac3(0, mat->b, st->z1, mat->v, st->z2, mat->w, st->z3), mod_mac2(0, mat->s, st->z4, mat->a, st->z5));
+151:   uint_fast32_t o4 = mod_mac_y(mod_mac4(0, mat->a, st->z1, mat->u, st->z2, mat->v, st->z3, mat->w, st->z4), mod_mul(mat->s, st->z5));
+152:   uint_fast32_t o5 = mod_mac2(mod_mac3(0, mat->s, st->z1, mat->t, st->z2, mat->u, st->z3), mat->v, st->z4, mat->w, st->z5);
+153:   r->z1 = o1;
+[...]
+159: }

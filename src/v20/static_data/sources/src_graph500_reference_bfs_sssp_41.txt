@@ -1,0 +1,11 @@
+/home/hananefdh/MPNA/graph500/src/validate.c: 114 - 285
+--------------------------------------------------------------------------------
+
+114: 	edgedist m = {vloc,VERTEX_LOCAL(COLUMN(vedge)),globpred[vloc],globdist[vloc]
+115: #ifdef SSSP
+116: 		,vweights[vedge]
+117: #endif
+118: 	};
+119: 	aml_send(&m,1,sizeof(edgedist),VERTEX_OWNER(COLUMN(vedge)));
+[...]
+285: 		for(j = vrowstarts[i];j<vrowstarts[i+1];j++)

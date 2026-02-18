@@ -1,0 +1,259 @@
+{
+  "__fct":
+    {
+      "loops":
+        {
+          "_26":
+            {
+              "src_regions":
+                [
+                  {
+                    "path": "/home/hananefdh/MPNA/graph500/src/csr_reference.c",
+                    "regions":
+                      [
+                        [
+                        138,
+                        140
+                        ]
+                      ]
+                  }
+                ],
+              "src": "csr_reference.c:138-140"
+            },
+          "_28":
+            {
+              "_27":
+                {
+                  "_29":
+                    {
+                      "src_regions":
+                        [
+                          {
+                            "path": "/home/hananefdh/MPNA/graph500/src/../generator/graph_generator.h",
+                            "regions":
+                              [
+                                [
+                                36,
+                                40
+                                ]
+                              ]
+                          },
+                          {
+                            "path": "/home/hananefdh/MPNA/graph500/src/csr_reference.c",
+                            "regions":
+                              [
+                                [
+                                51,
+                                54
+                                ],
+                                [
+                                90,
+                                93
+                                ]
+                              ]
+                          }
+                        ],
+                      "src": "csr_reference.c:51-93"
+                    },
+                  "src_regions":
+                    [
+                      {
+                        "path": "/home/hananefdh/MPNA/graph500/src/../generator/graph_generator.h",
+                        "regions":
+                          [
+                            [
+                            36,
+                            40
+                            ]
+                          ]
+                      },
+                      {
+                        "path": "/home/hananefdh/MPNA/graph500/src/csr_reference.c",
+                        "regions":
+                          [
+                            [
+                            51,
+                            54
+                            ],
+                            [
+                            88,
+                            98
+                            ]
+                          ]
+                      },
+                      {
+                        "path": "/home/hananefdh/MPNA/graph500/src/common.h",
+                        "regions":
+                          [
+                            [
+                            250,
+                            250
+                            ]
+                          ]
+                      }
+                    ],
+                  "src": "csr_reference.c:51-98"
+                },
+              "src_regions":
+                [
+                  {
+                    "path": "/home/hananefdh/MPNA/graph500/src/../generator/graph_generator.h",
+                    "regions":
+                      [
+                        [
+                        36,
+                        40
+                        ]
+                      ]
+                  },
+                  {
+                    "path": "/home/hananefdh/MPNA/graph500/src/csr_reference.c",
+                    "regions":
+                      [
+                        [
+                        51,
+                        54
+                        ],
+                        [
+                        88,
+                        98
+                        ]
+                      ]
+                  },
+                  {
+                    "path": "/home/hananefdh/MPNA/graph500/src/common.h",
+                    "regions":
+                      [
+                        [
+                        250,
+                        250
+                        ]
+                      ]
+                  }
+                ],
+              "src": "csr_reference.c:51-98"
+            },
+          "_24":
+            {
+              "_23":
+                {
+                  "_25":
+                    {
+                      "src_regions":
+                        [
+                          {
+                            "path": "/home/hananefdh/MPNA/graph500/src/../generator/graph_generator.h",
+                            "regions":
+                              [
+                                [
+                                36,
+                                40
+                                ]
+                              ]
+                          },
+                          {
+                            "path": "/home/hananefdh/MPNA/graph500/src/csr_reference.c",
+                            "regions":
+                              [
+                                [
+                                58,
+                                63
+                                ],
+                                [
+                                164,
+                                170
+                                ]
+                              ]
+                          }
+                        ],
+                      "src": "csr_reference.c:58-170"
+                    },
+                  "src_regions":
+                    [
+                      {
+                        "path": "/home/hananefdh/MPNA/graph500/src/../generator/graph_generator.h",
+                        "regions":
+                          [
+                            [
+                            36,
+                            40
+                            ]
+                          ]
+                      },
+                      {
+                        "path": "/home/hananefdh/MPNA/graph500/src/csr_reference.c",
+                        "regions":
+                          [
+                            [
+                            58,
+                            63
+                            ],
+                            [
+                            162,
+                            170
+                            ],
+                            [
+                            176,
+                            177
+                            ]
+                          ]
+                      },
+                      {
+                        "path": "/home/hananefdh/MPNA/graph500/src/common.h",
+                        "regions":
+                          [
+                            [
+                            250,
+                            250
+                            ]
+                          ]
+                      }
+                    ],
+                  "src": "csr_reference.c:58-177"
+                },
+              "src_regions":
+                [
+                  {
+                    "path": "/home/hananefdh/MPNA/graph500/src/../generator/graph_generator.h",
+                    "regions":
+                      [
+                        [
+                        36,
+                        40
+                        ]
+                      ]
+                  },
+                  {
+                    "path": "/home/hananefdh/MPNA/graph500/src/csr_reference.c",
+                    "regions":
+                      [
+                        [
+                        58,
+                        63
+                        ],
+                        [
+                        162,
+                        170
+                        ],
+                        [
+                        176,
+                        177
+                        ]
+                      ]
+                  },
+                  {
+                    "path": "/home/hananefdh/MPNA/graph500/src/common.h",
+                    "regions":
+                      [
+                        [
+                        250,
+                        250
+                        ]
+                      ]
+                  }
+                ],
+              "src": "csr_reference.c:58-177"
+            }
+        }
+    }
+}

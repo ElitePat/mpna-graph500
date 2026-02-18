@@ -1,0 +1,89 @@
+/home/hananefdh/MPNA/graph500/src/../aml/aml.c: 181 - 308
+--------------------------------------------------------------------------------
+
+181: 	while ( i < length ) {
+182: 		void*m = message+i;
+183: 		struct hdri *h = m;
+184: 		int hsz=h->sz;
+185: 		int hndl=h->hndl;
+186: 		aml_handlers[hndl](PROC_FROM_GROUPLOCAL((int)(h->routing),fromlocal),m+sizeof(struct hdri),hsz);
+187: 		i += sizeof(struct hdri) + hsz;
+[...]
+195: 	MPI_Testany( NRECV_intra,rqrecv_intra, &index, &flag, &status );
+196: 	if ( flag ) {
+197: 		MPI_Get_count( &status, MPI_CHAR, &length );
+198: 		ack_intra -= status.MPI_TAG;
+199: 		if(length>0) { //no confirmation & processing for ack only messages
+200: 			from = status.MPI_SOURCE;
+201: 			if(inbarrier)
+202: 				MPI_Send(NULL, 0, MPI_CHAR,from, 1, comm_intra); //ack now
+203: 			else
+204: 				acks_intra[from]++; //normally we have delayed ack
+205: 			process_intra( from, length,recvbuf_intra +AGGR_intra*index);
+206: 		}
+207: 		MPI_Start( rqrecv_intra+index);
+[...]
+237: 	int flag=0,index,tmp;
+238: 	if (sendsize[node] == 0 && acks[node]==0 ) return;
+239: 	while (!flag) {
+240: 		aml_poll();
+241: 		MPI_Testany(NSEND,rqsend,&index,&flag,&stsend);
+242: 	}
+243: 	MPI_Isend(SENDSOURCE(node), sendsize[node], MPI_CHAR,node, acks[node], comm, rqsend+index );
+244: 	nbytes_sent+=sendsize[node];
+245: 	if (sendsize[node] > 0) ack++;
+246: 	sendsize[node] = 0;
+247: 	acks[node] = 0;
+248: 	tmp=activebuf[index]; activebuf[index]=nbuf[node]; nbuf[node]=tmp; //swap bufs
+[...]
+254: 	int flag=0,index,tmp;
+255: 	if (sendsize_intra[node] == 0 && acks_intra[node]==0 ) return;
+256: 	while (!flag) {
+257: 		aml_poll_intra();
+258: 		MPI_Testany(NSEND_intra,rqsend_intra,&index,&flag,&stsend);
+259: 	}
+260: 	MPI_Isend( SENDSOURCE_intra(node), sendsize_intra[node], MPI_CHAR,
+261: 			node, acks_intra[node], comm_intra, rqsend_intra+index );
+262: 	if (sendsize_intra[node] > 0) ack_intra++;
+263: 	sendsize_intra[node] = 0;
+264: 	acks_intra[node] = 0;
+265: 	tmp=activebuf_intra[index]; activebuf_intra[index]=nbuf_intra[node]; nbuf_intra[node]=tmp; //swap bufs
+[...]
+271: 	int nmax = AGGR_intra - sendsize_intra[local] - sizeof(struct hdri);
+272: 	if ( nmax < length ) {
+273: 		flush_buffer_intra(local);
+274: 	}
+275: 	char* dst = (SENDSOURCE_intra(local)+sendsize_intra[local]);
+276: 	struct hdri *h=(void*)dst;
+277: 	h->routing = GROUP_FROM_PROC(from);
+278: 	h->sz=length;
+279: 	h->hndl = type;
+280: 	sendsize_intra[local] += length+sizeof(struct hdri);
+281: 
+282: 	memcpy(dst+sizeof(struct hdri),src,length);
+283: }
+284: 
+285: SOATTR void aml_send(void *src, int type,int length, int node ) {
+286: 	if ( node == myproc )
+287: 		return aml_handlers[type](myproc,src,length);
+288: 
+289: 	int group = GROUP_FROM_PROC(node);
+290: 	int local = LOCAL_FROM_PROC(node);
+291: 
+292: 	//send to another node in my group
+293: 	if ( group == mygroup )
+294: 		return aml_send_intra(src,type,length,local,myproc);
+295: 
+296: 	//send to another group
+297: 	int nmax = AGGR - sendsize[group]-sizeof(struct hdr);
+298: 	if ( nmax < length ) {
+299: 		flush_buffer(group);
+300: 	}
+301: 	char* dst = (SENDSOURCE(group)+sendsize[group]);
+302: 	struct hdr *h=(void*)dst;
+303: 	h->routing = local;
+304: 	h->hndl = type;
+305: 	h->sz=length;
+306: 	sendsize[group] += length+sizeof(struct hdr);
+307: 	memcpy(dst+sizeof(struct hdr),src,length);
+308: }

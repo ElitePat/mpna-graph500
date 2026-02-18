@@ -1,0 +1,3 @@
+name;time_p;time_s;cpi_ratio;
+/gpfs/home/hananefdh/MPNA/graph500/src/v1/binaries/graph500_reference_bfs_sssp;99.425277709961;1.7300019264221;;
+/usr/lib64/libc.so.6;0.57471191883087;0.00999999884516;;

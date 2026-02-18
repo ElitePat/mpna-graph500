@@ -1,0 +1,8 @@
+/home/hananefdh/MPNA/graph500/src/validate.c: 59 - 63
+--------------------------------------------------------------------------------
+
+59: 	int64_t predfrom = VERTEX_TO_GLOBAL(from,vfrom);
+60: 	int vloc = *(int*)(data+4);
+61: 
+62: 	if(globpred[vloc] == predfrom && globdist[vloc]==FLT_MAX) globdist[vloc]=prevlevel+1.0,newvisits++;
+63: }

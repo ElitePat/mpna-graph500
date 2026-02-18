@@ -1,0 +1,104 @@
+/home/hananefdh/MPNA/graph500/src/../generator/graph_generator.h: 36 - 40
+--------------------------------------------------------------------------------
+
+36:   return (p->v0_low | ((int64_t)((int16_t)(p->high & 0xFFFF)) << 32));
+37: }
+38: 
+39: static inline int64_t get_v1_from_edge(const packed_edge* p) {
+40:   return (p->v1_low | ((int64_t)((int16_t)(p->high >> 16)) << 32));
+/home/hananefdh/MPNA/graph500/src/csr_reference.c: 51 - 180
+--------------------------------------------------------------------------------
+
+51: 	int pe=VERTEX_OWNER(src);
+52: 	int vloc=VERTEX_LOCAL(src);
+53: 	aml_send(&vloc,1,4,pe);
+54: 	if(tgt>=nverts_known) nverts_known=tgt+1;
+55: }
+56: #ifdef SSSP
+57: void send_full_edge (int64_t src,int64_t tgt,float w) {
+58: 	int pe=VERTEX_OWNER(src);
+59: 	int vloc[4];
+60: 	vloc[0]=VERTEX_LOCAL(src);
+61: 	memcpy(vloc+1,&tgt,8);
+62: 	memcpy(vloc+3,&w,4);
+63: 	aml_send(vloc,1,16,pe);
+[...]
+75: void convert_graph_to_oned_csr(const tuple_graph* const tg, oned_csr_graph* const g) {
+76: 	g->tg = tg;
+77: 
+78: 	size_t i,j,k;
+79: 
+80: 	int64_t nvert=tg->nglobaledges/2;
+81: 	nvert/=num_pes();
+82: 	nvert+=1;
+83: 	degrees=xcalloc(nvert,sizeof(int));
+84: 
+85: 	aml_register_handler(halfedgehndl,1);
+86: 	int numiters=ITERATE_TUPLE_GRAPH_BLOCK_COUNT(tg);
+87: 	// First pass : calculate degrees of each vertex
+88: 	ITERATE_TUPLE_GRAPH_BEGIN(tg, buf, bufsize,wbuf) {
+89: 		ptrdiff_t j;
+90: 		for (j = 0; j < bufsize; ++j) {
+91: 			int64_t v0 = get_v0_from_edge(&buf[j]);
+92: 			int64_t v1 = get_v1_from_edge(&buf[j]);
+93: 			if(v0==v1) continue;
+94: 			send_half_edge(v0, v1);
+95: 			send_half_edge(v1, v0);
+96: 		}
+97: 		aml_barrier();
+98: 	} ITERATE_TUPLE_GRAPH_END;
+99: 
+100: 	int64_t nglobalverts = 0;
+101: 	aml_long_allmax(&nverts_known);
+102: 	nglobalverts=nverts_known+1;
+103: 	g->nglobalverts = nglobalverts;
+104: 	size_t nlocalverts = VERTEX_LOCAL(nglobalverts + num_pes() - 1 - my_pe());
+105: 	g->nlocalverts = nlocalverts;
+[...]
+134: 	unsigned int *rowstarts = xmalloc((nlocalverts + 1) * sizeof(int));
+135: 	g->rowstarts = rowstarts;
+136: 
+137: 	rowstarts[0] = 0;
+138: 	for (i = 0; i < nlocalverts; ++i) {
+139: 		rowstarts[i + 1] = rowstarts[i] + (i >= nlocalverts ? 0 : degrees[i]);
+140: 		degrees[i] = rowstarts[i];
+141: 	}
+142: 
+143: 	size_t nlocaledges = rowstarts[nlocalverts];
+144: 	g->nlocaledges = nlocaledges;
+145: 
+146: 	int64_t colalloc = BYTES_PER_VERTEX*nlocaledges;
+147: 	colalloc += (4095);
+148: 	colalloc /= 4096;
+149: 	colalloc *= 4096;
+150: 	column = xmalloc(colalloc);
+151: 	aml_barrier();
+152: #ifdef SSSP
+153: 	weights = xmalloc(4*nlocaledges);
+154: 	g->weights = weights;
+155: 	aml_barrier();
+156: #endif
+157: 	//long allocatededges=colalloc;
+158: 	g->column = column;
+159: 
+160: 	aml_register_handler(fulledgehndl,1);
+161: 	//Next pass , actual data transfer: placing edges to its places in column and hcolumn
+162: 	ITERATE_TUPLE_GRAPH_BEGIN(tg, buf, bufsize,wbuf) {
+163: 		ptrdiff_t j;
+164: 		for (j = 0; j < bufsize; ++j) {
+165: 			int64_t v0 = get_v0_from_edge(&buf[j]);
+166: 			int64_t v1 = get_v1_from_edge(&buf[j]);
+167: 			if(v0==v1) continue;
+168: #ifdef SSSP
+169: 			send_full_edge(v0, v1,wbuf[j]);
+170: 			send_full_edge(v1, v0,wbuf[j]);
+[...]
+176: 		aml_barrier();
+177: 	} ITERATE_TUPLE_GRAPH_END;
+178: 
+179: 	free(degrees);
+180: }
+/home/hananefdh/MPNA/graph500/src/common.h: 250 - 250
+--------------------------------------------------------------------------------
+
+250: 							return a < b ? a : b;

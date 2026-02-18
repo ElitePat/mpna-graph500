@@ -1,0 +1,5 @@
+name;time_p;time_s;cpi_ratio;
+/gpfs/home/hananefdh/MPNA/graph500/src/v20/binaries/graph500_reference_bfs_sssp;99.961776733398;156.91009521484;;
+/usr/lib64/libc.so.6;0.022297237068415;0.034999992698431;;
+/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/mpich-4.3.0-udyhaai3chj56talqfjwgu4dxqxbzue5/lib/libmpi.so.12.5.0;0.012741278856993;0.01999999769032;;
+/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/libfabric-2.4.0-trxdixu53og7c6wdy3jbnkmw6p7ja6ab/lib/libfabric.so.1.30.0;0.0031853197142482;0.00499999942258;;

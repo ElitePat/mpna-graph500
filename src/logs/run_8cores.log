@@ -1,0 +1,21 @@
+graph_generation:               3.020786 s
+construction_time:              0.404070 s
+[romeo-c023:2221927] *** Process received signal ***
+[romeo-c023:2221927] Signal: Segmentation fault (11)
+[romeo-c023:2221927] Signal code: Address not mapped (1)
+[romeo-c023:2221927] Failing at address: 0x23586b0
+[romeo-c023:2221927] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x1521b9e3e6f0]
+[romeo-c023:2221927] [ 1] ./graph500_custom_bfs_sssp[0x403916]
+[romeo-c023:2221927] [ 2] ./graph500_custom_bfs_sssp[0x403c4c]
+[romeo-c023:2221927] [ 3] ./graph500_custom_bfs_sssp[0x4032e1]
+[romeo-c023:2221927] [ 4] /lib64/libc.so.6(+0x29590)[0x1521b9e29590]
+[romeo-c023:2221927] [ 5] /lib64/libc.so.6(__libc_start_main+0x80)[0x1521b9e29640]
+[romeo-c023:2221927] [ 6] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2221927] *** End of error message ***
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 4 with PID 0 on node romeo-c023 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------

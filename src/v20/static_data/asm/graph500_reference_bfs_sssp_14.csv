@@ -1,0 +1,5 @@
+address;source_location;insn;indent
+0x404560;/home/hananefdh/MPNA/graph500/src/bfs_reference.c:146;MOVQ	$-0x1,(%RDI,%RAX,8);
+0x404568;/home/hananefdh/MPNA/graph500/src/bfs_reference.c:146;INC	%RAX;
+0x40456b;/home/hananefdh/MPNA/graph500/src/bfs_reference.c:146;CMP	%RAX,0xb666e(%RIP);
+0x404572;/home/hananefdh/MPNA/graph500/src/bfs_reference.c:146;JA	404560 <clean_pred+0x10>;

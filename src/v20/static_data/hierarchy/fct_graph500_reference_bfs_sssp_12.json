@@ -1,0 +1,25 @@
+{
+  "__fct":
+    {
+      "loops":
+        {
+          "_14":
+            {
+              "src_regions":
+                [
+                  {
+                    "path": "/home/hananefdh/MPNA/graph500/src/bfs_reference.c",
+                    "regions":
+                      [
+                        [
+                        146,
+                        146
+                        ]
+                      ]
+                  }
+                ],
+              "src": "bfs_reference.c:146-146"
+            }
+        }
+    }
+}

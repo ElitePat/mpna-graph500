@@ -1,0 +1,55 @@
+/home/hananefdh/MPNA/graph500/src/../generator/graph_generator.c: 50 - 212
+--------------------------------------------------------------------------------
+
+50:   uint32_t val = mrg_get_uint_orig(st);
+51:   if (/* Unlikely */ val < limit) {
+[...]
+62:   val %= INITIATOR_DENOMINATOR;
+63:   if (val < adjusted_bc_numerator) return 1;
+64:   val = (uint32_t)(val - adjusted_bc_numerator);
+65:   if (val < adjusted_bc_numerator) return 2;
+66:   val = (uint32_t)(val - adjusted_bc_numerator);
+67: #if SPK_NOISE_LEVEL == 0
+68:   if (val < INITIATOR_A_NUMERATOR) return 0;
+[...]
+92:   x = __builtin_bswap64(x);
+[...]
+98:   x = ((x >>  4) & UINT64_C(0x0F0F0F0F0F0F0F0F)) | ((x & UINT64_C(0x0F0F0F0F0F0F0F0F)) <<  4);
+99:   x = ((x >>  2) & UINT64_C(0x3333333333333333)) | ((x & UINT64_C(0x3333333333333333)) <<  2);
+100:   x = ((x >>  1) & UINT64_C(0x5555555555555555)) | ((x & UINT64_C(0x5555555555555555)) <<  1);
+[...]
+132:   v += val0 + val1;
+133:   v *= (val0 | UINT64_C(0x4519840211493211));
+134:   v = (bitreverse(v) >> (64 - lgN));
+135:   assert ((v >> lgN) == 0);
+136:   v *= (val1 | UINT64_C(0x3050852102C843A5));
+137:   v = (bitreverse(v) >> (64 - lgN));
+138:   assert ((v >> lgN) == 0);
+[...]
+145:   int64_t base_src = 0, base_tgt = 0;
+146:   while (nverts > 1) {
+147:     int square = generate_4way_bernoulli(st, level, lgN);
+148:     int src_offset = square / 2;
+149:     int tgt_offset = square % 2;
+150:     assert (base_src <= base_tgt);
+151:     if (base_src == base_tgt) {
+152:       /* Clip-and-flip for undirected graph */
+153:       if (src_offset > tgt_offset) {
+[...]
+159:     nverts /= 2;
+160:     ++level;
+161:     base_src += nverts * src_offset;
+162:     base_tgt += nverts * tgt_offset;
+[...]
+207:   for (ei = start_edge; ei < end_edge; ++ei) {
+208:     mrg_state new_state = state;
+209:     mrg_skip(&new_state, 0, (uint64_t)ei, 0);
+210:     make_one_edge(nverts, 0, logN, &new_state, edges + (ei - start_edge), val0, val1);
+211: #ifdef SSSP
+212:     weights[ei-start_edge]=mrg_get_float_orig(&new_state);
+/home/hananefdh/MPNA/graph500/src/../generator/graph_generator.h: 44 - 46
+--------------------------------------------------------------------------------
+
+44:   p->v0_low = (uint32_t)v0;
+45:   p->v1_low = (uint32_t)v1;
+46:   p->high = (uint32_t)(((v0 >> 32) & 0xFFFF) | (((v1 >> 32) & 0xFFFF) << 16));

@@ -1,0 +1,15 @@
+address;source_location;insn;indent
+0x4098c0;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:193;ADD	$0x4800,%R13;
+0x4098c7;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:193;SHR	$0x8,%R12;
+0x4098cb;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:193;JE	4098fa <mrg_skip+0xba>;
+0x4098cd;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:195;TEST	%R12B,%R12B;
+0x4098d0;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:195;JE	4098c0 <mrg_skip+0x80>;
+0x4098d2;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:195;MOVZX	%R12B,%EAX;
+0x4098d6;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:165;MOV	%R15,%RDX;
+0x4098d9;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:165;MOV	%R15,%RSI;
+0x4098dc;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:195;LEA	(%RAX,%RAX,8),%RAX;
+0x4098e0;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:195;LEA	0x40b3a0(%R13,%RAX,8),%RDI;
+0x4098e8;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:193;ADD	$0x4800,%R13;
+0x4098ef;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:165;CALL	4092b0 <mrg_apply_transition>;
+0x4098f4;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:193;SHR	$0x8,%R12;
+0x4098f8;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:193;JNE	4098cd <mrg_skip+0x8d>;

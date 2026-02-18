@@ -1,0 +1,17 @@
+/home/hananefdh/MPNA/graph500/src/bfs_reference.c: 129 - 142
+--------------------------------------------------------------------------------
+
+129: void get_edge_count_for_teps(int64_t* edge_visit_count) {
+130: 	long i,j;
+131: 	long edge_count=0;
+132: 	for(i=0;i<g.nlocalverts;i++)
+133: 		if(pred_glob[i]!=-1) {
+134: 			for(j=rowstarts[i];j<rowstarts[i+1];j++)
+135: 				if(COLUMN(j)<=VERTEX_TO_GLOBAL(my_pe(),i))
+136: 					edge_count++;
+137: 
+138: 		}
+139: 
+140: 	aml_long_allsum(&edge_count);
+141: 	*edge_visit_count=edge_count;
+142: }

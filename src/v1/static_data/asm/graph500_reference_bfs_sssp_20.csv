@@ -1,0 +1,35 @@
+address;source_location;insn;indent
+0x404823;/home/hananefdh/MPNA/graph500/src/sssp_reference.c:107;MOV	0xb6406(%RIP),%RCX;
+0x40482a;/home/hananefdh/MPNA/graph500/src/sssp_reference.c:108;MOV	%EBX,%EAX;  (21) 
+0x40482c;/home/hananefdh/MPNA/graph500/src/sssp_reference.c:108;VMOVSS	(%RCX,%RAX,4),%XMM0;  (21) 
+0x404831;/home/hananefdh/MPNA/graph500/src/sssp_reference.c:108;VCOMISS	%XMM0,%XMM1;  (21) 
+0x404835;/home/hananefdh/MPNA/graph500/src/sssp_reference.c:108;JA	404a50 <run_sssp+0x380>;  (21) 
+0x40483b;/home/hananefdh/MPNA/graph500/src/sssp_reference.c:107;INC	%EBX;  (21) 
+0x40483d;/home/hananefdh/MPNA/graph500/src/sssp_reference.c:107;CMP	%EBX,%EDX;  (21) 
+0x40483f;/home/hananefdh/MPNA/graph500/src/sssp_reference.c:107;JA	40482a <run_sssp+0x15a>;  (21) 
+0x404a50;/home/hananefdh/MPNA/graph500/src/sssp_reference.c:109;VADDSS	(%R14,%RDI,4),%XMM0,%XMM0;
+0x404a56;/home/hananefdh/MPNA/graph500/src/sssp_reference.c:109;MOV	0xb612b(%RIP),%RDX;
+0x404a5d;/home/hananefdh/MPNA/graph500/src/sssp_reference.c:109;LEA	(%RBX,%RBX,2),%EAX;
+0x404a60;/home/hananefdh/MPNA/graph500/src/sssp_reference.c:107;INC	%EBX;
+0x404a62;/home/hananefdh/MPNA/graph500/src/sssp_reference.c:109;ADD	%EAX,%EAX;
+0x404a64;/home/hananefdh/MPNA/graph500/src/sssp_reference.c:109;MOV	(%RDX,%RAX,1),%RCX;
+0x404a68;/home/hananefdh/MPNA/graph500/src/sssp_reference.c:66;MOV	0xb61ea(%RIP),%EAX;
+0x404a6e;/home/hananefdh/MPNA/graph500/src/sssp_reference.c:67;MOV	$0xc,%EDX;
+0x404a73;/home/hananefdh/MPNA/graph500/src/sssp_reference.c:109;AND	%R15,%RCX;
+0x404a76;/home/hananefdh/MPNA/graph500/src/sssp_reference.c:66;SARX	%RAX,%RCX,%RDI;
+0x404a7b;/home/hananefdh/MPNA/graph500/src/sssp_reference.c:67;BZHI	%EAX,%ECX,%ECX;
+0x404a80;/home/hananefdh/MPNA/graph500/src/sssp_reference.c:66;VMOVSS	%XMM0,-0x40(%RBP);
+0x404a85;/home/hananefdh/MPNA/graph500/src/sssp_reference.c:66;VMOVQ	%RDI,%XMM0;
+0x404a8a;/home/hananefdh/MPNA/graph500/src/sssp_reference.c:67;LEA	-0x40(%RBP),%RDI;
+0x404a8e;/home/hananefdh/MPNA/graph500/src/sssp_reference.c:66;VPINSRD	$0x1,%ESI,%XMM0,%XMM0;
+0x404a94;/home/hananefdh/MPNA/graph500/src/sssp_reference.c:67;MOV	$0x1,%ESI;
+0x404a99;/home/hananefdh/MPNA/graph500/src/sssp_reference.c:66;VMOVQ	%XMM0,-0x3c(%RBP);
+0x404a9e;/home/hananefdh/MPNA/graph500/src/sssp_reference.c:67;CALL	4075c0 <aml_send>;
+0x404aa3;/home/hananefdh/MPNA/graph500/src/sssp_reference.c:107;MOV	0xb6116(%RIP),%R9;
+0x404aaa;/home/hananefdh/MPNA/graph500/src/sssp_reference.c:107;MOV	0xb60df(%RIP),%R8;
+0x404ab1;/home/hananefdh/MPNA/graph500/src/sssp_reference.c:107;VMOVSS	0x5557(%RIP),%XMM1;
+0x404ab9;/home/hananefdh/MPNA/graph500/src/sssp_reference.c:107;MOVSXD	(%R9,%R12,1),%RDI;
+0x404abd;/home/hananefdh/MPNA/graph500/src/sssp_reference.c:107;MOV	0x4(%R8,%RDI,4),%EDX;
+0x404ac2;/home/hananefdh/MPNA/graph500/src/sssp_reference.c:107;MOV	%RDI,%RSI;
+0x404ac5;/home/hananefdh/MPNA/graph500/src/sssp_reference.c:107;CMP	%EBX,%EDX;
+0x404ac7;/home/hananefdh/MPNA/graph500/src/sssp_reference.c:107;JA	404823 <run_sssp+0x153>;

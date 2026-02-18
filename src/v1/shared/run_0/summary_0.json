@@ -1,0 +1,68 @@
+{
+  "report": [
+    {
+      "name": "lvl0_profiled_time",
+      "status": "bad",
+      "score": 0,
+      "max_score": 4,
+      "text": "Application profile is too short (1.74 s)",
+      "desc": "If the overall application profiling time is less than 10 seconds, many of the measurements at function or loop level will very likely be under the measurement quality threshold (0,1 seconds).\n Rerun to increase runtime duration: for example use a larger dataset or include a repetition loop."
+    },
+    {
+      "name": "lvl0_optimization_level",
+      "status": "good",
+      "score": 3,
+      "max_score": 3,
+      "text": "Optimization level option is correctly used",
+      "desc": ""
+    },
+    {
+      "name": "lvl0_utilitary_options",
+      "status": "good",
+      "score": 3,
+      "max_score": 3,
+      "text": "Most of time spent in analyzed modules comes from functions compiled with -g and -fno-omit-frame-pointer",
+      "desc": "-g option gives access to debugging informations, such are source locations. -fno-omit-frame-pointer improve the accuracy of callchains found during the application profiling."
+    },
+    {
+      "name": "lvl0_is_perf_event_paranoid",
+      "status": "warning",
+      "score": 2,
+      "max_score": 3,
+      "text": "Security settings from the host restrict profiling. Some metrics will be missing or incomplete.",
+      "desc": "Current value for kernel.perf_event_paranoid is 2. If possible, set it to 1 or check with your system administrator which flag can be used to achieve this."
+    },
+    {
+      "name": "lvl0_architecture_options",
+      "status": "bad",
+      "score": 0,
+      "max_score": 3,
+      "text": "Compilation of some functions is not optimized for the target processor",
+      "desc": "Application run on the ZEN_V4 micro-architecture while the code was specialized for znver3."
+    },
+    {
+      "name": "lvl0_profiled_modules",
+      "status": "good",
+      "score": 2,
+      "max_score": 2,
+      "text": "Application is correctly profiled (\"Others\" category represents 0.00 % of the execution time)",
+      "desc": "To have a representative profiling, it is advised that the category \"Others\" represents less than 20% of the execution time in order to analyze as much as possible of the user code"
+    },
+    {
+      "name": "lvl0_is_lstopo",
+      "status": "good",
+      "score": 1,
+      "max_score": 1,
+      "text": "Lstopo present. The Topology lstopo report will be generated.",
+      "desc": ""
+    },
+    {
+      "name": "lvl0_is_fastmath",
+      "status": "warning",
+      "score": 0,
+      "max_score": 0,
+      "text": "Fastmath not used",
+      "desc": "Consider to add ffast-math to compilation flags (or replace -O3 with -Ofast) to unlock potential extra speedup by relaxing floating-point computation consistency. Warning: floating-point accuracy may be reduced and the compliance to IEEE/ISO rules/specifications for math functions will be relaxed, typically 'errno' will no longer be set after calling some math functions."
+    }
+  ]
+}

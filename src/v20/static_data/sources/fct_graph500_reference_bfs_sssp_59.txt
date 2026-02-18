@@ -1,0 +1,27 @@
+/home/hananefdh/MPNA/graph500/src/../generator/mod_arith_64bit.h: 27 - 36
+--------------------------------------------------------------------------------
+
+27:   assert (a <= 0x7FFFFFFE);
+28:   assert (b <= 0x7FFFFFFE);
+29:   return (uint_fast32_t)((uint_fast64_t)a * b % 0x7FFFFFFF);
+30: }
+31: 
+32: static inline uint_fast32_t mod_mac(uint_fast32_t sum, uint_fast32_t a, uint_fast32_t b) {
+33:   assert (sum <= 0x7FFFFFFE);
+34:   assert (a <= 0x7FFFFFFE);
+35:   assert (b <= 0x7FFFFFFE);
+36:   return (uint_fast32_t)(((uint_fast64_t)a * b + sum) % 0x7FFFFFFF);
+/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c: 172 - 270
+--------------------------------------------------------------------------------
+
+172:   uint_fast32_t new_elt = mod_mac_y(mod_mul_x(state->z1), state->z5);
+173:   state->z5 = state->z4;
+174:   state->z4 = state->z3;
+175:   state->z3 = state->z2;
+176:   state->z2 = state->z1;
+177:   state->z1 = new_elt;
+[...]
+267: uint_fast32_t mrg_get_uint_orig(mrg_state* state) {
+268:   mrg_orig_step(state);
+269:   return state->z1;
+270: }

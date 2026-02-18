@@ -1,0 +1,5 @@
+/home/hananefdh/MPNA/graph500/src/sssp_reference.c: 107 - 108
+--------------------------------------------------------------------------------
+
+107: 				for(j=rowstarts[q1[i]];j<rowstarts[q1[i]+1];j++)
+108: 					if(weights[j]<delta)

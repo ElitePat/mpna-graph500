@@ -1,0 +1,79 @@
+address;source_location;insn;indent
+0x409840;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:186;PUSH	%RBP;
+0x409841;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:186;MOV	%RSP,%RBP;
+0x409844;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:186;PUSH	%R15;
+0x409846;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:186;PUSH	%R14;
+0x409848;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:186;PUSH	%R13;
+0x40984a;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:186;PUSH	%R12;
+0x40984c;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:186;PUSH	%RBX;
+0x40984d;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:186;MOV	%RDI,%R15;
+0x409850;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:186;MOV	%RSI,%RBX;
+0x409853;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:186;SUB	$0x8,%RSP;
+0x409857;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:186;MOV	%RDX,%R12;
+0x40985a;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:189;TEST	%RCX,%RCX;
+0x40985d;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:189;JE	4098aa <mrg_skip+0x6a>;
+0x40985f;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:189;MOV	%RCX,%R13;
+0x409862;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:189;XOR	%R14D,%R14D;
+0x409865;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:189;JMP	40987d <mrg_skip+0x3d>;
+0x409867;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:189;NOPW	(%RAX,%RAX,1);
+0x409870;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:189;ADD	$0x4800,%R14;(77) 
+0x409877;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:189;SHR	$0x8,%R13;(77) 
+0x40987b;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:189;JE	4098aa <mrg_skip+0x6a>;(77) 
+0x40987d;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:191;TEST	%R13B,%R13B;(77) 
+0x409880;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:191;JE	409870 <mrg_skip+0x30>;(77) 
+0x409882;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:191;MOVZX	%R13B,%EAX;(77) 
+0x409886;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:165;MOV	%R15,%RDX;(77) 
+0x409889;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:165;MOV	%R15,%RSI;(77) 
+0x40988c;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:191;LEA	(%RAX,%RAX,8),%RAX;(77) 
+0x409890;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:191;LEA	0x40b3a0(%R14,%RAX,8),%RDI;(77) 
+0x409898;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:189;ADD	$0x4800,%R14;(77) 
+0x40989f;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:165;CALL	4092b0 <mrg_apply_transition>;(77) 
+0x4098a4;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:189;SHR	$0x8,%R13;(77) 
+0x4098a8;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:189;JNE	40987d <mrg_skip+0x3d>;(77) 
+0x4098aa;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:193;TEST	%R12,%R12;
+0x4098ad;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:193;JE	4098fa <mrg_skip+0xba>;
+0x4098af;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:193;MOV	$0x24000,%R13D;
+0x4098b5;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:193;JMP	4098cd <mrg_skip+0x8d>;
+0x4098b7;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:193;NOPW	(%RAX,%RAX,1);
+0x4098c0;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:193;ADD	$0x4800,%R13;(76) 
+0x4098c7;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:193;SHR	$0x8,%R12;(76) 
+0x4098cb;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:193;JE	4098fa <mrg_skip+0xba>;(76) 
+0x4098cd;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:195;TEST	%R12B,%R12B;(76) 
+0x4098d0;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:195;JE	4098c0 <mrg_skip+0x80>;(76) 
+0x4098d2;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:195;MOVZX	%R12B,%EAX;(76) 
+0x4098d6;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:165;MOV	%R15,%RDX;(76) 
+0x4098d9;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:165;MOV	%R15,%RSI;(76) 
+0x4098dc;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:195;LEA	(%RAX,%RAX,8),%RAX;(76) 
+0x4098e0;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:195;LEA	0x40b3a0(%R13,%RAX,8),%RDI;(76) 
+0x4098e8;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:193;ADD	$0x4800,%R13;(76) 
+0x4098ef;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:165;CALL	4092b0 <mrg_apply_transition>;(76) 
+0x4098f4;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:193;SHR	$0x8,%R12;(76) 
+0x4098f8;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:193;JNE	4098cd <mrg_skip+0x8d>;(76) 
+0x4098fa;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:197;TEST	%RBX,%RBX;
+0x4098fd;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:197;JE	409948 <mrg_skip+0x108>;
+0x4098ff;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:197;MOV	$0x48000,%R12D;
+0x409905;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:197;JMP	40991d <mrg_skip+0xdd>;
+0x409907;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:197;NOPW	(%RAX,%RAX,1);
+0x409910;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:197;ADD	$0x4800,%R12;(75) 
+0x409917;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:197;SHR	$0x8,%RBX;(75) 
+0x40991b;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:197;JE	409948 <mrg_skip+0x108>;(75) 
+0x40991d;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:199;TEST	%BL,%BL;(75) 
+0x40991f;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:199;JE	409910 <mrg_skip+0xd0>;(75) 
+0x409921;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:199;MOVZX	%BL,%EAX;(75) 
+0x409924;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:165;MOV	%R15,%RDX;(75) 
+0x409927;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:165;MOV	%R15,%RSI;(75) 
+0x40992a;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:199;LEA	(%RAX,%RAX,8),%RAX;(75) 
+0x40992e;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:199;LEA	0x40b3a0(%R12,%RAX,8),%RDI;(75) 
+0x409936;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:197;ADD	$0x4800,%R12;(75) 
+0x40993d;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:165;CALL	4092b0 <mrg_apply_transition>;(75) 
+0x409942;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:197;SHR	$0x8,%RBX;(75) 
+0x409946;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:197;JNE	40991d <mrg_skip+0xdd>;(75) 
+0x409948;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:201;ADD	$0x8,%RSP;
+0x40994c;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:201;POP	%RBX;
+0x40994d;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:201;POP	%R12;
+0x40994f;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:201;POP	%R13;
+0x409951;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:201;POP	%R14;
+0x409953;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:201;POP	%R15;
+0x409955;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:201;POP	%RBP;
+0x409956;/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c:201;RET;
+0x409957;:0;NOPW	(%RAX,%RAX,1);

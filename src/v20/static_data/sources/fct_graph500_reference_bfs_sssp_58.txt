@@ -1,0 +1,21 @@
+/home/hananefdh/MPNA/graph500/src/../generator/splittable_mrg.c: 165 - 201
+--------------------------------------------------------------------------------
+
+165:   mrg_apply_transition(mat, state, state);
+[...]
+186: void mrg_skip(mrg_state* state, uint_least64_t exponent_high, uint_least64_t exponent_middle, uint_least64_t exponent_low) {
+187:   /* fprintf(stderr, "skip(%016" PRIXLEAST64 "%016" PRIXLEAST64 "%016" PRIXLEAST64 ")\n", exponent_high, exponent_middle, exponent_low); */
+188:   int byte_index;
+189:   for (byte_index = 0; exponent_low; ++byte_index, exponent_low >>= 8) {
+190:     uint_least8_t val = (uint_least8_t)(exponent_low & 0xFF);
+191:     if (val != 0) mrg_step(&mrg_skip_matrices[byte_index][val], state);
+192:   }
+193:   for (byte_index = 8; exponent_middle; ++byte_index, exponent_middle >>= 8) {
+194:     uint_least8_t val = (uint_least8_t)(exponent_middle & 0xFF);
+195:     if (val != 0) mrg_step(&mrg_skip_matrices[byte_index][val], state);
+196:   }
+197:   for (byte_index = 16; exponent_high; ++byte_index, exponent_high >>= 8) {
+198:     uint_least8_t val = (uint_least8_t)(exponent_high & 0xFF);
+199:     if (val != 0) mrg_step(&mrg_skip_matrices[byte_index][val], state);
+200:   }
+201: }

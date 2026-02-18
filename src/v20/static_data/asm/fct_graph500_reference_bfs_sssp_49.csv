@@ -1,0 +1,4 @@
+address;source_location;insn;indent
+0x408cd0;/home/hananefdh/MPNA/graph500/src/../aml/aml.c:488;MOV	0xb1e8e(%RIP),%EAX;
+0x408cd6;/home/hananefdh/MPNA/graph500/src/../aml/aml.c:488;RET;
+0x408cd7;:0;NOPW	(%RAX,%RAX,1);

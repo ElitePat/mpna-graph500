@@ -1,0 +1,18 @@
+address;source_location;insn;indent
+0x406380;/home/hananefdh/MPNA/graph500/src/validate.c:154;VMOVDQU64	(%RDX,%RAX,2),%ZMM7;
+0x406387;/home/hananefdh/MPNA/graph500/src/validate.c:154;MOV	0x18(%RSP),%RDI;
+0x40638c;/home/hananefdh/MPNA/graph500/src/validate.c:154;VPCMPEQQ	%ZMM1,%ZMM7,%K0;
+0x406393;/home/hananefdh/MPNA/graph500/src/validate.c:154;VMOVDQU64	0x40(%RDX,%RAX,2),%ZMM7;
+0x40639b;/home/hananefdh/MPNA/graph500/src/validate.c:154;VPCMPEQQ	%ZMM1,%ZMM7,%K1;
+0x4063a2;/home/hananefdh/MPNA/graph500/src/validate.c:154;VMOVDQU64	(%RDX,%RAX,2),%ZMM7;
+0x4063a9;/home/hananefdh/MPNA/graph500/src/validate.c:154;KUNPCKBW	%K0,%K1,%K1;
+0x4063ad;/home/hananefdh/MPNA/graph500/src/validate.c:154;VBLENDMPS	%ZMM5,%ZMM4,%ZMM0{%K1};
+0x4063b3;/home/hananefdh/MPNA/graph500/src/validate.c:155;VPCMPNEQQ	%ZMM2,%ZMM7,%K0;
+0x4063ba;/home/hananefdh/MPNA/graph500/src/validate.c:155;VMOVDQU64	0x40(%RDX,%RAX,2),%ZMM7;
+0x4063c2;/home/hananefdh/MPNA/graph500/src/validate.c:155;VPCMPNEQQ	%ZMM2,%ZMM7,%K1;
+0x4063c9;/home/hananefdh/MPNA/graph500/src/validate.c:155;KUNPCKBW	%K0,%K1,%K1;
+0x4063cd;/home/hananefdh/MPNA/graph500/src/validate.c:155;VBLENDMPS	%ZMM0,%ZMM3,%ZMM0{%K1};
+0x4063d3;/home/hananefdh/MPNA/graph500/src/validate.c:155;VMOVUPS	%ZMM0,(%RDI,%RAX,1);
+0x4063da;/home/hananefdh/MPNA/graph500/src/validate.c:152;ADD	$0x40,%RAX;
+0x4063de;/home/hananefdh/MPNA/graph500/src/validate.c:152;CMP	%RAX,%RCX;
+0x4063e1;/home/hananefdh/MPNA/graph500/src/validate.c:152;JNE	406380 <makedepthmapforbfs+0xa0>;

@@ -1,0 +1,44 @@
+/home/hananefdh/MPNA/graph500/src/bfs_reference.c: 62 - 126
+--------------------------------------------------------------------------------
+
+62: 	visitmsg m = {VERTEX_LOCAL(glob),from};
+63: 	aml_send(&m,1,sizeof(visitmsg),VERTEX_OWNER(glob));
+[...]
+80: void run_bfs(int64_t root, int64_t* pred) {
+81: 	int64_t nvisited;
+82: 	long sum;
+83: 	unsigned int i,j,k,lvl=1;
+84: 	pred_glob=pred;
+85: 	aml_register_handler(visithndl,1);
+86: 
+87: 	CLEAN_VISITED();
+88: 
+89: 	qc=0; sum=1; q2c=0;
+90: 
+91: 	nvisited=1;
+92: 	if(VERTEX_OWNER(root) == rank) {
+93: 		pred[VERTEX_LOCAL(root)]=root;
+94: 		SET_VISITED(root);
+95: 		q1[0]=VERTEX_LOCAL(root);
+96: 		qc=1;
+97: 	} 
+98: 
+99: 	// While there are vertices in current level
+100: 	while(sum) {
+[...]
+106: 		for(i=0;i<qc;i++)
+107: 			for(j=rowstarts[q1[i]];j<rowstarts[q1[i]+1];j++)
+108: 				send_visit(COLUMN(j),q1[i]);
+109: 		aml_barrier();
+110: 
+111: 		qc=q2c;int *tmp=q1;q1=q2;q2=tmp;
+112: 		sum=qc;
+113: 		aml_long_allsum(&sum);
+114: 
+115: 		nvisited+=sum;
+116: 
+117: 		q2c=0;
+[...]
+124: 	aml_barrier();
+125: 
+126: }

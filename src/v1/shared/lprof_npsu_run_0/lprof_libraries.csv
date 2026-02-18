@@ -1,0 +1,14 @@
+name;
+/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/gcc-runtime-11.4.1-q6wrzecqsjkeqj75djmxleag65fdmftm/lib/libatomic.so.1;
+/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/libfabric-2.4.0-trxdixu53og7c6wdy3jbnkmw6p7ja6ab/lib/libfabric.so.1.30.0;
+/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/libxml2-2.15.1-k7lnoh63rwr5dgd3adxulufp5tji2dzh/lib/libxml2.so.16.1.1;
+/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/hwloc-2.12.2-6lwxzn2zb5ylfaxw3iqywocvcio53kdl/lib/libhwloc.so.15.10.1;
+/gpfs/home/hananefdh/MPNA/graph500/src/v1/tools/lprof_npsu_run_0/romeo-c023/interposer.so;
+[vdso];
+/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/libiconv-1.18-2uad6sbxqgufiis3gkexewy5s7f4zxjc/lib/libiconv.so.2.7.0;
+/usr/lib64/ld-linux-x86-64.so.2;
+/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/mpich-4.3.0-udyhaai3chj56talqfjwgu4dxqxbzue5/lib/libmpi.so.12.5.0;
+/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/libpciaccess-0.17-3zk2ad5hn2elzieoxrqgohela6jvxwly/lib/libpciaccess.so.0.11.1;
+/usr/lib64/libm.so.6;
+/usr/lib64/libc.so.6;
+/gpfs/home/hananefdh/spack/opt/spack/linux-zen4/yaksa-0.4-75thwa2kvt34v6fm6pjucw26vxuig45j/lib/libyaksa.so.0.0.0;

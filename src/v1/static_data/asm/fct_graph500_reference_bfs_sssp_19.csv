@@ -1,0 +1,6 @@
+address;source_location;insn;indent
+0x404c80;/home/hananefdh/MPNA/graph500/src/csr_reference.c:38;MOVSXD	(%RSI),%RDX;
+0x404c83;/home/hananefdh/MPNA/graph500/src/csr_reference.c:38;MOV	0xb5fc6(%RIP),%RAX;
+0x404c8a;/home/hananefdh/MPNA/graph500/src/csr_reference.c:38;INCL	(%RAX,%RDX,4);
+0x404c8d;/home/hananefdh/MPNA/graph500/src/csr_reference.c:38;RET;
+0x404c8e;:0;XCHG	%AX,%AX;

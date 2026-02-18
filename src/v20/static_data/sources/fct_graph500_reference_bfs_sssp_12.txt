@@ -1,0 +1,5 @@
+/home/hananefdh/MPNA/graph500/src/bfs_reference.c: 146 - 147
+--------------------------------------------------------------------------------
+
+146: 	for(i=0;i<g.nlocalverts;i++) pred[i]=-1;
+147: }

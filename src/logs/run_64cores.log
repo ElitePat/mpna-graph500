@@ -1,0 +1,713 @@
+graph_generation:               3.025130 s
+construction_time:              0.857142 s
+[romeo-c023:2222156] *** Process received signal ***
+[romeo-c023:2222156] Signal: Segmentation fault (11)
+[romeo-c023:2222156] Signal code: Address not mapped (1)
+[romeo-c023:2222156] Failing at address: (nil)
+[romeo-c023:2222157] *** Process received signal ***
+[romeo-c023:2222157] Signal: Segmentation fault (11)
+[romeo-c023:2222157] Signal code: Address not mapped (1)
+[romeo-c023:2222157] Failing at address: (nil)
+[romeo-c023:2222158] *** Process received signal ***
+[romeo-c023:2222158] Signal: Segmentation fault (11)
+[romeo-c023:2222158] Signal code: Address not mapped (1)
+[romeo-c023:2222158] Failing at address: (nil)
+[romeo-c023:2222159] *** Process received signal ***
+[romeo-c023:2222159] Signal: Segmentation fault (11)
+[romeo-c023:2222159] Signal code: Address not mapped (1)
+[romeo-c023:2222159] Failing at address: (nil)
+[romeo-c023:2222161] *** Process received signal ***
+[romeo-c023:2222161] Signal: Segmentation fault (11)
+[romeo-c023:2222161] Signal code: Address not mapped (1)
+[romeo-c023:2222161] Failing at address: (nil)
+[romeo-c023:2222160] *** Process received signal ***
+[romeo-c023:2222160] Signal: Segmentation fault (11)
+[romeo-c023:2222160] Signal code: Address not mapped (1)
+[romeo-c023:2222160] Failing at address: (nil)
+[romeo-c023:2222160] [ 0] [romeo-c023:2222162] *** Process received signal ***
+[romeo-c023:2222162] Signal: Segmentation fault (11)
+[romeo-c023:2222162] Signal code: Address not mapped (1)
+[romeo-c023:2222162] Failing at address: (nil)
+[romeo-c023:2222163] *** Process received signal ***
+[romeo-c023:2222163] Signal: Segmentation fault (11)
+[romeo-c023:2222163] Signal code: Address not mapped (1)
+[romeo-c023:2222163] Failing at address: (nil)
+[romeo-c023:2222165] *** Process received signal ***
+[romeo-c023:2222165] Signal: Segmentation fault (11)
+[romeo-c023:2222165] Signal code: Address not mapped (1)
+[romeo-c023:2222165] Failing at address: (nil)
+[romeo-c023:2222164] *** Process received signal ***
+[romeo-c023:2222164] Signal: Segmentation fault (11)
+[romeo-c023:2222164] Signal code: Address not mapped (1)
+[romeo-c023:2222164] Failing at address: (nil)
+[romeo-c023:2222166] *** Process received signal ***
+[romeo-c023:2222166] Signal: Segmentation fault (11)
+[romeo-c023:2222166] Signal code: Address not mapped (1)
+[romeo-c023:2222166] Failing at address: (nil)
+[romeo-c023:2222167] *** Process received signal ***
+[romeo-c023:2222167] Signal: Segmentation fault (11)
+[romeo-c023:2222167] Signal code: Address not mapped (1)
+[romeo-c023:2222167] Failing at address: (nil)
+[romeo-c023:2222168] *** Process received signal ***
+[romeo-c023:2222168] Signal: Segmentation fault (11)
+[romeo-c023:2222168] Signal code: Address not mapped (1)
+[romeo-c023:2222168] Failing at address: (nil)
+[romeo-c023:2222173] *** Process received signal ***
+[romeo-c023:2222173] Signal: Segmentation fault (11)
+[romeo-c023:2222173] Signal code: Address not mapped (1)
+[romeo-c023:2222173] Failing at address: (nil)
+[romeo-c023:2222169] *** Process received signal ***
+[romeo-c023:2222169] Signal: Segmentation fault (11)
+[romeo-c023:2222169] Signal code: Address not mapped (1)
+[romeo-c023:2222169] Failing at address: (nil)
+[romeo-c023:2222170] *** Process received signal ***
+[romeo-c023:2222170] Signal: Segmentation fault (11)
+[romeo-c023:2222170] Signal code: Address not mapped (1)
+[romeo-c023:2222170] Failing at address: (nil)
+[romeo-c023:2222175] *** Process received signal ***
+[romeo-c023:2222175] Signal: Segmentation fault (11)
+[romeo-c023:2222175] Signal code: Address not mapped (1)
+[romeo-c023:2222175] Failing at address: (nil)
+[romeo-c023:2222178] *** Process received signal ***
+[romeo-c023:2222178] Signal: Segmentation fault (11)
+[romeo-c023:2222178] Signal code: Address not mapped (1)
+[romeo-c023:2222178] Failing at address: (nil)
+[romeo-c023:2222172] *** Process received signal ***
+[romeo-c023:2222172] Signal: Segmentation fault (11)
+[romeo-c023:2222172] Signal code: Address not mapped (1)
+[romeo-c023:2222172] Failing at address: (nil)
+[romeo-c023:2222174] *** Process received signal ***
+[romeo-c023:2222174] Signal: Segmentation fault (11)
+[romeo-c023:2222174] Signal code: Address not mapped (1)
+[romeo-c023:2222174] Failing at address: (nil)
+[romeo-c023:2222183] *** Process received signal ***
+[romeo-c023:2222183] Signal: Segmentation fault (11)
+[romeo-c023:2222183] Signal code: Address not mapped (1)
+[romeo-c023:2222183] Failing at address: (nil)
+[romeo-c023:2222181] *** Process received signal ***
+[romeo-c023:2222181] Signal: Segmentation fault (11)
+[romeo-c023:2222181] Signal code: Address not mapped (1)
+[romeo-c023:2222181] Failing at address: (nil)
+[romeo-c023:2222179] *** Process received signal ***
+[romeo-c023:2222179] Signal: Segmentation fault (11)
+[romeo-c023:2222179] Signal code: Address not mapped (1)
+[romeo-c023:2222179] Failing at address: (nil)
+[romeo-c023:2222180] *** Process received signal ***
+[romeo-c023:2222180] Signal: Segmentation fault (11)
+[romeo-c023:2222180] Signal code: Address not mapped (1)
+[romeo-c023:2222180] Failing at address: (nil)
+[romeo-c023:2222186] *** Process received signal ***
+[romeo-c023:2222186] Signal: Segmentation fault (11)
+[romeo-c023:2222186] Signal code: Address not mapped (1)
+[romeo-c023:2222186] Failing at address: (nil)
+[romeo-c023:2222190] *** Process received signal ***
+[romeo-c023:2222190] Signal: Segmentation fault (11)
+[romeo-c023:2222190] Signal code: Address not mapped (1)
+[romeo-c023:2222190] Failing at address: (nil)
+[romeo-c023:2222190] [ 0] [romeo-c023:2222184] *** Process received signal ***
+[romeo-c023:2222184] Signal: Segmentation fault (11)
+[romeo-c023:2222184] Signal code: Address not mapped (1)
+[romeo-c023:2222184] Failing at address: (nil)
+[romeo-c023:2222184] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x14e2b123e6f0]
+[romeo-c023:2222184] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222184] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222184] [ 3] /lib64/libc.so.6(+0x29590)[0x14e2b1229590]
+[romeo-c023:2222184] [ 4] [romeo-c023:2222192] *** Process received signal ***
+[romeo-c023:2222192] Signal: Segmentation fault (11)
+[romeo-c023:2222192] Signal code: Address not mapped (1)
+[romeo-c023:2222192] Failing at address: (nil)
+[romeo-c023:2222198] *** Process received signal ***
+[romeo-c023:2222198] Signal: Segmentation fault (11)
+[romeo-c023:2222198] Signal code: Address not mapped (1)
+[romeo-c023:2222198] Failing at address: (nil)
+[romeo-c023:2222198] [ 0] [romeo-c023:2222208] *** Process received signal ***
+[romeo-c023:2222208] Signal: Segmentation fault (11)
+[romeo-c023:2222208] Signal code: Address not mapped (1)
+[romeo-c023:2222208] Failing at address: (nil)
+[romeo-c023:2222196] *** Process received signal ***
+[romeo-c023:2222196] Signal: Segmentation fault (11)
+[romeo-c023:2222196] Signal code: Address not mapped (1)
+[romeo-c023:2222196] Failing at address: (nil)
+[romeo-c023:2222204] *** Process received signal ***
+[romeo-c023:2222204] Signal: Segmentation fault (11)
+[romeo-c023:2222204] Signal code: Address not mapped (1)
+[romeo-c023:2222204] Failing at address: (nil)
+[romeo-c023:2222204] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x14ec7583e6f0]
+[romeo-c023:2222204] [ 1] [romeo-c023:2222216] *** Process received signal ***
+[romeo-c023:2222216] Signal: Segmentation fault (11)
+[romeo-c023:2222216] Signal code: Address not mapped (1)
+[romeo-c023:2222216] Failing at address: (nil)
+[romeo-c023:2222222] *** Process received signal ***
+[romeo-c023:2222222] Signal: Segmentation fault (11)
+[romeo-c023:2222222] Signal code: Address not mapped (1)
+[romeo-c023:2222222] Failing at address: (nil)
+[romeo-c023:2222222] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x14d5ea63e6f0]
+[romeo-c023:2222222] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222222] [romeo-c023:2222211] *** Process received signal ***
+[romeo-c023:2222211] Signal: Segmentation fault (11)
+[romeo-c023:2222211] Signal code: Address not mapped (1)
+[romeo-c023:2222211] Failing at address: (nil)
+[romeo-c023:2222211] [ 0] [romeo-c023:2222220] *** Process received signal ***
+[romeo-c023:2222220] Signal: Segmentation fault (11)
+[romeo-c023:2222220] Signal code: Address not mapped (1)
+[romeo-c023:2222220] Failing at address: (nil)
+[romeo-c023:2222220] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x14b1d943e6f0]
+[romeo-c023:2222220] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222220] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222220] [ 3] [romeo-c023:2222228] *** Process received signal ***
+[romeo-c023:2222228] Signal: Segmentation fault (11)
+[romeo-c023:2222228] Signal code: Address not mapped (1)
+[romeo-c023:2222228] Failing at address: (nil)
+[romeo-c023:2222228] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x147fada3e6f0]
+[romeo-c023:2222228] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222228] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222228] [ 3] /lib64/libc.so.6(+0x29590)[0x147fada29590]
+[romeo-c023:2222228] [romeo-c023:2222232] *** Process received signal ***
+[romeo-c023:2222232] Signal: Segmentation fault (11)
+[romeo-c023:2222232] Signal code: Address not mapped (1)
+[romeo-c023:2222232] Failing at address: (nil)
+[romeo-c023:2222224] *** Process received signal ***
+[romeo-c023:2222224] Signal: Segmentation fault (11)
+[romeo-c023:2222224] Signal code: Address not mapped (1)
+[romeo-c023:2222224] Failing at address: (nil)
+[romeo-c023:2222230] *** Process received signal ***
+[romeo-c023:2222230] Signal: Segmentation fault (11)
+[romeo-c023:2222230] Signal code: Address not mapped (1)
+[romeo-c023:2222230] Failing at address: (nil)
+[romeo-c023:2222239] *** Process received signal ***
+[romeo-c023:2222239] Signal: Segmentation fault (11)
+[romeo-c023:2222239] Signal code: Address not mapped (1)
+[romeo-c023:2222239] Failing at address: (nil)
+[romeo-c023:2222239] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x14f98b03e6f0]
+[romeo-c023:2222239] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222239] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222239] [ 3] /lib64/libc.so.6(+0x29590)[0x14f98b029590]
+[romeo-c023:2222239] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x14f98b029640]
+[romeo-c023:2222239] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222239] *** End of error message ***
+[romeo-c023:2222245] *** Process received signal ***
+[romeo-c023:2222245] Signal: Segmentation fault (11)
+[romeo-c023:2222245] Signal code: Address not mapped (1)
+[romeo-c023:2222245] Failing at address: (nil)
+[romeo-c023:2222245] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x150daf03e6f0]
+[romeo-c023:2222245] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222245] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222245] [ 3] /lib64/libc.so.6(+0x29590)[0x150daf029590]
+[romeo-c023:2222245] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x150daf029640]
+[romeo-c023:2222245] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222245] *** End of error message ***
+[romeo-c023:2222236] *** Process received signal ***
+[romeo-c023:2222236] Signal: Segmentation fault (11)
+[romeo-c023:2222236] Signal code: Address not mapped (1)
+[romeo-c023:2222236] Failing at address: (nil)
+[romeo-c023:2222243] *** Process received signal ***
+[romeo-c023:2222243] Signal: Segmentation fault (11)
+[romeo-c023:2222243] Signal code: Address not mapped (1)
+[romeo-c023:2222243] Failing at address: (nil)
+[romeo-c023:2222255] *** Process received signal ***
+[romeo-c023:2222255] Signal: Segmentation fault (11)
+[romeo-c023:2222255] Signal code: Address not mapped (1)
+[romeo-c023:2222255] Failing at address: (nil)
+[romeo-c023:2222255] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x14889323e6f0]
+[romeo-c023:2222255] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222255] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222255] [ 3] /lib64/libc.so.6(+0x29590)[0x148893229590]
+[romeo-c023:2222255] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x148893229640]
+[romeo-c023:2222255] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222255] *** End of error message ***
+[romeo-c023:2222258] *** Process received signal ***
+[romeo-c023:2222258] Signal: Segmentation fault (11)
+[romeo-c023:2222258] Signal code: Address not mapped (1)
+[romeo-c023:2222258] Failing at address: (nil)
+[romeo-c023:2222250] *** Process received signal ***
+[romeo-c023:2222250] Signal: Segmentation fault (11)
+[romeo-c023:2222250] Signal code: Address not mapped (1)
+[romeo-c023:2222250] Failing at address: (nil)
+[romeo-c023:2222250] [ 0] [romeo-c023:2222261] *** Process received signal ***
+[romeo-c023:2222261] Signal: Segmentation fault (11)
+[romeo-c023:2222261] Signal code: Address not mapped (1)
+[romeo-c023:2222261] Failing at address: (nil)
+[romeo-c023:2222261] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x14693d03e6f0]
+[romeo-c023:2222261] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222261] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222261] [ 3] /lib64/libc.so.6(+0x29590)[0x14693d029590]
+[romeo-c023:2222261] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x14693d029640]
+[romeo-c023:2222261] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222261] *** End of error message ***
+[romeo-c023:2222270] *** Process received signal ***
+[romeo-c023:2222270] Signal: Segmentation fault (11)
+[romeo-c023:2222270] Signal code: Address not mapped (1)
+[romeo-c023:2222270] Failing at address: (nil)
+[romeo-c023:2222275] *** Process received signal ***
+[romeo-c023:2222275] Signal: Segmentation fault (11)
+[romeo-c023:2222275] Signal code: Address not mapped (1)
+[romeo-c023:2222275] Failing at address: (nil)
+[romeo-c023:2222275] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x14c271e3e6f0]
+[romeo-c023:2222265] *** Process received signal ***
+[romeo-c023:2222265] Signal: Segmentation fault (11)
+[romeo-c023:2222265] Signal code: Address not mapped (1)
+[romeo-c023:2222265] Failing at address: (nil)
+[romeo-c023:2222265] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x14c8a883e6f0]
+[romeo-c023:2222278] *** Process received signal ***
+[romeo-c023:2222278] Signal: Segmentation fault (11)
+[romeo-c023:2222278] Signal code: Address not mapped (1)
+[romeo-c023:2222278] Failing at address: (nil)
+[romeo-c023:2222278] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x1460b503e6f0]
+[romeo-c023:2222278] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222278] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222278] [ 3] /lib64/libc.so.6(+0x29590)[0x1460b5029590]
+[romeo-c023:2222278] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x1460b5029640]
+[romeo-c023:2222278] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222278] *** End of error message ***
+[romeo-c023:2222280] *** Process received signal ***
+[romeo-c023:2222280] Signal: Segmentation fault (11)
+[romeo-c023:2222280] Signal code: Address not mapped (1)
+[romeo-c023:2222280] Failing at address: (nil)
+[romeo-c023:2222280] [ 0] [romeo-c023:2222286] *** Process received signal ***
+[romeo-c023:2222286] Signal: Segmentation fault (11)
+[romeo-c023:2222286] Signal code: Address not mapped (1)
+[romeo-c023:2222286] Failing at address: (nil)
+[romeo-c023:2222286] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x146a8563e6f0]
+[romeo-c023:2222286] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222286] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222286] [ 3] /lib64/libc.so.6(+0x29590)[0x146a85629590]
+[romeo-c023:2222286] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x146a85629640]
+[romeo-c023:2222286] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222286] *** End of error message ***
+[romeo-c023:2222283] *** Process received signal ***
+[romeo-c023:2222283] Signal: Segmentation fault (11)
+[romeo-c023:2222283] Signal code: Address not mapped (1)
+[romeo-c023:2222283] Failing at address: (nil)
+[romeo-c023:2222283] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x15364c43e6f0]
+[romeo-c023:2222288] *** Process received signal ***
+[romeo-c023:2222288] Signal: Segmentation fault (11)
+[romeo-c023:2222288] Signal code: Address not mapped (1)
+[romeo-c023:2222288] Failing at address: (nil)
+[romeo-c023:2222288] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x1541f6c3e6f0]
+[romeo-c023:2222288] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222288] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222288] [ 3] /lib64/libc.so.6(+0x29590)[0x1541f6c29590]
+[romeo-c023:2222288] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x1541f6c29640]
+[romeo-c023:2222288] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222288] *** End of error message ***
+[romeo-c023:2222291] *** Process received signal ***
+[romeo-c023:2222291] Signal: Segmentation fault (11)
+[romeo-c023:2222291] Signal code: Address not mapped (1)
+[romeo-c023:2222291] Failing at address: (nil)
+[romeo-c023:2222291] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x14687103e6f0]
+[romeo-c023:2222291] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222291] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222291] [ 3] /lib64/libc.so.6(+0x29590)[0x146871029590]
+[romeo-c023:2222291] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x146871029640]
+[romeo-c023:2222291] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222291] *** End of error message ***
+[romeo-c023:2222295] *** Process received signal ***
+[romeo-c023:2222295] Signal: Segmentation fault (11)
+[romeo-c023:2222295] Signal code: Address not mapped (1)
+[romeo-c023:2222295] Failing at address: (nil)
+[romeo-c023:2222295] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x153e5343e6f0]
+[romeo-c023:2222295] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222295] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222295] [ 3] /lib64/libc.so.6(+0x29590)[0x153e53429590]
+[romeo-c023:2222295] [ 4] [romeo-c023:2222293] *** Process received signal ***
+[romeo-c023:2222293] Signal: Segmentation fault (11)
+[romeo-c023:2222293] Signal code: Address not mapped (1)
+[romeo-c023:2222293] Failing at address: (nil)
+[romeo-c023:2222293] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x14e3d363e6f0]
+[romeo-c023:2222293] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222293] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222293] [ 3] /lib64/libc.so.6(+0x29590)[0x14e3d3629590]
+[romeo-c023:2222293] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x14e3d3629640]
+[romeo-c023:2222293] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222299] *** Process received signal ***
+[romeo-c023:2222299] Signal: Segmentation fault (11)
+[romeo-c023:2222299] Signal code: Address not mapped (1)
+[romeo-c023:2222299] Failing at address: (nil)
+[romeo-c023:2222299] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x15058ca3e6f0]
+[romeo-c023:2222299] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222299] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222299] [ 3] /lib64/libc.so.6(+0x29590)[0x15058ca29590]
+[romeo-c023:2222299] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x15058ca29640]
+[romeo-c023:2222299] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222299] *** End of error message ***
+[romeo-c023:2222297] *** Process received signal ***
+[romeo-c023:2222297] Signal: Segmentation fault (11)
+[romeo-c023:2222297] Signal code: Address not mapped (1)
+[romeo-c023:2222297] Failing at address: (nil)
+[romeo-c023:2222297] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x148f9323e6f0]
+[romeo-c023:2222297] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222297] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222297] [ 3] /lib64/libc.so.6(+0x29590)[0x148f93229590]
+[romeo-c023:2222297] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x148f93229640]
+[romeo-c023:2222297] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222297] *** End of error message ***
+[romeo-c023:2222304] *** Process received signal ***
+[romeo-c023:2222304] Signal: Segmentation fault (11)
+[romeo-c023:2222304] Signal code: Address not mapped (1)
+[romeo-c023:2222304] Failing at address: (nil)
+[romeo-c023:2222304] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x15545de3e6f0]
+[romeo-c023:2222304] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222304] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222304] [ 3] /lib64/libc.so.6(+0x29590)[0x15545de29590]
+[romeo-c023:2222304] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x15545de29640]
+[romeo-c023:2222304] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222304] *** End of error message ***
+[romeo-c023:2222303] *** Process received signal ***
+[romeo-c023:2222303] Signal: Segmentation fault (11)
+[romeo-c023:2222303] Signal code: Address not mapped (1)
+[romeo-c023:2222303] Failing at address: (nil)
+[romeo-c023:2222303] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x14801943e6f0]
+[romeo-c023:2222303] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222303] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222303] [ 3] /lib64/libc.so.6(+0x29590)[0x148019429590]
+[romeo-c023:2222303] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x148019429640]
+[romeo-c023:2222303] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222303] *** End of error message ***
+[romeo-c023:2222155] *** Process received signal ***
+[romeo-c023:2222156] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x14ba4343e6f0]
+[romeo-c023:2222156] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222156] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222156] [ 3] /lib64/libc.so.6(+0x29590)[0x14ba43429590]
+[romeo-c023:2222156] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x14ba43429640]
+[romeo-c023:2222156] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222156] *** End of error message ***
+[romeo-c023:2222157] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x14b08ce3e6f0]
+[romeo-c023:2222157] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222157] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222157] [ 3] /lib64/libc.so.6(+0x29590)[0x14b08ce29590]
+[romeo-c023:2222157] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x14b08ce29640]
+[romeo-c023:2222157] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222157] *** End of error message ***
+[romeo-c023:2222158] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x1524d903e6f0]
+[romeo-c023:2222158] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222158] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222158] [ 3] /lib64/libc.so.6(+0x29590)[0x1524d9029590]
+[romeo-c023:2222158] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x1524d9029640]
+[romeo-c023:2222158] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222158] *** End of error message ***
+[romeo-c023:2222159] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x14f6d103e6f0]
+[romeo-c023:2222159] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222159] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222159] [ 3] /lib64/libc.so.6(+0x29590)[0x14f6d1029590]
+[romeo-c023:2222159] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x14f6d1029640]
+[romeo-c023:2222159] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222159] *** End of error message ***
+[romeo-c023:2222161] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x14950423e6f0]
+[romeo-c023:2222161] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222161] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222161] [ 3] /lib64/libc.so.6(+0x29590)[0x149504229590]
+[romeo-c023:2222161] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x149504229640]
+[romeo-c023:2222161] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222161] *** End of error message ***
+/lib64/libc.so.6(+0x3e6f0)[0x147decc3e6f0]
+[romeo-c023:2222160] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222160] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222160] [ 3] /lib64/libc.so.6(+0x29590)[0x147decc29590]
+[romeo-c023:2222160] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x147decc29640]
+[romeo-c023:2222160] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222160] *** End of error message ***
+[romeo-c023:2222162] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x145a2683e6f0]
+[romeo-c023:2222162] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222162] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222162] [ 3] /lib64/libc.so.6(+0x29590)[0x145a26829590]
+[romeo-c023:2222162] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x145a26829640]
+[romeo-c023:2222162] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222162] *** End of error message ***
+[romeo-c023:2222163] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x15203903e6f0]
+[romeo-c023:2222163] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222163] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222163] [ 3] /lib64/libc.so.6(+0x29590)[0x152039029590]
+[romeo-c023:2222163] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x152039029640]
+[romeo-c023:2222163] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222163] *** End of error message ***
+[romeo-c023:2222165] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x1458d323e6f0]
+[romeo-c023:2222165] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222165] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222165] [ 3] /lib64/libc.so.6(+0x29590)[0x1458d3229590]
+[romeo-c023:2222165] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x1458d3229640]
+[romeo-c023:2222165] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222165] *** End of error message ***
+[romeo-c023:2222164] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x14958fe3e6f0]
+[romeo-c023:2222164] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222164] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222164] [ 3] /lib64/libc.so.6(+0x29590)[0x14958fe29590]
+[romeo-c023:2222164] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x14958fe29640]
+[romeo-c023:2222164] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222164] *** End of error message ***
+[romeo-c023:2222166] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x1487ec03e6f0]
+[romeo-c023:2222166] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222166] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222166] [ 3] /lib64/libc.so.6(+0x29590)[0x1487ec029590]
+[romeo-c023:2222166] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x1487ec029640]
+[romeo-c023:2222166] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222166] *** End of error message ***
+[romeo-c023:2222167] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x14b3ef23e6f0]
+[romeo-c023:2222167] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222167] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222167] [ 3] /lib64/libc.so.6(+0x29590)[0x14b3ef229590]
+[romeo-c023:2222167] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x14b3ef229640]
+[romeo-c023:2222167] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222167] *** End of error message ***
+[romeo-c023:2222168] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x146950c3e6f0]
+[romeo-c023:2222168] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222168] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222168] [ 3] /lib64/libc.so.6(+0x29590)[0x146950c29590]
+[romeo-c023:2222168] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x146950c29640]
+[romeo-c023:2222168] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222168] *** End of error message ***
+[romeo-c023:2222173] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x14588b43e6f0]
+[romeo-c023:2222173] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222173] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222173] [ 3] /lib64/libc.so.6(+0x29590)[0x14588b429590]
+[romeo-c023:2222173] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x14588b429640]
+[romeo-c023:2222173] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222173] *** End of error message ***
+[romeo-c023:2222169] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x14b04bc3e6f0]
+[romeo-c023:2222169] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222169] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222169] [ 3] /lib64/libc.so.6(+0x29590)[0x14b04bc29590]
+[romeo-c023:2222169] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x14b04bc29640]
+[romeo-c023:2222169] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222169] *** End of error message ***
+[romeo-c023:2222170] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x14d27703e6f0]
+[romeo-c023:2222170] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222170] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222170] [ 3] /lib64/libc.so.6(+0x29590)[0x14d277029590]
+[romeo-c023:2222170] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x14d277029640]
+[romeo-c023:2222170] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222170] *** End of error message ***
+[romeo-c023:2222175] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x14d891c3e6f0]
+[romeo-c023:2222175] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222175] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222175] [ 3] /lib64/libc.so.6(+0x29590)[0x14d891c29590]
+[romeo-c023:2222175] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x14d891c29640]
+[romeo-c023:2222175] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222175] *** End of error message ***
+[romeo-c023:2222178] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x149003e3e6f0]
+[romeo-c023:2222178] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222178] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222178] [ 3] /lib64/libc.so.6(+0x29590)[0x149003e29590]
+[romeo-c023:2222178] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x149003e29640]
+[romeo-c023:2222178] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222178] *** End of error message ***
+[romeo-c023:2222172] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x14ecd6e3e6f0]
+[romeo-c023:2222172] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222172] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222172] [ 3] /lib64/libc.so.6(+0x29590)[0x14ecd6e29590]
+[romeo-c023:2222172] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x14ecd6e29640]
+[romeo-c023:2222172] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222172] *** End of error message ***
+[romeo-c023:2222174] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x14e20aa3e6f0]
+[romeo-c023:2222174] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222174] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222174] [ 3] /lib64/libc.so.6(+0x29590)[0x14e20aa29590]
+[romeo-c023:2222174] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x14e20aa29640]
+[romeo-c023:2222174] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222174] *** End of error message ***
+[romeo-c023:2222183] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x154d6103e6f0]
+[romeo-c023:2222183] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222183] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222183] [ 3] /lib64/libc.so.6(+0x29590)[0x154d61029590]
+[romeo-c023:2222183] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x154d61029640]
+[romeo-c023:2222183] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222183] *** End of error message ***
+[romeo-c023:2222181] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x14a82943e6f0]
+[romeo-c023:2222181] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222181] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222181] [ 3] /lib64/libc.so.6(+0x29590)[0x14a829429590]
+[romeo-c023:2222181] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x14a829429640]
+[romeo-c023:2222181] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222181] *** End of error message ***
+[romeo-c023:2222179] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x152999c3e6f0]
+[romeo-c023:2222179] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222179] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222179] [ 3] /lib64/libc.so.6(+0x29590)[0x152999c29590]
+[romeo-c023:2222179] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x152999c29640]
+[romeo-c023:2222179] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222179] *** End of error message ***
+[romeo-c023:2222180] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x146445a3e6f0]
+[romeo-c023:2222180] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222180] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222180] [ 3] /lib64/libc.so.6(+0x29590)[0x146445a29590]
+[romeo-c023:2222180] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x146445a29640]
+[romeo-c023:2222180] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222180] *** End of error message ***
+[romeo-c023:2222186] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x14bc5583e6f0]
+[romeo-c023:2222186] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222186] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222186] [ 3] /lib64/libc.so.6(+0x29590)[0x14bc55829590]
+[romeo-c023:2222186] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x14bc55829640]
+[romeo-c023:2222186] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222186] *** End of error message ***
+/lib64/libc.so.6(+0x3e6f0)[0x14b5e603e6f0]
+[romeo-c023:2222190] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222190] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222190] [ 3] /lib64/libc.so.6(+0x29590)[0x14b5e6029590]
+[romeo-c023:2222190] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x14b5e6029640]
+[romeo-c023:2222190] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222190] *** End of error message ***
+/lib64/libc.so.6(__libc_start_main+0x80)[0x14e2b1229640]
+[romeo-c023:2222184] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222184] *** End of error message ***
+[romeo-c023:2222192] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x15186003e6f0]
+[romeo-c023:2222192] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222192] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222192] [ 3] /lib64/libc.so.6(+0x29590)[0x151860029590]
+[romeo-c023:2222192] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x151860029640]
+[romeo-c023:2222192] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222192] *** End of error message ***
+/lib64/libc.so.6(+0x3e6f0)[0x14b12d83e6f0]
+[romeo-c023:2222198] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222198] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222198] [ 3] /lib64/libc.so.6(+0x29590)[0x14b12d829590]
+[romeo-c023:2222198] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x14b12d829640]
+[romeo-c023:2222198] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222198] *** End of error message ***
+[romeo-c023:2222208] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x1501ca23e6f0]
+[romeo-c023:2222208] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222208] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222208] [ 3] /lib64/libc.so.6(+0x29590)[0x1501ca229590]
+[romeo-c023:2222208] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x1501ca229640]
+[romeo-c023:2222208] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222208] *** End of error message ***
+[romeo-c023:2222196] [ 0] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222204] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222204] [ 3] /lib64/libc.so.6(+0x29590)[0x14ec75829590]
+[romeo-c023:2222204] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x14ec75829640]
+[romeo-c023:2222204] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222204] *** End of error message ***
+[romeo-c023:2222216] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x14dfbe63e6f0]
+[romeo-c023:2222216] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222216] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222216] [ 3] /lib64/libc.so.6(+0x29590)[0x14dfbe629590]
+[romeo-c023:2222216] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x14dfbe629640]
+[romeo-c023:2222216] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222216] *** End of error message ***
+[ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222222] [ 3] /lib64/libc.so.6(+0x29590)[0x14d5ea629590]
+[romeo-c023:2222222] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x14d5ea629640]
+[romeo-c023:2222222] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222222] *** End of error message ***
+/lib64/libc.so.6(+0x3e6f0)[0x14b71643e6f0]
+[romeo-c023:2222211] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222211] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222211] [ 3] /lib64/libc.so.6(+0x29590)[0x14b716429590]
+[romeo-c023:2222211] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x14b716429640]
+[romeo-c023:2222211] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222211] *** End of error message ***
+/lib64/libc.so.6(+0x29590)[0x14b1d9429590]
+[romeo-c023:2222220] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x14b1d9429640]
+[romeo-c023:2222220] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222220] *** End of error message ***
+[ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x147fada29640]
+[romeo-c023:2222228] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222228] *** End of error message ***
+[romeo-c023:2222232] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x151168c3e6f0]
+[romeo-c023:2222232] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222232] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222232] [ 3] /lib64/libc.so.6(+0x29590)[0x151168c29590]
+[romeo-c023:2222232] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x151168c29640]
+[romeo-c023:2222232] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222232] *** End of error message ***
+[romeo-c023:2222224] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x153edf23e6f0]
+[romeo-c023:2222224] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222224] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222224] [ 3] /lib64/libc.so.6(+0x29590)[0x153edf229590]
+[romeo-c023:2222224] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x153edf229640]
+[romeo-c023:2222224] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222224] *** End of error message ***
+[romeo-c023:2222230] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x14e25f83e6f0]
+[romeo-c023:2222230] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222230] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222230] [ 3] /lib64/libc.so.6(+0x29590)[0x14e25f829590]
+[romeo-c023:2222230] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x14e25f829640]
+[romeo-c023:2222230] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222230] *** End of error message ***
+[romeo-c023:2222236] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x14dd6ce3e6f0]
+[romeo-c023:2222236] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222236] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222236] [ 3] /lib64/libc.so.6(+0x29590)[0x14dd6ce29590]
+[romeo-c023:2222236] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x14dd6ce29640]
+[romeo-c023:2222236] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222236] *** End of error message ***
+[romeo-c023:2222243] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x15375b43e6f0]
+[romeo-c023:2222243] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222243] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222243] [ 3] /lib64/libc.so.6(+0x29590)[0x15375b429590]
+[romeo-c023:2222243] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x15375b429640]
+[romeo-c023:2222243] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222243] *** End of error message ***
+[romeo-c023:2222258] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x1544cbc3e6f0]
+[romeo-c023:2222258] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222258] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222258] [ 3] /lib64/libc.so.6(+0x29590)[0x1544cbc29590]
+[romeo-c023:2222258] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x1544cbc29640]
+[romeo-c023:2222258] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222258] *** End of error message ***
+/lib64/libc.so.6(+0x3e6f0)[0x1518af83e6f0]
+[romeo-c023:2222250] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222250] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222250] [ 3] /lib64/libc.so.6(+0x29590)[0x1518af829590]
+[romeo-c023:2222250] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x1518af829640]
+[romeo-c023:2222250] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222250] *** End of error message ***
+[romeo-c023:2222270] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x1534a623e6f0]
+[romeo-c023:2222270] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222270] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222270] [ 3] /lib64/libc.so.6(+0x29590)[0x1534a6229590]
+[romeo-c023:2222270] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x1534a6229640]
+[romeo-c023:2222270] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222270] *** End of error message ***
+[romeo-c023:2222275] [ 1] [romeo-c023:2222265] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222265] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222265] [ 3] /lib64/libc.so.6(+0x29590)[0x14c8a8829590]
+[romeo-c023:2222265] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x14c8a8829640]
+[romeo-c023:2222265] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222265] *** End of error message ***
+/lib64/libc.so.6(+0x3e6f0)[0x1475d363e6f0]
+[romeo-c023:2222280] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222280] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222280] [ 3] /lib64/libc.so.6(+0x29590)[0x1475d3629590]
+[romeo-c023:2222280] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x1475d3629640]
+[romeo-c023:2222280] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222280] *** End of error message ***
+[romeo-c023:2222283] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222283] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222283] [ 3] /lib64/libc.so.6(+0x29590)[0x15364c429590]
+[romeo-c023:2222283] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x15364c429640]
+[romeo-c023:2222283] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222283] *** End of error message ***
+/lib64/libc.so.6(__libc_start_main+0x80)[0x153e53429640]
+[romeo-c023:2222295] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222295] *** End of error message ***
+[romeo-c023:2222293] *** End of error message ***
+[romeo-c023:2222155] Signal: Segmentation fault (11)
+[romeo-c023:2222155] Signal code: Address not mapped (1)
+[romeo-c023:2222155] Failing at address: (nil)
+[romeo-c023:2222155] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x154bc183e6f0]
+[romeo-c023:2222155] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222155] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222155] [ 3] /lib64/libc.so.6(+0x29590)[0x154bc1829590]
+[romeo-c023:2222155] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x154bc1829640]
+[romeo-c023:2222155] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222155] *** End of error message ***
+/lib64/libc.so.6(+0x3e6f0)[0x154c6883e6f0]
+[romeo-c023:2222196] [ 1] ./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222196] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222196] [ 3] /lib64/libc.so.6(+0x29590)[0x154c68829590]
+[romeo-c023:2222196] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x154c68829640]
+[romeo-c023:2222196] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222196] *** End of error message ***
+./graph500_custom_bfs_sssp[0x405a03]
+[romeo-c023:2222275] [ 2] ./graph500_custom_bfs_sssp[0x403670]
+[romeo-c023:2222275] [ 3] /lib64/libc.so.6(+0x29590)[0x14c271e29590]
+[romeo-c023:2222275] [ 4] /lib64/libc.so.6(__libc_start_main+0x80)[0x14c271e29640]
+[romeo-c023:2222275] [ 5] ./graph500_custom_bfs_sssp[0x4036c5]
+[romeo-c023:2222275] *** End of error message ***
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 3 with PID 0 on node romeo-c023 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
