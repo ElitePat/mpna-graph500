@@ -1,7 +1,7 @@
-Cores   Time
-1       
-2
-4
+Cores   Time(min_time)  Time(max_time)  Time(mean_time)
+1       2.96157         5.23344         4.08425
+2       1.91448         3.09974         2.57072
+4       
 8
 16
 32
