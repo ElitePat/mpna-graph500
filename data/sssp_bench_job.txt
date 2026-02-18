@@ -18,7 +18,7 @@ cd ../src/
 make
 
 #maitenant on ce concentre sur le SSSP
-SKIP_BFS=1
+export SKIP_BFS=1
 echo "Verification SKIP_BFS = $SKIP_BFS"
 
 srun graph500_custom_bfs_sssp.out 10
