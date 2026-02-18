@@ -2,7 +2,7 @@ CFLAGS = -Drestrict=__restrict__ -O3 -DGRAPH_GENERATOR_MPI -DREUSE_CSR_FOR_VALID
 LDFLAGS = -lpthread
 MPICC = mpicc
 
-all:  graph500_custom_bfs_sssp.out #graph500_reference_bfs graph500_reference_bfs_sssp.out
+all: graph500_custom_bfs_sssp.out #graph500_reference_bfs graph500_reference_bfs_sssp.out
 #graph500_custom_bfs graph500_custom_bfs_sssp
 
 GENERATOR_SOURCES = ../generator/graph_generator.c ../generator/make_graph.c ../generator/splittable_mrg.c ../generator/utils.c

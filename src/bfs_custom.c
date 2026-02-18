@@ -41,7 +41,7 @@ unsigned long *frontier_bitmap;
 unsigned long *next_frontier_bitmap;
 int64_t visited_size;
 
-int64_t *pred_glob, *column;
+extern int64_t *pred_glob, *column;
 int *rowstarts;
 oned_csr_graph g;
 
