@@ -48,7 +48,7 @@ int64_t         visited_size;
 int64_t        *pred_glob;
 oned_csr_graph  g;         /* attendu par csr_reference.c */
 int            *rowstarts; /* attendu par validate.c      */
-void           *column;    /* attendu par COLUMN() macro  */
+extern void           *column;    /* attendu par COLUMN() macro  */
 
 int     mpi_rank, mpi_size;
 int64_t max_local_verts = 0;
