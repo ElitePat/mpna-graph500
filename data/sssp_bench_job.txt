@@ -22,5 +22,5 @@ echo "Verification SKIP_BFS = $SKIP_BFS"
 
 echo "===========REF==============="
 srun graph500_reference_bfs_sssp.out 22
-#echo "===========custom==============="
-#srun graph500_custom_bfs_sssp.out 10
+echo "===========custom==============="
+srun graph500_custom_bfs_sssp.out 10
